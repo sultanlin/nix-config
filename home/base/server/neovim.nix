@@ -64,7 +64,7 @@
         nvim-treesitter-textobjects
         nvim-ts-context-commentstring
         nvim-ts-autotag
-        nvim-ts-rainbow
+        rainbow-delimiters-nvim
 
         #-- TELESCOPE
         telescope-nvim # Fuzzy finder (files, lsp, etc)
