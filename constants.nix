@@ -1,7 +1,7 @@
 rec {
   # user information
   # hostname = "vm";
-  dotfilesConfig = "/home/sultan/ryan-nixos/modified/dotfiles/config";
+  dotfilesConfig = builtins.getEnv "HOME" + "/ryan-nixos/modified/dotfiles/config";
   username = "sultan";
   userfullname = "Sultan Linjawi";
   useremail = "skorpion219@hotmail.co.uk";
