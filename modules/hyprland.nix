@@ -10,7 +10,7 @@
 
   imports = [
     ./base
-    ../base.nix
+    ./base.nix
 
     ./desktop
   ];
