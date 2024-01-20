@@ -3,7 +3,7 @@ with args;
 with mylib;
 with allSystemAttrs; let
   base_args = {
-    inherit home-manager inputs;
+    inherit home-manager; # inputs;
     # inherit nixpkgs; # or nixpkgs-stable
     nixpkgs = nixpkgs-unstable;
     system = x64_system;
