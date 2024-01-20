@@ -5,7 +5,7 @@
 #############################################################
 {
   imports = [
-    ./nfs-mount.nix
+    # ./nfs-mount.nix
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
   ];
