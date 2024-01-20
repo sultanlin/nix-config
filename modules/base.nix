@@ -1,14 +1,14 @@
 {
   username,
   userfullname,
-  nuenv,
+  # nuenv,
   ...
 } @ args: {
-  nixpkgs.overlays =
-    [
-      nuenv.overlays.default
-    ]
-    ++ (import ../overlays args);
+  nixpkgs.overlays = import ../overlays args;
+  # [
+  #   nuenv.overlays.default
+  # ]
+  # ++ (import ../overlays args);
 
   users.users.${username} = {
     description = userfullname;
