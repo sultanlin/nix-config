@@ -11,6 +11,7 @@
         (
           path: _type:
             (_type == "directory") # include directories
+            && (!lib.strings.hasSuffix ".bak" path) # exclude .bak files
             || (
               (path != "default.nix") # ignore default.nix
               && (lib.strings.hasSuffix ".nix" path) # include .nix files
