@@ -9,3 +9,4 @@ home.nix in hosts not done
 overlays done
 Potentially modules done
 home directory potentially done
+inputs/nixpkgs attribute missing
