@@ -14,6 +14,7 @@
             || (
               (path != "default.nix") # ignore default.nix
               && (lib.strings.hasSuffix ".nix" path) # include .nix files
+              && (!lib.strings.hasSuffix ".bak" path) # exclude .bak files
             )
         )
         (builtins.readDir path)));
