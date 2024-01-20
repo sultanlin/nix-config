@@ -5,7 +5,7 @@
 #############################################################
 {
   imports = [
-    # ./nfs-mount.nix
+    ./nfs-mount.nix
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
   ];
@@ -13,6 +13,9 @@
   networking = {
     hostName = "laptop";
     wireless.enable = false; # Enables wireless support via wpa_supplicant.
+    hosts = {
+      "192.168.1.40" = ["truenas"];
+    };
 
     # Configure network proxy if necessary
     # proxy.default = "http://user:password@proxy:port/";
