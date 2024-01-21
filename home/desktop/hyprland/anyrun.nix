@@ -3,6 +3,10 @@
   anyrun,
   ...
 }: {
+  imports = [
+    anyrun.homeManagerModules.default
+    ./options
+  ];
   programs.anyrun = {
     enable = true;
     config = {
