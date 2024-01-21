@@ -60,12 +60,12 @@
   programs = {
     # A modern replacement for ‘ls’
     # useful in bash/zsh prompt, not in nushell.
-    eza = {
-      enable = true;
-      enableAliases = false; # do not enable aliases in nushell!
-      git = true;
-      icons = true;
-    };
+    # eza = {
+    #   enable = true;
+    #   enableAliases = false; # do not enable aliases in nushell!
+    #   git = true;
+    #   icons = true;
+    # };
 
     # A command-line fuzzy finder
     fzf = {
