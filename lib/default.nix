@@ -1,9 +1,4 @@
-{
-  lib,
-  constants,
-  config,
-  ...
-}: {
+{lib, ...}: {
   # colmenaSystem = import ./colmenaSystem.nix;
   # macosSystem = import ./macosSystem.nix;
   nixosSystem = import ./nixosSystem.nix;
@@ -24,5 +19,5 @@
             )
         )
         (builtins.readDir path)));
-  symlinkConfig = path: config.lib.file.mkOutOfStoreSymlink "${constants.dotfilesConfig}/${path}";
+  # symlinkConfig = path: config.lib.file.mkOutOfStoreSymlink "${constants.dotfilesConfig}/${path}";
 }
