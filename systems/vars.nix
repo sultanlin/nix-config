@@ -13,7 +13,7 @@ in {
     nixos-modules =
       [
         ../hosts/laptop
-        {modules.desktop.wayland.enable = true;}
+        # {modules.desktop.wayland.enable = true;}
       ]
       ++ desktop_base_modules.nixos-modules;
     home-module.imports =
