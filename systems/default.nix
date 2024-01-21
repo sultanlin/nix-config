@@ -1,10 +1,11 @@
 {
   self,
+  config,
   inputs,
   constants,
 }: let
   inherit (inputs.nixpkgs-unstable) lib;
-  mylib = import ../lib {inherit lib;};
+  mylib = import ../lib {inherit constants config lib;};
   vars = import ./vars.nix;
 
   specialArgsForSystem = system:
