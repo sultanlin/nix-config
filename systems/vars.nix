@@ -19,7 +19,7 @@ in {
     home-module.imports =
       [
         ../hosts/laptop/home.nix
-        {modules.desktop.hyprland.enable = true;}
+        # {modules.desktop.hyprland.enable = true;}
       ]
       ++ desktop_base_modules.home-module.imports;
   };
