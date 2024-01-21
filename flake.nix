@@ -120,7 +120,7 @@
       flake = false;
     };
     cattppuccin-yazi = {
-      url = "github:catppuccin/yazi";
+      url = "github:yazi-rs/themes";
       flake = false;
     };
     #------ Review later
