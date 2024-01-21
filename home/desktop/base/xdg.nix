@@ -23,10 +23,10 @@
     enable = true;
 
     cacheHome = "${config.home.homeDirectory}/.cache";
-    # configHome = "${config.home.homeDirectory}/.config";
-    # dataHome = "${config.home.homeDirectory}/.local/share";
-    # stateHome = "${config.home.homeDirectory}/.local/state";
-    #
+    configHome = "${config.home.homeDirectory}/.config";
+    dataHome = "${config.home.homeDirectory}/.local/share";
+    stateHome = "${config.home.homeDirectory}/.local/state";
+
     # manage $XDG_CONFIG_HOME/mimeapps.list
     # xdg search all desktop entries from $XDG_DATA_DIRS, check it by command:
     #  echo $XDG_DATA_DIRS
