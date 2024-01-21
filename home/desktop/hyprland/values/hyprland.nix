@@ -2,7 +2,7 @@
   pkgs,
   lib,
   hyprland,
-  nur-ryan4yin,
+  # nur-ryan4yin,
   ...
 }: {
   # NOTE:
@@ -12,7 +12,7 @@
   wayland.windowManager.hyprland = {
     enable = true;
     settings = {
-      source = "${nur-ryan4yin.packages.${pkgs.system}.catppuccin-hyprland}/themes/mocha.conf";
+      # source = "${nur-ryan4yin.packages.${pkgs.system}.catppuccin-hyprland}/themes/mocha.conf";
       env = [
         "NIXOS_OZONE_WL,1" # for any ozone-based browser & electron apps to run on wayland
         "MOZ_ENABLE_WAYLAND,1" # for firefox to run on wayland
