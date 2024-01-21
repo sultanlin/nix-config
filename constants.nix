@@ -2,7 +2,7 @@ rec {
   # user information
   # hostname = "vm";
   #dotfilesConfig = builtins.getEnv "HOME" + "/ryan-nixos/modified/dotfiles/config";
-  dotfilesConfig = "/home/sultan/nix2/dotfiles/config";
+  dotfilesConfig = "/home/sultan/nix-config/dotfiles/config";
   # dotfilesConfig = "${config.home.homeDirectory}/ryan-nixos/modified/dotfiles/config";
 
   username = "sultan";
