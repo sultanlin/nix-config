@@ -17,9 +17,9 @@ in {
       recursive = true;
       # target = ".config/nvim";
     };
-    file.".config/hypr" = {
-      source = "${config_sym_dir}/hypr";
-      recursive = true;
+    file.".config/hypr/hyprland.conf" = {
+      source = "${config_sym_dir}/hypr/hyprland.conf";
+      # recursive = true;
     };
     #file.".config/tmux" = {
     # source = "${config_sym_dir}/tmux";
