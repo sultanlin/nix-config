@@ -18,7 +18,7 @@ in {
       # target = ".config/nvim";
     };
     xdg.configFile."hypr" = {
-      source = "${config_sym_dir}/hypr/hyprland.conf";
+      source = "${config_sym_dir}/hypr";
       recursive = true;
     };
     #file.".config/tmux" = {

@@ -13,6 +13,11 @@
   ];
 
   xdg.configFile."mimeapps.list".force = true;
+  # xdg.configFile."hypr" = {
+  #   source = "${config_sym_dir}/hypr/hyprland.conf";
+  #   recursive = true;
+  # };
+
   xdg = {
     enable = true;
 
