@@ -11,7 +11,7 @@
         # monitor = "DP-2,highres,auto,1.5,bitdepth,10";
       };
     };
-    i3.nvidia = false;
+    # i3.nvidia = false;
   };
   # modules.editors.emacs = {
   #   enable = true;
