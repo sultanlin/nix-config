@@ -25,12 +25,20 @@ in {
     # source = "${config_sym_dir}/tmux";
     #  recursive = true;
     #};
-    file.".config/hypr" = {
+    # file.".config/hypr" = {
+    #   # source = "${config_sym_dir}/hypr";
+    #   # source = "${dotfilesConfig}/hypr";
+    #   source = builtins.toPath "${dotfilesConfig}/hypr";
+    #   # source = mylib.symlinkConfig "/hypr";
+    #   recursive = true;
+    # };
+    nvim = {
       # source = "${config_sym_dir}/hypr";
       # source = "${dotfilesConfig}/hypr";
       source = builtins.toPath "${dotfilesConfig}/hypr";
       # source = mylib.symlinkConfig "/hypr";
       recursive = true;
+      target = ".config/hypr";
     };
   };
 }
