@@ -13,13 +13,13 @@ in {
     nixos-modules =
       [
         ../hosts/laptop
-        # {modules.desktop.wayland.enable = true;}
+        {modules.desktop.wayland.enable = true;}
       ]
       ++ desktop_base_modules.nixos-modules;
     home-module.imports =
       [
         ../hosts/laptop/home.nix
-        # {modules.desktop.hyprland.enable = true;}
+        {modules.desktop.hyprland.enable = true;}
       ]
       ++ desktop_base_modules.home-module.imports;
   };
