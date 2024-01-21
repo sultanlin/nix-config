@@ -119,6 +119,10 @@
       url = "github:catppuccin/k9s";
       flake = false;
     };
+    catppuccin-foot = {
+      url = "github:catppuccin/foot";
+      flake = false;
+    };
     catppuccin-yazi = {
       url = "github:yazi-rs/themes";
       flake = false;
