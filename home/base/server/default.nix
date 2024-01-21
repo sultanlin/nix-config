@@ -17,15 +17,19 @@ in {
       recursive = true;
       # target = ".config/nvim";
     };
+    file.".config/hypr" = {
+      source = "${config_sym_dir}/hypr";
+      recursive = true;
+    };
     #file.".config/tmux" = {
     # source = "${config_sym_dir}/tmux";
     #  recursive = true;
     #};
-    file.".config/hypr" = {
-      source = "${config_sym_dir}/hypr";
-      # source = "${dotfilesConfig}/hypr";
-      # source = mylib.symlinkConfig "/hypr";
-      recursive = true;
-    };
+    # file.".config/hypr" = {
+    #   source = "${config_sym_dir}/hypr";
+    #   # source = "${dotfilesConfig}/hypr";
+    #   # source = mylib.symlinkConfig "/hypr";
+    #   recursive = true;
+    # };
   };
 }
