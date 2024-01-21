@@ -10,7 +10,7 @@ in {
 
   xdg.configFile."hypr" = {
     source = "${config_sym_dir}/hypr";
-    recursive = true;
+    # recursive = true;
   };
   home = {
     file.".config/nvim" = {
