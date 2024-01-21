@@ -8,11 +8,11 @@
 in {
   imports = mylib.scanPaths ./.;
 
-  xdg.configFile."hypr" = {
-    # source = "${config_sym_dir}/hypr";
-    source = builtins.toPath "${dotfilesConfig}/hypr";
-    recursive = true;
-  };
+  # xdg.configFile."hypr" = {
+  #   # source = "${config_sym_dir}/hypr";
+  #   source = builtins.toPath "${dotfilesConfig}/hypr";
+  #   recursive = true;
+  # };
   home = {
     file.".config/nvim" = {
       #source = config.lib.file.mkOutOfStoreSymlink "${dotfilesConfig}/nvim";
@@ -26,17 +26,17 @@ in {
     # source = "${config_sym_dir}/tmux";
     #  recursive = true;
     #};
-    # file.".config/hypr" = {
-    #   # source = "${config_sym_dir}/hypr";
-    #   # source = "${dotfilesConfig}/hypr";
-    #   source = builtins.toPath "${dotfilesConfig}/hypr";
-    #   # source = mylib.symlinkConfig "/hypr";
-    #   recursive = true;
-    # };
+    file.".config/hypr" = {
+      source = "${config_sym_dir}/hypr";
+      # source = "${dotfilesConfig}/hypr";
+      # source = builtins.toPath "${dotfilesConfig}/hypr";
+      # source = mylib.symlinkConfig "/hypr";
+      recursive = true;
+    };
     # nvim = {
     #   # source = "${config_sym_dir}/hypr";
-    #   # source = "${dotfilesConfig}/hypr";
-    #   source = builtins.toPath "${dotfilesConfig}/hypr";
+    #   source = "${dotfilesConfig}/hypr";
+    #   # source = builtins.toPath "${dotfilesConfig}/hypr";
     #   # source = mylib.symlinkConfig "/hypr";
     #   recursive = true;
     #   target = ".config/hypr";
