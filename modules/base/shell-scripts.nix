@@ -5,7 +5,7 @@
   ...
 }: {
   environment.systemPackages = let
-    shellPath = script: (import ../../scripts/${script} {inherit pkgs;});
+    shellPath = script: (import ../../scripts/${script} {inherit pkgs nixosPath;});
   in [
     (shellPath "direnv-create.nix")
     (shellPath "direnv-add.nix")
