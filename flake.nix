@@ -116,14 +116,14 @@
       url = "github:catppuccin/cava";
       flake = false;
     };
-    cattppuccin-k9s = {
+    catppuccin-k9s = {
       url = "github:catppuccin/k9s";
       flake = false;
     };
-    # cattppuccin-yazi = {
-    #   url = "github:yazi-rs/themes";
-    #   flake = false;
-    # };
+    catppuccin-yazi = {
+      url = "github:yazi-rs/themes";
+      flake = false;
+    };
     #------ Review later
     # https://github.com/virchau13/dots/blob/9eec548da8e72c5f2b41cdeb40e983dcc91aefd1/apps/nvim/default.nix#L7
     sentiment-nvim = {
