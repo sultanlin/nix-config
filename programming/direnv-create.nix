@@ -1,0 +1,6 @@
+
+{ pkgs, ... }:
+  pkgs.writeShellScriptBin "dvt" ''
+    nix flake init -t "github:the-nix-way/dev-templates#$1"
+    direnv allow
+  ''
