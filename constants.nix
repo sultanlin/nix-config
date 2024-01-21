@@ -1,9 +1,9 @@
-{inputs, ...}: rec {
+{config, ...}: rec {
   # user information
   # hostname = "vm";
   #dotfilesConfig = builtins.getEnv "HOME" + "/ryan-nixos/modified/dotfiles/config";
   # dotfilesConfig = "/home/sultan/ryan-nixos/modified/dotfiles/config";
-  dotfilesConfig = "${inputs.config.home.homeDirectory}/ryan-nixos/modified/dotfiles/config";
+  dotfilesConfig = "${config.home.homeDirectory}/ryan-nixos/modified/dotfiles/config";
 
   username = "sultan";
   userfullname = "Sultan Linjawi";
