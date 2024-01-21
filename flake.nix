@@ -17,6 +17,7 @@
     self,
     nixpkgs-unstable,
     nixpkgs-stable,
+    cattppuccin-k9s,
     ...
   }: let
     constants = import ./constants.nix;
