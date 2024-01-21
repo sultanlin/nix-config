@@ -1,7 +1,7 @@
 {
   pkgs,
   # pkgs-unstable,
-  # catppuccin-yazi,
+  catppuccin-yazi,
   ...
 }: {
   # terminal file manager
@@ -14,5 +14,5 @@
     enableNushellIntegration = false;
   };
 
-  # xdg.configFile."yazi/theme.toml".source = "${catppuccin-yazi}/mocha.toml";
+  xdg.configFile."yazi/theme.toml".source = "${catppuccin-yazi}/catppuccin-mocha/theme.toml";
 }
