@@ -5,7 +5,6 @@
   ...
 }: let
   config_sym_dir = config.lib.file.mkOutOfStoreSymlink "${dotfilesConfig}";
-  config_sym_dir2 = config.lib.file.mkOutOfStoreSymlink "../../../dotfiles/config";
 in {
   imports = mylib.scanPaths ./.;
 
@@ -28,8 +27,8 @@ in {
     #  recursive = true;
     #};
     file.".config/hypr" = {
-      source = "${config_sym_dir2}/hypr";
-      # source = "${dotfilesConfig}/hypr";
+      # source = "${config_sym_dir}/hypr";
+      source = "${dotfilesConfig}/hypr";
       # source = builtins.toPath "${dotfilesConfig}/hypr";
       # source = mylib.symlinkConfig "/hypr";
       recursive = true;
