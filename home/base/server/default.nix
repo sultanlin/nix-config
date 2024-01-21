@@ -8,6 +8,10 @@
 in {
   imports = mylib.scanPaths ./.;
 
+  xdg.configFile."hypr" = {
+    source = "${config_sym_dir}/hypr";
+    recursive = true;
+  };
   home = {
     file.".config/nvim" = {
       #source = config.lib.file.mkOutOfStoreSymlink "${dotfilesConfig}/nvim";
@@ -16,10 +20,6 @@ in {
       # source = mylib.symlinkConfig "/nvim-nixos";
       recursive = true;
       # target = ".config/nvim";
-    };
-    xdg.configFile."hypr" = {
-      source = "${config_sym_dir}/hypr";
-      recursive = true;
     };
     #file.".config/tmux" = {
     # source = "${config_sym_dir}/tmux";
