@@ -17,9 +17,10 @@
     self,
     nixpkgs-unstable,
     nixpkgs-stable,
+    config,
     ...
   }: let
-    constants = import ./constants.nix;
+    constants = import ./constants.nix {inherit config;};
 
     allSystemConfigurations = import ./systems {inherit self inputs constants;};
   in
