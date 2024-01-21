@@ -33,7 +33,7 @@ conform.setup({
 		-- xml = { "xmlformat" },
 		-- yaml = { "yamlfix" },
 		go = { "goimports", "gofmt" },
-		nix = { "alejandra", "prettierd" },
+		nix = { "alejandra" },
 		-- rust = { "rustfmt" },
 	},
 

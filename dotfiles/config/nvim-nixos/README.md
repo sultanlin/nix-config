@@ -22,3 +22,8 @@ neovim setup
 - github
   -- https://github.com/Alexis12119/nvim-config/tree/main
   -- https://github.com/ecosse3/nvim
+
+  # Extra plugins to checkout
+
+  `https://github.com/HakonHarnes/img-clip.nvim`
+  `https://github.com/abecodes/tabout.nvim`

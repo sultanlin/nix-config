@@ -3,5 +3,3 @@ vim.loader.enable()
 
 -- require("plugins")
 require("core")
--- require("sultan.plugin.lsp.helloworld")
--- require("after.plugin.lsp.helloworld")
