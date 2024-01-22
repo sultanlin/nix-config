@@ -81,6 +81,7 @@
         friendly-snippets
         lspkind-nvim
         cmp-nvim-lua
+        cmp-emoji
 
         #-- LSP - Formatting - Linting
         nvim-lspconfig # LSP configuration
@@ -101,6 +102,7 @@
         vim-fugitive
         vim-rhubarb
         fidget-nvim # Useful status updates for LSP
+        harpoon
         own-sentiment-nvim
 
         #  {
