@@ -133,20 +133,20 @@
         oil-nvim
         nvim-ufo
         tabout-nvim
-        vim-jsx-typescript
+        vim-jsx-pretty
 
         neotest
         # General tests
         vim-test
         # neotest-vim-test    # Not in nixpkgs
-# Language specific tests
-        neotest-vitest    # JS? TS?
+        # Language specific tests
+        neotest-vitest # JS? TS?
         neotest-python
         neotest-plenary
         neotest-rust
-        neotest-bash
+        # neotest-bash
         neotest-deno
-        neotest-dotnet    # C#
+        neotest-dotnet # C#
         neotest-go
         # neotest-jest    # Javacript
         # neotest-zig
