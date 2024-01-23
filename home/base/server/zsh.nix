@@ -36,13 +36,16 @@
       #  #eval "$(direnv hook zsh)"
       #'';                                       # Theming
 
-      # shellAliases = {
-      #   ne = "nix-env";
-      #   ni = "nix-env -iA";
-      #   no = "nixops";
-      #   ns = "nix-shell --pure";
-      #   please = "sudo";
-      # };
+      shellAliases = {
+        #   ne = "nix-env";
+        #   ni = "nix-env -iA";
+        #   no = "nixops";
+        #   ns = "nix-shell --pure";
+        #   please = "sudo";
+        ls = "eza --icons  -T -L 1 -x";
+        ll = "eza --icons  -T -L 2 -x";
+        cp = "cp -iv";
+      };
 
       initExtra = ''
         # # zsh vi mode install

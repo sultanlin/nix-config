@@ -121,6 +121,7 @@
         nvim-autopairs
         # guess-indent-nvim
         vim-sleuth
+        nvim-tree-lua
 
         hardtime-nvim
         nui-nvim
@@ -219,15 +220,14 @@
     #-- Go
     go
     gomodifytags
-    iferr # generate error handling code for go
+    # iferr # generate error handling code for go
     impl # generate function implementation for go
     gotools # contains tools like: godoc, goimports, etc.
     gopls # go language server
     delve # go debugger
     golangci-lint
     air # Live reloading for server hosting
-    # Templ HTML in go
-    templ
+    templ # Templ HTML in go
 
     #-- C#
     omnisharp-roslyn
