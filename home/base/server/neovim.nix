@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{pkgs, neovim-nightly, ...}: {
   nixpkgs.config = {
     programs.npm = {
       enable = true;
@@ -23,7 +23,7 @@
 
       # Nightly maybe?
       # package = pkgs.neovim-nightly.overrideAttrs (_: { CFLAGS = "-O3"; });
-      # package = inputs.neovim-nightly.packages."${pkgs.system}".default.override(old: old // { inherit (pkgs) libvterm-neovim; });
+      package = neovim-nightly.packages."${pkgs.system}".default.override(old: old // { inherit (pkgs) libvterm-neovim; });
 
       viAlias = true;
       vimAlias = true;
@@ -103,6 +103,8 @@
         vim-rhubarb
         fidget-nvim # Useful status updates for LSP
         harpoon
+        SchemaStore-nvim
+        eyeliner-nvim
         own-sentiment-nvim
 
         #  {
@@ -123,7 +125,6 @@
         nui-nvim
 
         #-- Future plugins
-        # eyeliner-nvim
         # flash-nvim
         # fzf-lua
 
@@ -224,6 +225,8 @@
     delve # go debugger
     golangci-lint
     air # Live reloading for server hosting
+    # Templ HTML in go
+    templ
 
     #-- C#
     omnisharp-roslyn
