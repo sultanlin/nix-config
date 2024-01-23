@@ -1,4 +1,8 @@
-{pkgs, neovim-nightly, ...}: {
+{
+  pkgs,
+  neovim-nightly,
+  ...
+}: {
   nixpkgs.config = {
     programs.npm = {
       enable = true;
@@ -122,6 +126,38 @@
         # guess-indent-nvim
         vim-sleuth
         nvim-tree-lua
+        barbecue-nvim
+        nvim-navic
+        tabby-nvim
+        neoscroll-nvim
+        oil-nvim
+        nvim-ufo
+        tabout-nvim
+        vim-jsx-typescript
+
+        neotest
+        # General tests
+        vim-test
+        neotest-vim-test
+# Language specific tests
+        neotest-vitest    # JS? TS?
+        neotest-python
+        neotest-plenary
+        neotest-rust
+        neotest-bash
+        neotest-deno
+        neotest-dotnet    # C#
+        neotest-go
+        # neotest-jest    # Javacript
+        # neotest-zig
+        # neotest-dart
+        # neotest-elixir
+        # neotest-haskell
+        # neotest-pest    # PhP
+        # neotest-phpunit
+        # neotest-scala
+        # neotest-rspec   # ruby
+        # neotest-testthat    # R
 
         hardtime-nvim
         nui-nvim
