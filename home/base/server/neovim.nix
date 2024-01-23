@@ -138,7 +138,7 @@
         neotest
         # General tests
         vim-test
-        neotest-vim-test
+        # neotest-vim-test    # Not in nixpkgs
 # Language specific tests
         neotest-vitest    # JS? TS?
         neotest-python
