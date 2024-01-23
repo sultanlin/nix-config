@@ -23,7 +23,7 @@
 
       # Nightly maybe?
       # package = pkgs.neovim-nightly.overrideAttrs (_: { CFLAGS = "-O3"; });
-      package = neovim-nightly.packages."${pkgs.system}".default.override(old: old // { inherit (pkgs) libvterm-neovim; });
+      # package = neovim-nightly.packages."${pkgs.system}".default.override(old: old // { inherit (pkgs) libvterm-neovim; });
 
       viAlias = true;
       vimAlias = true;
