@@ -36,7 +36,7 @@
       #  #eval "$(direnv hook zsh)"
       #'';                                       # Theming
 
-      shellAliases = {
+      shellAliases = lib.mkForce {
         #   ne = "nix-env";
         #   ni = "nix-env -iA";
         #   no = "nixops";
