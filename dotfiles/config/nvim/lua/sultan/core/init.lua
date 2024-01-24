@@ -1,2 +1,3 @@
-require("sultan.core.keymaps")
-require("sultan.core.options")
+require("core.options")
+require("core.keymaps")
+require("core.autocmd")
