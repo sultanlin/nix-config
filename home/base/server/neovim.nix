@@ -98,14 +98,15 @@
         neodev-nvim # Additional lua config
         conform-nvim # Formatter
         nvim-lint
-        none-ls-nvim
+        none-ls-nvim # Lint and format and code actions
 
         nvim-autopairs
-        which-key-nvim
         comment-nvim
         gitsigns-nvim
         # Github plugins
         vim-fugitive
+        neogit
+        gitlinker-nvim
         vim-rhubarb
         fidget-nvim # Useful status updates for LSP
         harpoon
@@ -113,6 +114,8 @@
         eyeliner-nvim
         own-sentiment-nvim
 
+        which-key-nvim
+        legendary-nvim
         #  {
         # error: Failed assertions:
         # - sultan profile: `nixpkgs` options are disabled when `home-manager.useGlobalPkgs` is enabled.
@@ -135,13 +138,19 @@
         tabout-nvim
         vim-jsx-pretty
         toggleterm-nvim
-        neogit
         alpha-nvim
         project-nvim
         nvim-colorizer-lua
         vim-matchup
         modicator-nvim
         nvim-navbuddy
+        nvim-bqf
+        noice-nvim
+        numb-nvim
+        nvim-spider
+        todo-comments-nvim
+        trouble-nvim
+        auto-session
 
         neotest
         # General tests
