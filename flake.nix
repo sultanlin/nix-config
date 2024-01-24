@@ -47,7 +47,7 @@
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
     hyprland-plugins = {
-      utl = "github:hyprwm/hyprland-plugins";
+      url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
     };
 
