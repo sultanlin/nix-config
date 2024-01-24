@@ -87,6 +87,7 @@
         lspkind-nvim
         cmp-nvim-lua
         cmp-emoji
+        cmp-tabnine
 
         #-- LSP - Formatting - Linting
         nvim-lspconfig # LSP configuration
@@ -131,9 +132,16 @@
         tabby-nvim
         neoscroll-nvim
         oil-nvim
-        nvim-ufo
         tabout-nvim
         vim-jsx-pretty
+        toggleterm-nvim
+        neogit
+        alpha-nvim
+        project-nvim
+        nvim-colorizer-lua
+        vim-matchup
+        modicator-nvim
+        nvim-navbuddy
 
         neotest
         # General tests
@@ -158,6 +166,10 @@
         # neotest-scala
         # neotest-rspec   # ruby
         # neotest-testthat    # R
+
+        nvim-ufo
+        promise-async
+        statuscol-nvim
 
         hardtime-nvim
         nui-nvim
