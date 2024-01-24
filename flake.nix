@@ -46,6 +46,10 @@
       url = "github:hyprwm/Hyprland/v0.33.1";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
+    hyprland-plugins = {
+      utl = "github:hyprwm/hyprland-plugins";
+      inputs.hyprland.follows = "hyprland";
+    };
 
     # community wayland nixpkgs
     # nixpkgs-wayland.url = "github:nix-community/nixpkgs-wayland";
@@ -140,8 +144,8 @@
     # };
     neovim-nightly = {
       # https://github.com/neovim/neovim/blob/master/BUILD.md
-        url = github:neovim/neovim?dir=contrib;
-        inputs.nixpkgs.follows = "nixpkgs-unstable";
+      url = github:neovim/neovim?dir=contrib;
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
     #
     #
