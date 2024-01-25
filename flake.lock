@@ -365,6 +365,26 @@
         "type": "github"
       }
     },
+    "hyprland-plugins": {
+      "inputs": {
+        "hyprland": [
+          "hyprland"
+        ]
+      },
+      "locked": {
+        "lastModified": 1706056366,
+        "narHash": "sha256-+eysY4uvMNrHkexrL2A7CE43gqX0h8Kr5Pk8Qx7E1Xs=",
+        "owner": "hyprwm",
+        "repo": "hyprland-plugins",
+        "rev": "6172e9b4b52dd2f4a0f9303e969709441340d741",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hyprwm",
+        "repo": "hyprland-plugins",
+        "type": "github"
+      }
+    },
     "hyprland-protocols": {
       "inputs": {
         "nixpkgs": [
@@ -534,6 +554,7 @@
         "doomemacs": "doomemacs",
         "home-manager": "home-manager",
         "hyprland": "hyprland",
+        "hyprland-plugins": "hyprland-plugins",
         "neovim-nightly": "neovim-nightly",
         "nixos-wsl": "nixos-wsl",
         "nixpkgs-stable": "nixpkgs-stable",
