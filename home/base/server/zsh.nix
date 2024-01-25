@@ -83,6 +83,7 @@
         bindkey -M viins '^[[B' history-substring-search-down
         bindkey -M viins '^[OB' history-substring-search-down
 
+        #this is a test
         # Remind you of aliases
         source ${pkgs.zsh-you-should-use}/share/zsh/plugins/you-should-use/you-should-use.plugin.zsh
       '';
