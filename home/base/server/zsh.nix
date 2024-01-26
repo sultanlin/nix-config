@@ -2,6 +2,7 @@
   pkgs,
   lib,
   dotfilesConfig,
+  nixosPath,
   ...
 }: {
   programs = {
@@ -50,6 +51,9 @@
         ls = "eza --icons  -T -L 1 -x";
         ll = "eza --icons  -T -L 2 -x";
         cp = "cp -iv";
+        flake-rebuild = "sudo nixos-rebuild switch --flake ${nixosPath}";
+        flake-test = "sudo nixos-rebuild test --flake ${nixosPath}";
+        flake-update = "sudo nix flake update ${nixosPath}";
       };
 
       initExtra = ''
