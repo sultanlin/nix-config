@@ -18,7 +18,8 @@ in {
       #source = config.lib.file.mkOutOfStoreSymlink "${dotfilesConfig}/nvim";
       # source = config.lib.file.mkOutOfStoreSymlink "${dotfilesConfig}/nvim-nixos";
       # source = "${config_sym_dir}/nvim-nixos";
-      source = "${config_sym_dir}/nvim";
+      # source = "${config_sym_dir}/nvim";
+      source = mylib.symlinkConfig "nvim";
       # source = mylib.symlinkConfig "/nvim-nixos";
       recursive = true;
       # target = ".config/nvim";
