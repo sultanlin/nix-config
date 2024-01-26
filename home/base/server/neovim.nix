@@ -99,6 +99,7 @@
         conform-nvim # Formatter
         nvim-lint
         none-ls-nvim # Lint and format and code actions
+        # lsp_signature-nvim  # Check out later
 
         nvim-autopairs
         comment-nvim
@@ -133,6 +134,7 @@
         barbecue-nvim
         nvim-navic
         tabby-nvim
+        barbar-nvim
         neoscroll-nvim
         oil-nvim
         tabout-nvim
@@ -151,6 +153,7 @@
         todo-comments-nvim
         trouble-nvim
         auto-session
+        neorg
 
         neotest
         # General tests
