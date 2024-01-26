@@ -1,4 +1,4 @@
-rec {
+{}: rec {
   # user information
   # hostname = "vm";
   #dotfilesConfig = builtins.getEnv "HOME" + "/ryan-nixos/modified/dotfiles/config";
