@@ -134,7 +134,7 @@
         barbecue-nvim
         nvim-navic
         tabby-nvim
-        barbar-nvim
+        # barbar-nvim
         neoscroll-nvim
         oil-nvim
         tabout-nvim
