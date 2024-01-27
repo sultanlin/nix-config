@@ -5,21 +5,6 @@ M.config = function()
     local lualine = require "lualine"
     -- local lazy_status = require("lazy.status") -- to configure lazy pending updates count
 
-    local clients_lsp = function()
-        local bufnr = vim.api.nvim_get_current_buf()
-
-        local clients = vim.lsp.buf_get_clients(bufnr)
-        if next(clients) == nil then
-            return ""
-        end
-
-        local c = {}
-        for _, client in pairs(clients) do
-            table.insert(c, client.name)
-        end
-        return "  " .. table.concat(c, "|")
-    end
-
     -- configure lualine with modified theme
     lualine.setup {
         options = {
