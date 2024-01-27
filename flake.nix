@@ -69,7 +69,7 @@
 
     ########################  Some non-flake repositories  #########################################
 
-    # doom-emacs is a configuration framework for GNU Emacs.
+    # doom-emacs is a configuration framework for GNU Emacs.desktop/base
     doomemacs = {
       url = "github:doomemacs/doomemacs";
       flake = false;
@@ -137,14 +137,14 @@
       url = "github:utilyre/sentiment.nvim";
       flake = false;
     };
-    # nix-gaming.url = github:fufexan/nix-gaming;
+    nix-gaming.url = "github:fufexan/nix-gaming";
     # flake-utils.url = github:numtide/flake-utils;
     # # eww = {
     #     url = github:elkowar/eww;
     # };
     neovim-nightly = {
       # https://github.com/neovim/neovim/blob/master/BUILD.md
-      url = github:neovim/neovim?dir=contrib;
+      url = "github:neovim/neovim?dir=contrib";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
     #
