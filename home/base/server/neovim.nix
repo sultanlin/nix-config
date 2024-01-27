@@ -134,7 +134,7 @@
         barbecue-nvim
         nvim-navic
         tabby-nvim
-        # barbar-nvim
+        # barbar-nvim     # Adds buffer as tab, don't want that
         neoscroll-nvim
         oil-nvim
         tabout-nvim
