@@ -2,6 +2,7 @@
   pkgs,
   lib,
   dotfilesConfig,
+  config,
   nixosPath,
   ...
 }: {
@@ -67,7 +68,7 @@
 
         # powerlevel10k
         source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
-        test -f ~/.config/zsh/.p10k.zsh && source ~/.config/zsh/.p10k.zsh
+        # test -f ~/.config/zsh/.p10k.zsh && source ~/.config/zsh/.p10k.zsh
         test -f ${dotfilesConfig}/zsh/.p10k.zsh && source ${dotfilesConfig}/zsh/.p10k.zsh
 
         # Up arrow grep searching (for example, type zsh and press up)
@@ -140,4 +141,5 @@
   #   recursive = true;
   #   # target = ".config/nvim";
   # };
+  # home.file.".config/zsh/.p10k.zsh".source = config.lib.file.mkOutOfStoreSymlink "${dotfilesConfig}/zsh/.p10k.zsh";
 }
