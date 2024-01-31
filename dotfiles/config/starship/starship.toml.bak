@@ -1,7 +1,7 @@
 add_newline = false
 # A minimal left prompt
-format = """$os$directory$git_branch$git_status$character"""
-# format = """$os $directory$character"""
+# format = """$os$directory{$git_branch}$character"""
+format = """$os $directory$character"""
 palette = "catppuccin_mocha"
 # move the rest of the prompt to the right
 right_format = """$all"""
@@ -43,8 +43,8 @@ detect_folders = []
 disabled = true
 
 [git_branch]
-format = "on [$symbol$branch]($style)"
-# symbol = "🍣 "
+format = "[$symbol$branch]($style)"
+symbol = "🍣 "
 style = "bold flamingo"
 
 [git_commit]
@@ -107,14 +107,14 @@ disabled = false
 style_user = 'bold dimmed text'
 style_root = "bold dimmed red"
 format = '[$user]($style)'
-disabled = true
+disabled = false
 
 [hostname]
 ssh_only = false
 format = "@[$hostname]($style)"
 trim_at = "-"
 style = "bold lavender"
-disabled = true
+# disabled = true
 
 [aws]
 format = 'on [$symbol($profile )(\($region\) )]($style)'
