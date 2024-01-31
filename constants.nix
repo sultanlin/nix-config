@@ -4,6 +4,7 @@
   #dotfilesConfig = builtins.getEnv "HOME" + "/ryan-nixos/modified/dotfiles/config";
   nixosPath = "/home/sultan/nix-config";
   dotfilesConfig = "${nixosPath}/dotfiles/config";
+  dotfilesConfigPath = ./dotfiles/config;
   # dotfilesConfig = "${config.home.homeDirectory}/ryan-nixos/modified/dotfiles/config";
 
   username = "sultan";

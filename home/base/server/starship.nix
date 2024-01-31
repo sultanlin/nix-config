@@ -1,6 +1,6 @@
 {
   catppuccin-starship,
-  dotfilesConfig,
+  dotfilesConfigPath,
   ...
 }: {
   programs.starship = {
@@ -34,7 +34,8 @@
         add_newline = false;
         line_break.disabled = true;
       }
-      // builtins.fromTOML (builtins.readFile ./starship.toml)
+      # // builtins.fromTOML (builtins.readFile ./starship.toml)
+      // builtins.fromTOML (builtins.readFile dotfilesConfigPath/starship.toml)
       // builtins.fromTOML (builtins.readFile "${catppuccin-starship}/palettes/mocha.toml");
   };
 }
