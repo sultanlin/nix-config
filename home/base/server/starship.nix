@@ -40,5 +40,5 @@
     #   // builtins.fromTOML (builtins.readFile "${catppuccin-starship}/palettes/mocha.toml");
   };
   # config_sym_dir = config.lib.file.mkOutOfStoreSymlink "${dotfilesConfig}";
-  home.file.".config/starship.toml" = config.lib.file.mkOutOfStoreSymlink "${dotfilesConfig}/starship/starship.toml";
+  home.file.".config/starship.toml".source = config.lib.file.mkOutOfStoreSymlink "${dotfilesConfig}/starship/starship.toml";
 }
