@@ -9,7 +9,7 @@
 
   specialArgsForSystem = system:
     {
-      inherit (constants) username userfullname useremail dotfilesConfig nixosPath;
+      inherit (constants) username userfullname useremail dotfilesConfig dotfilesConfigPath nixosPath;
       inherit mylib;
       # use unstable branch for some packages to get the latest updates
       pkgs-stable = import inputs.nixpkgs-stable {
