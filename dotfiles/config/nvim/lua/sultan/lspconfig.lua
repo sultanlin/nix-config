@@ -10,7 +10,7 @@ local M = {
 
 M.config = function()
     local runtime_path = vim.split(package.path, ";")
-    local omnipath = os.getenv "OMNISHARP_ROSLYN_PATH" .. "/lib/omnisharp-roslyn/OmniSharp.dll"
+    local omnipath = os.getenv("OMNISHARP_ROSLYN_PATH") .. "/lib/omnisharp-roslyn/OmniSharp.dll"
     local servers = {
         -- clangd = {},
         -- gopls = { cmd = { "gopls" }, { "go", "gomod", "gowork", "gotmpl", "tmpl", "templ" } },
@@ -71,7 +71,7 @@ M.config = function()
                 commands = {
                     Format = {
                         function()
-                            vim.lsp.buf.range_formatting({}, { 0, 0 }, { vim.fn.line "$", 0 })
+                            vim.lsp.buf.range_formatting({}, { 0, 0 }, { vim.fn.line("$"), 0 })
                         end,
                     },
                 },
@@ -153,14 +153,14 @@ M.config = function()
         -- })
 
         vim.api.nvim_buf_create_user_command(bufnr, "Format", function(_)
-            vim.lsp.buf.format {
+            vim.lsp.buf.format({
                 bufnr = bufnr,
                 filter = function(client)
                     return client.name == "null-ls"
                 end,
-            }
+            })
         end, { desc = "Format current buffer with LSP" })
-        if client.supports_method "textDocument/inlayHint" then
+        if client.supports_method("textDocument/inlayHint") then
             vim.lsp.inlay_hint.enable(bufnr, true)
         end
     end
@@ -170,7 +170,7 @@ M.config = function()
     capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 
     -- Testing
-    local icons = require "sultan.icons"
+    local icons = require("sultan.icons")
 
     local default_diagnostic_config = {
         signs = {
@@ -216,7 +216,7 @@ M.config = function()
         vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" })
     require("lspconfig.ui.windows").default_options.border = "rounded"
 
-    local lspconfig = require "lspconfig"
+    local lspconfig = require("lspconfig")
     -- Set up each server using the common configuration options
     for server, config in pairs(servers) do
         local server_config = vim.tbl_extend("force", {
@@ -227,7 +227,7 @@ M.config = function()
     end
 
     -- Lua LSP
-    require("neodev").setup { library = { plugins = { "neotest" }, types = true } }
+    require("neodev").setup({ library = { plugins = { "neotest" }, types = true } })
 end
 
 M.toggle_inlay_hints = function()
