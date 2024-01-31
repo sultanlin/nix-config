@@ -29,13 +29,13 @@
           symbol = "🅶 ️";
         };
 
-        # palette = "catppuccin_mocha";
+        palette = "catppuccin_mocha";
 
         add_newline = false;
         line_break.disabled = true;
       }
-      // builtins.fromTOML (builtins.readFile "${dotfilesConfig}/starship.toml");
-    # // builtins.fromTOML (builtins.readFile "${catppuccin-starship}/palettes/mocha.toml");
+      // builtins.fromTOML (builtins.readFile ./starship.toml)
+      // builtins.fromTOML (builtins.readFile "${catppuccin-starship}/palettes/mocha.toml");
   };
 }
 #  # starship - an customizable prompt for any shell
