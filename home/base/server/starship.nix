@@ -1,6 +1,6 @@
 {catppuccin-starship, ...}: {
   programs.starship = {
-    # enable = true;
+    enable = true;
 
     enableBashIntegration = true;
     enableZshIntegration = true;
