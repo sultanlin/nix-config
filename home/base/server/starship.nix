@@ -5,6 +5,9 @@
     enableBashIntegration = true;
     enableZshIntegration = true;
     enableNushellIntegration = true;
+    enableFishIntegration = true;
+
+    enableTransience = true;
 
     settings =
       {
