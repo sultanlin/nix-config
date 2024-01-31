@@ -15,10 +15,10 @@
 
     settings =
       {
-        # character = {
-        #   success_symbol = "[›](bold green)";
-        #   error_symbol = "[›](bold red)";
-        # };
+        character = {
+          success_symbol = "[›](bold green)";
+          error_symbol = "[›](bold red)";
+        };
         aws = {
           symbol = "🅰 ";
         };
@@ -34,18 +34,7 @@
         add_newline = false;
         line_break.disabled = true;
       }
-      # // builtins.fromTOML (builtins.readFile ./starship.toml)
       // builtins.fromTOML (builtins.readFile "${dotfilesConfigPath}/starship.toml")
       // builtins.fromTOML (builtins.readFile "${catppuccin-starship}/palettes/mocha.toml");
   };
 }
-#  # starship - an customizable prompt for any shell
-#  programs.starship = {
-#    enable = true;
-#    # custom settings
-#    settings = {
-#      add_newline = false;
-#      aws.disabled = true;
-#      gcloud.disabled = true;
-#    };
-#  };
