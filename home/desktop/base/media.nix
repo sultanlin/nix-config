@@ -13,7 +13,9 @@
     pulsemixer
     imv # simple image viewer
 
-    nvtop
+    # GPU task monitoring, disable it if you don't need it
+    # Increases nix build time by a lot (installs cuda)
+    # nvtop # htop for GPUs (nvidia/amd/intel), builds cuda, takes too long
 
     # video/audio tools
     cava # for visualizing audio
