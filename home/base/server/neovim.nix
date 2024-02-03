@@ -67,7 +67,7 @@
         oxocarbon-nvim
 
         #-- TREESITTER
-        nvim-treesitter.withAllGrammars # Highlight, edit, and navigate code
+        # nvim-treesitter.withAllGrammars # Highlight, edit, and navigate code
         nvim-treesitter-textobjects
         nvim-ts-context-commentstring
         nvim-ts-autotag
