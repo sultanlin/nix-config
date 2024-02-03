@@ -32,7 +32,7 @@
       # package = neovim-nightly.packages."${pkgs.system}".neovim;
       # package = neovim-nightly.packages."${pkgs.system}".neovim-unwrapped;
       # package = neovim-nightly.packages."${pkgs.system}";
-      package = neovim-nightly.packages."${pkgs.system}".default.override (old: old.pkgs.tree-sitter);
+      package = neovim-nightly.packages."${pkgs.system}".default.override (old: old // pkgs.tree-sitter);
 
       viAlias = true;
       vimAlias = true;
