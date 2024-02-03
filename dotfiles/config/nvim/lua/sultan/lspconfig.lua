@@ -9,13 +9,16 @@ local M = {
 }
 
 M.config = function()
+    vim.filetype.add({ extension = { templ = "templ" } })
+
     local runtime_path = vim.split(package.path, ";")
     local omnipath = os.getenv("OMNISHARP_ROSLYN_PATH") .. "/lib/omnisharp-roslyn/OmniSharp.dll"
     local servers = {
         -- clangd = {},
-        -- gopls = { cmd = { "gopls" }, { "go", "gomod", "gowork", "gotmpl", "tmpl", "templ" } },
-        gopls = { cmd = { "gopls" } },
-        templ = {},
+        gopls = { cmd = { "gopls" }, filetypes = { "go", "gomod", "gowork", "gotmpl", "tmpl", "templ" } },
+        -- gopls = { cmd = { "gopls" } },
+        templ = { filetypes = { "gotmpl", "tmpl", "templ" } },
+        -- templ = {},
         ruff_lsp = {},
         -- -- rust_analyser = {},
         lua_ls = {
