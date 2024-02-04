@@ -22,7 +22,7 @@
       toLua = str: "lua << EOF\n${str}\nEOF\n";
       toLuaFile = file: "lua << EOF\n${builtins.readFile file}\nEOF\n";
     in {
-      # enable = true;
+      enable = true;
       # enable = false;
       defaultEditor = true;
 
@@ -72,11 +72,11 @@
         oxocarbon-nvim
 
         #-- TREESITTER
-        nvim-treesitter.withAllGrammars # Highlight, edit, and navigate code
-        nvim-treesitter-textobjects
-        nvim-ts-context-commentstring
-        nvim-ts-autotag
-        rainbow-delimiters-nvim
+        #nvim-treesitter.withAllGrammars # Highlight, edit, and navigate code
+        #nvim-treesitter-textobjects
+        #nvim-ts-context-commentstring
+        #nvim-ts-autotag
+        #rainbow-delimiters-nvim
 
         #-- TELESCOPE
         telescope-nvim # Fuzzy finder (files, lsp, etc)
