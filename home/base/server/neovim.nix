@@ -34,6 +34,8 @@
       # package = neovim-nightly.packages."${pkgs.system}";
       # package = neovim-nightly.packages."${pkgs.system}".default.override (old: old // pkgs.tree-sitter);
       # package = neovim-nightly.packages."${pkgs.system}".default.override {tree-sitter = pkgs.tree-sitter.override {version = "0.20.8";};};
+      package = neovim-nightly.packages."${pkgs.system}".neovim;
+      # package = neovim-nightly.overlay;
 
       viAlias = true;
       vimAlias = true;
