@@ -2,6 +2,7 @@
   username,
   userfullname,
   # nuenv,
+  lib,
   ...
 } @ args: {
   nixpkgs.overlays = import ../overlays args;
