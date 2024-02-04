@@ -29,13 +29,7 @@
       # Nightly maybe?
       # package = pkgs.neovim-nightly.overrideAttrs (_: { CFLAGS = "-O3"; });
       # package = neovim-nightly.packages."${pkgs.system}".default.override (old: old // {inherit (pkgs) libvterm-neovim;});
-      package = neovim-nightly.packages."${pkgs.system}".neovim;
-      # package = neovim-nightly.packages."${pkgs.system}".neovim-unwrapped;
-      # package = neovim-nightly.packages."${pkgs.system}";
-      # package = neovim-nightly.packages."${pkgs.system}".default.override (old: old // pkgs.tree-sitter);
-      # package = neovim-nightly.packages."${pkgs.system}".default.override {tree-sitter = pkgs.tree-sitter.override {version = "0.20.8";};};
       # package = neovim-nightly.packages."${pkgs.system}".neovim;
-      # package = neovim-nightly.overlay;
 
       viAlias = true;
       vimAlias = true;
@@ -320,7 +314,7 @@
     actionlint # GitHub Actions linter
     buf # protoc plugin for linting and formatting
     proselint # English prose linter
-    # tree-sitter # common language parser/highlighter
+    tree-sitter # common language parser/highlighter
     marksman # language server for markdown
     glow # markdown previewer
     fzf
