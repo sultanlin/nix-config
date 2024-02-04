@@ -10,5 +10,13 @@ builtins.map
       f
       != "default.nix" # ignore default.nix
       && f != "README.md" # ignore README.md
+      && !args.lib.string.hasSuffix ".bak" f
   )
   (builtins.attrNames (builtins.readDir ./.)))
+# path: _type:
+#   (_type == "directory") # include directories
+#   && (!lib.strings.hasSuffix ".bak" path) # exclude .bak files
+#   || (
+#     (path != "default.nix") # ignore default.nix
+#     && (lib.strings.hasSuffix ".nix" path) # include .nix files
+#     && (!lib.strings.hasSuffix ".bak" path) # exclude .bak files
