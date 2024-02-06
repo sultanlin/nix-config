@@ -155,6 +155,7 @@
         trouble-nvim
         auto-session
         neorg
+        vim-tmux-navigator
 
         neotest
         # General tests
