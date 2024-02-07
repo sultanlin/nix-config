@@ -11,7 +11,7 @@
   programs = {
     k9s = {
       enable = true;
-      skin = let
+      skins.skin = let
         skin_file = "${catppuccin-k9s}/dist/catppuccin-mocha.yaml"; # theme - catppuccin mocha
         skin_attr = builtins.fromJSON (
           builtins.readFile
