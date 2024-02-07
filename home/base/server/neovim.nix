@@ -145,9 +145,7 @@
         project-nvim
         nvim-colorizer-lua
         vim-matchup
-        modicator-nvim
-        not
-        working
+        modicator-nvim # not working
         # nvim-navbuddy       BLOAT
         nvim-bqf
         noice-nvim
