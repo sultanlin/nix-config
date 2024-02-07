@@ -2,13 +2,13 @@ local M = {}
 
 M.config = function()
     -- config = function()
-    local lualine = require "lualine"
+    local lualine = require("lualine")
     -- local lazy_status = require("lazy.status") -- to configure lazy pending updates count
 
     -- configure lualine with modified theme
-    lualine.setup {
+    lualine.setup({
         options = {
-            --   theme = "gruvbox",
+            -- theme = "gruvbox",
             icons_enabled = true,
             -- component_separators = "|",
             -- section_separators = "",
@@ -17,6 +17,7 @@ M.config = function()
             ignore_focus = { "NvimTree" },
         },
         sections = {
+            -- lualine_a = { "mode", "branch" },
             lualine_a = { "branch" },
             lualine_b = { "diagnostics" },
             lualine_c = { require("sultan.lualine").clients_lsp },
@@ -42,7 +43,7 @@ M.config = function()
         --     { "filetype" },
         --   },
         -- },
-    }
+    })
     -- end
 end
 

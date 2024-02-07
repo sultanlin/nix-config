@@ -81,6 +81,9 @@ local defaults = {
         ["+"] = "<C-a>",
         ["-"] = "<C-x>",
 
+        -- Save file
+        ["<C-s>"] = ":w<CR>",
+
         ["<leader>ee"] = "oif err != nil {<CR>}<Esc>Oreturn err<Esc>",
     },
 

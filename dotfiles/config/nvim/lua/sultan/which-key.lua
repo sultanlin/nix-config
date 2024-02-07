@@ -13,26 +13,36 @@ function M.config()
         h = { "<cmd>nohlsearch<CR>", "NOHL" },
         [";"] = { "<cmd>tabnew | terminal<CR>", "[T]erminal" },
         v = { "<cmd>vsplit<CR>", "Split" },
-        b = { name = "Buffers" },
-        d = { name = "Debug" },
-        f = { name = "Find" },
-        g = { name = "Git" },
-        l = { name = "LSP" },
-        p = { name = "Plugins" },
-        t = { name = "Test" },
+        ["-"] = { "<cmd>split<CR>", "Horizontal Split" },
+        b = { "Buffers" },
+        d = { "Debug" },
+        f = { "Find" },
+        g = { "Git" },
+        l = { "LSP" },
+        -- p = { "Plugins" },
+        t = { "Test" },
+        w = { "Workspace" },
+        -- b = { name = "Buffers" },
+        -- d = { name = "Debug" },
+        -- f = { name = "Find" },
+        -- g = { name = "Git" },
+        -- l = { name = "LSP" },
+        -- p = { desc = "Plugins" },
+        -- t = { name = "Test" },
         a = {
             name = "Tab",
-            n = { "<cmd>$tabnew<cr>", "New Empty Tab" },
-            N = { "<cmd>tabnew %<cr>", "New Tab" },
+            N = { "<cmd>$tabnew<cr>", "New Empty Tab" },
+            n = { "<cmd>tabnew %<cr>", "New Tab" },
             o = { "<cmd>tabonly<cr>", "Only" },
             h = { "<cmd>-tabmove<cr>", "Move Left" },
             l = { "<cmd>+tabmove<cr>", "Move Right" },
+            a = { "<cmd>tabnext<cr>", "Goto next tab" },
         },
         T = { name = "Treesitter" },
     }
 
-    local which_key = require "which-key"
-    which_key.setup {
+    local which_key = require("which-key")
+    which_key.setup({
         plugins = {
             marks = true,
             registers = true,
@@ -62,7 +72,7 @@ function M.config()
             buftypes = {},
             filetypes = { "TelescopePrompt" },
         },
-    }
+    })
 
     local opts = {
         mode = "n", -- NORMAL mode

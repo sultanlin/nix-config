@@ -4,6 +4,68 @@ local M = {
 }
 
 M.config = function()
+    -- set keymaps
+    local keymap = function(keys, func, descr)
+        vim.keymap.set("n", keys, func, { desc = descr, noremap = true, silent = true })
+    end
+    keymap("<leader>bb", "<cmd>Telescope buffers previewer=false<cr>", "Find [b]uffer")
+    keymap("<leader>fb", "<cmd>Telescope git_branches<cr>", "Checkout branch")
+    keymap("<leader>fs", "<cmd>Telescope grep_string<cr>", "Find String under cursor in cwd")
+    keymap("<leader>fc", "<cmd>Telescope colorscheme<cr>", "Colorscheme")
+    keymap("<leader>ff", "<cmd>Telescope find_files<cr>", "Find files")
+    keymap("<leader>fp", "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects")
+    keymap("<leader>fg", "<cmd>Telescope live_grep<cr>", "Find Text (Grep)")
+    keymap("<leader>fh", "<cmd>Telescope help_tags<cr>", "Help")
+    -- keymap("<leader>fl", "<cmd>Telescope resume<cr>","Last Search"  )
+    keymap("<leader>fr", "<cmd>Telescope oldfiles<cr>", "Recent File")
+
+    local wk = require("which-key")
+    wk.register({
+        ["<leader>fH"] = { "<cmd>Telescope highlights<cr>", "Highlights" },
+        -- ["<leader>fi"] = { "<cmd>lua require('telescope').extensions.media_files.media_files()<cr>", "Media" },
+        ["<leader>fl"] = { "<cmd>Telescope resume<cr>", "Last Search" },
+        ["<leader>fM"] = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
+        ["<leader>fR"] = { "<cmd>Telescope registers<cr>", "Registers" },
+        ["<leader>fk"] = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
+        ["<leader>fC"] = { "<cmd>Telescope commands<cr>", "Commands" },
+
+        ["<leader>go"] = { "<cmd>Telescope git_status<cr>", "Open changed file" },
+        ["<leader>gb"] = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
+        ["<leader>gc"] = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
+        ["<leader>gC"] = {
+            "<cmd>Telescope git_bcommits<cr>",
+            "Checkout commit(for current file)",
+        },
+
+        -- 	["<leader>bb"] = { "<cmd>Telescope buffers previewer=false<cr>", "Find" },
+        -- 	["<leader>fb"] = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
+        -- 	["<leader>fc"] = { "<cmd>Telescope grep_string<cr>", "Find string under cursor in cwd" },
+        -- 	["<leader>ft"] = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
+        -- 	["<leader>ff"] = { "<cmd>Telescope find_files<cr>", "Find files" },
+        -- 	-- ["<leader>fp"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
+        -- 	["<leader>fg"] = { "<cmd>Telescope live_grep<cr>", "Find Text" },
+        -- 	-- ["<leader>fh"] = { "<cmd>Telescope help_tags<cr>", "Help" },
+        -- 	-- ["<leader>fl"] = { "<cmd>Telescope resume<cr>", "Last Search" },
+        -- 	["<leader>fr"] = { "<cmd>Telescope oldfiles<cr>", "Recent File" },
+    })
+    --
+    -- keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files in cwd" })
+    -- keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "Fuzzy find recent files" })
+    -- keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd" })
+    -- keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" })
+    -- keymap.set("n", "<leader>fg", require("telescope.builtin").live_grep, { desc = "[S]earch by [G]rep" })
+    -- keymap.set("n", "<leader>fb", "<cmd>Telescope buffers previewer=false<cr>", { desc = "Find Buffer" })
+
+    vim.api.nvim_create_autocmd("FileType", {
+        pattern = "TelescopeResults",
+        callback = function(ctx)
+            vim.api.nvim_buf_call(ctx.buf, function()
+                vim.fn.matchadd("TelescopeParent", "\t\t.*$")
+                vim.api.nvim_set_hl(0, "TelescopeParent", { link = "Comment" })
+            end)
+        end,
+    })
+
     local telescope = require("telescope")
     local actions = require("telescope.actions")
     local icons = require("sultan.icons")
@@ -114,40 +176,7 @@ M.config = function()
 
     telescope.load_extension("fzf")
 
-    -- set keymaps
-    local keymap = function(keys, func, descr)
-        vim.keymap.set("n", keys, func, { desc = descr, noremap = true, silent = true })
-    end
-    keymap("<leader>bb", "<cmd>Telescope buffers previewer=false<cr>", "Find [b]uffer")
-    keymap("<leader>fb", "<cmd>Telescope git_branches<cr>", "Checkout branch")
-    keymap("<leader>fc", "<cmd>Telescope grep_string<cr>", "Find string under cursor in cwd")
-    keymap("<leader>ft", "<cmd>Telescope colorscheme<cr>", "Colorscheme")
-    keymap("<leader>ff", "<cmd>Telescope find_files<cr>", "Find files")
-    -- keymap("<leader>fp", "<cmd>lua require('telescope').extensions.projects.projects()<cr>","Projects"  )
-    keymap("<leader>fg", "<cmd>Telescope live_grep<cr>", "Find Text")
-    keymap("<leader>fh", "<cmd>Telescope help_tags<cr>", "Help")
-    -- keymap("<leader>fl", "<cmd>Telescope resume<cr>","Last Search"  )
-    keymap("<leader>fr", "<cmd>Telescope oldfiles<cr>", "Recent File")
-    -- local wk = require("which-key")
-    -- wk.register({
-    -- 	["<leader>bb"] = { "<cmd>Telescope buffers previewer=false<cr>", "Find" },
-    -- 	["<leader>fb"] = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
-    -- 	["<leader>fc"] = { "<cmd>Telescope grep_string<cr>", "Find string under cursor in cwd" },
-    -- 	["<leader>ft"] = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
-    -- 	["<leader>ff"] = { "<cmd>Telescope find_files<cr>", "Find files" },
-    -- 	-- ["<leader>fp"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
-    -- 	["<leader>fg"] = { "<cmd>Telescope live_grep<cr>", "Find Text" },
-    -- 	-- ["<leader>fh"] = { "<cmd>Telescope help_tags<cr>", "Help" },
-    -- 	-- ["<leader>fl"] = { "<cmd>Telescope resume<cr>", "Last Search" },
-    -- 	["<leader>fr"] = { "<cmd>Telescope oldfiles<cr>", "Recent File" },
-    -- })
-    --
-    -- keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files in cwd" })
-    -- keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "Fuzzy find recent files" })
-    -- keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd" })
-    -- keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" })
-    -- keymap.set("n", "<leader>fg", require("telescope.builtin").live_grep, { desc = "[S]earch by [G]rep" })
-    -- keymap.set("n", "<leader>fb", "<cmd>Telescope buffers previewer=false<cr>", { desc = "Find Buffer" })
+    telescope.load_extension("noice")
 end
 
 return M

@@ -11,87 +11,31 @@ local M = {
 M.config = function()
     vim.filetype.add({ extension = { templ = "templ" } })
 
-    local runtime_path = vim.split(package.path, ";")
-    local omnipath = os.getenv("OMNISHARP_ROSLYN_PATH") .. "/lib/omnisharp-roslyn/OmniSharp.dll"
     local servers = {
-        -- clangd = {},
-        gopls = { cmd = { "gopls" }, filetypes = { "go", "gomod", "gowork", "gotmpl", "tmpl", "templ" } },
-        -- gopls = { cmd = { "gopls" } },
-        templ = { filetypes = { "gotmpl", "tmpl", "templ" } },
-        -- templ = {},
-        ruff_lsp = {},
-        -- -- rust_analyser = {},
-        lua_ls = {
-            settings = {
-                Lua = {
-                    format = { enable = false },
-                    runtime = {
-                        -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
-                        version = "LuaJIT",
-                        special = {
-                            spec = "require",
-                        },
-                    },
-                    diagnostics = {
-                        -- Get the language server to recognize the `vim` global
-                        globals = { "vim", "spec" },
-                    },
-                    workspace = {
-                        checkThirdParty = false,
-                        library = { vim.api.nvim_get_runtime_file("", true) },
-                    },
-                    hint = {
-                        enable = false,
-                        arrayIndex = "Disable", -- "Enable" | "Auto" | "Disable"
-                        await = true,
-                        paramName = "Disable", -- "All" | "Literal" | "Disable"
-                        paramType = true,
-                        semicolon = "All", -- "All" | "SameLine" | "Disable"
-                        setType = false,
-                    },
-                    telemetry = { enable = false },
-                },
-            },
-        },
-        omnisharp = {
-            cmd = { "dotnet", omnipath },
-            enable_roslyn_analyzers = true,
-            -- enable_import_completion = true,   -- Can have negative impact on completion responsiveness
-            organize_imports_on_format = false,
-        },
-        tsserver = {},
-        html = {
-            filetypes = { "html", "twig", "hbs" },
-        },
-        cssls = {},
-        jsonls = {
-            settings = {
-                json = {
-                    schemas = require("schemastore").json.schemas(),
-                },
-            },
-            setup = {
-                commands = {
-                    Format = {
-                        function()
-                            vim.lsp.buf.range_formatting({}, { 0, 0 }, { vim.fn.line("$"), 0 })
-                        end,
-                    },
-                },
-            },
-        },
-        tailwindcss = {},
-        eslint = {},
-        -- svelte = {},
-        -- graphql = {},
-        -- prismals = {},
-        emmet_ls = {},
-        nil_ls = {},
-        clangd = {},
-        bashls = {},
-        dockerls = {},
-        -- nixd = {},
+        "tailwindcss",
+        "eslint",
+        -- "svelte" ,
+        -- "graphql" ,
+        -- "prismals" ,
+        "emmet",
+        "nil",
+        "clangd",
+        "bashls",
+        "dockerls",
+        -- "nixd",
         -- htmx = { "html", "templ", "tmpl" },
+        "gopls",
+        "templ",
+        "ruff_lsp",
+        "tsserver",
+        "html",
+        "rust_analyzer",
+        "lua_ls",
+        "omnisharp",
+        "cssls",
+        "jsonls",
+        "yamlls",
+        "marksman",
     }
 
     local on_attach = function(client, bufnr)
@@ -113,8 +57,9 @@ M.config = function()
         bufmap("gl", vim.diagnostic.open_float, "Open floating diagnostic message")
 
         -- bufmap('<leader>D', vim.lsp.buf.type_definition)
-        bufmap("<leader>ds", require("telescope.builtin").lsp_document_symbols, "[D]ocument [S]ymbols")
-        bufmap("<leader>ws", require("telescope.builtin").lsp_dynamic_workspace_symbols, "[W]orkspace [S]ymbols")
+        bufmap("<leader>ls", require("telescope.builtin").lsp_document_symbols, "Document [s]ymbols")
+        bufmap("<leader>lS", require("telescope.builtin").lsp_dynamic_workspace_symbols, "Workspace [S]ymbols")
+        bufmap("<leader>le", "<cmd>Telescope quickfix<cr>", "Telescope Quickfix")
 
         bufmap("K", vim.lsp.buf.hover, "Hover Documentation")
         bufmap("<C-k>", vim.lsp.buf.signature_help, "Signature Documentation")
@@ -219,14 +164,22 @@ M.config = function()
         vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" })
     require("lspconfig.ui.windows").default_options.border = "rounded"
 
-    local lspconfig = require("lspconfig")
     -- Set up each server using the common configuration options
-    for server, config in pairs(servers) do
-        local server_config = vim.tbl_extend("force", {
+    local lspconfig = require("lspconfig")
+    for _, server in pairs(servers) do
+        local opts = {
             on_attach = on_attach,
             capabilities = capabilities,
-        }, config)
-        lspconfig[server].setup(server_config)
+        }
+
+        local require_ok, settings = pcall(require, "sultan.lspsettings." .. server)
+        if require_ok then
+            print(require_ok)
+            print(settings)
+            opts = vim.tbl_deep_extend("force", settings, opts)
+        end
+
+        lspconfig[server].setup(opts)
     end
 
     -- Lua LSP
