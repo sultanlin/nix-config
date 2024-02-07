@@ -1,7 +1,6 @@
-{
-  pkgs,
-  neovim-nightly,
-  ...
+{ pkgs
+, neovim-nightly
+, ...
 }: {
   nixpkgs.config = {
     programs.npm = {
@@ -18,198 +17,201 @@
   #};
 
   programs = {
-    neovim = let
-      toLua = str: "lua << EOF\n${str}\nEOF\n";
-      toLuaFile = file: "lua << EOF\n${builtins.readFile file}\nEOF\n";
-    in {
-      enable = true;
-      # enable = false;
-      defaultEditor = true;
+    neovim =
+      let
+        toLua = str: "lua << EOF\n${str}\nEOF\n";
+        toLuaFile = file: "lua << EOF\n${builtins.readFile file}\nEOF\n";
+      in
+      {
+        enable = true;
+        # enable = false;
+        defaultEditor = true;
 
-      # Nightly maybe?
-      # package = pkgs.neovim-nightly.overrideAttrs (_: { CFLAGS = "-O3"; });
-      # package = neovim-nightly.packages."${pkgs.system}".default.override (old: old // {inherit (pkgs) libvterm-neovim;});
-      # package = neovim-nightly.packages."${pkgs.system}".neovim;
+        # Nightly maybe?
+        # package = pkgs.neovim-nightly.overrideAttrs (_: { CFLAGS = "-O3"; });
+        # package = neovim-nightly.packages."${pkgs.system}".default.override (old: old // {inherit (pkgs) libvterm-neovim;});
+        # package = neovim-nightly.packages."${pkgs.system}".neovim;
 
-      viAlias = true;
-      vimAlias = true;
+        viAlias = true;
+        vimAlias = true;
 
-      withPython3 = true;
-      withNodeJs = true;
-      extraPackages = with pkgs; [];
+        withPython3 = true;
+        withNodeJs = true;
+        extraPackages = with pkgs; [ ];
 
-      plugins = with pkgs.vimPlugins; [
-        # Non-neovim plugins (aka vim plugins) don't need a .setup() in config
+        plugins = with pkgs.vimPlugins; [
+          # Non-neovim plugins (aka vim plugins) don't need a .setup() in config
 
-        #-- COLORSCHEMES
-        gruvbox-nvim
-        gruvbox-material
-        tokyonight-nvim
-        oceanic-next
-        catppuccin-nvim
-        nightfox-nvim
-        onehalf
-        kanagawa-nvim
-        onedark-nvim
-        #onedarkpro-nvim
-        nord-nvim
-        onenord-nvim
-        neovim-ayu
-        papercolor-theme
-        iceberg-vim
-        nightfly
-        sonokai
-        everforest
-        monokai-pro-nvim
-        # bamboo-nvim not yet available
-        papercolor-theme
-        oxocarbon-nvim
+          #-- COLORSCHEMES
+          gruvbox-nvim
+          gruvbox-material
+          tokyonight-nvim
+          oceanic-next
+          catppuccin-nvim
+          nightfox-nvim
+          onehalf
+          kanagawa-nvim
+          onedark-nvim
+          #onedarkpro-nvim
+          nord-nvim
+          onenord-nvim
+          neovim-ayu
+          papercolor-theme
+          iceberg-vim
+          nightfly
+          sonokai
+          everforest
+          monokai-pro-nvim
+          # bamboo-nvim not yet available
+          papercolor-theme
+          oxocarbon-nvim
 
-        #-- TREESITTER
-        nvim-treesitter.withAllGrammars # Highlight, edit, and navigate code
-        nvim-treesitter-textobjects
-        nvim-ts-context-commentstring
-        nvim-ts-autotag
-        rainbow-delimiters-nvim
+          #-- TREESITTER
+          nvim-treesitter.withAllGrammars # Highlight, edit, and navigate code
+          nvim-treesitter-textobjects
+          nvim-ts-context-commentstring
+          nvim-ts-autotag
+          rainbow-delimiters-nvim
 
-        #-- TELESCOPE
-        telescope-nvim # Fuzzy finder (files, lsp, etc)
-        telescope-fzf-native-nvim
+          #-- TELESCOPE
+          telescope-nvim # Fuzzy finder (files, lsp, etc)
+          telescope-fzf-native-nvim
 
-        #-- COMPLETION
-        nvim-cmp
-        luasnip
-        cmp-path
-        cmp-buffer
-        cmp-nvim-lsp
-        cmp_luasnip
-        cmp-cmdline
-        friendly-snippets
-        lspkind-nvim
-        cmp-nvim-lua
-        cmp-emoji
-        cmp-tabnine
+          #-- COMPLETION
+          nvim-cmp
+          luasnip
+          cmp-path
+          cmp-buffer
+          cmp-nvim-lsp
+          cmp_luasnip
+          cmp-cmdline
+          friendly-snippets
+          lspkind-nvim
+          cmp-nvim-lua
+          cmp-emoji
+          cmp-tabnine
 
-        #-- LSP - Formatting - Linting
-        nvim-lspconfig # LSP configuration
-        # mason-nvim
-        # mason-lspconfig-nvim
-        # mason-tool-installer-nvim
-        # null-ls-nvim
-        neodev-nvim # Additional lua config
-        conform-nvim # Formatter
-        nvim-lint
-        none-ls-nvim # Lint and format and code actions
-        # lsp_signature-nvim  # Check out later
+          #-- LSP - Formatting - Linting
+          nvim-lspconfig # LSP configuration
+          # mason-nvim
+          # mason-lspconfig-nvim
+          # mason-tool-installer-nvim
+          # null-ls-nvim
+          neodev-nvim # Additional lua config
+          conform-nvim # Formatter
+          nvim-lint
+          none-ls-nvim # Lint and format and code actions
+          # lsp_signature-nvim  # Check out later
 
-        nvim-autopairs
-        comment-nvim
-        gitsigns-nvim
-        # Github plugins
-        vim-fugitive
-        neogit
-        gitlinker-nvim
-        vim-rhubarb
-        fidget-nvim # Useful status updates for LSP
-        harpoon
-        SchemaStore-nvim
-        eyeliner-nvim
-        own-sentiment-nvim
+          nvim-autopairs
+          comment-nvim
+          gitsigns-nvim
+          # Github plugins
+          vim-fugitive
+          neogit
+          gitlinker-nvim
+          vim-rhubarb
+          fidget-nvim # Useful status updates for LSP
+          harpoon
+          SchemaStore-nvim
+          eyeliner-nvim
+          own-sentiment-nvim
 
-        which-key-nvim
-        legendary-nvim
-        #  {
-        # error: Failed assertions:
-        # - sultan profile: `nixpkgs` options are disabled when `home-manager.useGlobalPkgs` is enabled.
-        #    plugin = vimPlugins.sentiment-nvim;
-        #  }
+          which-key-nvim
+          legendary-nvim
+          #  {
+          # error: Failed assertions:
+          # - sultan profile: `nixpkgs` options are disabled when `home-manager.useGlobalPkgs` is enabled.
+          #    plugin = vimPlugins.sentiment-nvim;
+          #  }
 
-        nvim-surround
-        indent-blankline-nvim # DONE
-        lualine-nvim # DONE
-        refactoring-nvim
-        nvim-autopairs
-        # guess-indent-nvim
-        vim-sleuth
-        nvim-tree-lua
-        barbecue-nvim
-        nvim-navic
-        tabby-nvim
-        # barbar-nvim     # Adds buffer as tab, don't want that
-        neoscroll-nvim
-        oil-nvim
-        tabout-nvim
-        vim-jsx-pretty
-        toggleterm-nvim
-        alpha-nvim
-        project-nvim
-        nvim-colorizer-lua
-        vim-matchup
-        modicator-nvim
-        nvim-navbuddy
-        nvim-bqf
-        noice-nvim
-        numb-nvim
-        nvim-spider
-        todo-comments-nvim
-        trouble-nvim
-        auto-session
-        neorg
-        vim-tmux-navigator
+          nvim-surround
+          indent-blankline-nvim # DONE
+          lualine-nvim # DONE
+          refactoring-nvim
+          nvim-autopairs
+          # guess-indent-nvim
+          vim-sleuth
+          nvim-tree-lua
+          barbecue-nvim
+          nvim-navic
+          tabby-nvim
+          # barbar-nvim     # Adds buffer as tab, don't want that
+          # neoscroll-nvim    # BLOAT
+          oil-nvim
+          tabout-nvim
+          vim-jsx-pretty
+          toggleterm-nvim
+          alpha-nvim
+          project-nvim
+          nvim-colorizer-lua
+          vim-matchup
+          # modicator-nvim      not working
+          # nvim-navbuddy       BLOAT
+          nvim-bqf
+          noice-nvim
+          numb-nvim
+          nvim-spider
+          todo-comments-nvim
+          trouble-nvim
+          auto-session
+          neorg
+          vim-tmux-navigator
+          vim-illuminate
 
-        neotest
-        # General tests
-        vim-test
-        # neotest-vim-test    # Not in nixpkgs
-        # Language specific tests
-        neotest-vitest # JS? TS?
-        neotest-python
-        neotest-plenary
-        neotest-rust
-        # neotest-bash
-        neotest-deno
-        neotest-dotnet # C#
-        neotest-go
-        # neotest-jest    # Javacript
-        # neotest-zig
-        # neotest-dart
-        # neotest-elixir
-        # neotest-haskell
-        # neotest-pest    # PhP
-        # neotest-phpunit
-        # neotest-scala
-        # neotest-rspec   # ruby
-        # neotest-testthat    # R
+          neotest
+          # General tests
+          vim-test
+          # neotest-vim-test    # Not in nixpkgs
+          # Language specific tests
+          neotest-vitest # JS? TS?
+          neotest-python
+          neotest-plenary
+          neotest-rust
+          # neotest-bash
+          neotest-deno
+          neotest-dotnet # C#
+          neotest-go
+          # neotest-jest    # Javacript
+          # neotest-zig
+          # neotest-dart
+          # neotest-elixir
+          # neotest-haskell
+          # neotest-pest    # PhP
+          # neotest-phpunit
+          # neotest-scala
+          # neotest-rspec   # ruby
+          # neotest-testthat    # R
 
-        nvim-ufo
-        promise-async
-        statuscol-nvim
+          nvim-ufo
+          promise-async
+          statuscol-nvim
 
-        hardtime-nvim
-        nui-nvim
+          hardtime-nvim
+          nui-nvim
 
-        #-- Future plugins
-        # flash-nvim
-        # fzf-lua
+          #-- Future plugins
+          # flash-nvim
+          # fzf-lua
 
-        #-- CORE
-        plenary-nvim
-        nvim-web-devicons
-        dressing-nvim
+          #-- CORE
+          plenary-nvim
+          nvim-web-devicons
+          dressing-nvim
 
-        # This does not work, unsure why
-        # Maybe because I'm using outofstoresymlink.
-        # TLDR the config is supposed to be added to init.lua
-        # Maybe I'm doing something that conflicts with that
-        #{
-        #  plugin = gitsigns-nvim;
-        #  type = "lua";
-        #  config = ''
-        #    require("gitsigns").setup()
-        #  '';
-        #}
-      ];
-    };
+          # This does not work, unsure why
+          # Maybe because I'm using outofstoresymlink.
+          # TLDR the config is supposed to be added to init.lua
+          # Maybe I'm doing something that conflicts with that
+          #{
+          #  plugin = gitsigns-nvim;
+          #  type = "lua";
+          #  config = ''
+          #    require("gitsigns").setup()
+          #  '';
+          #}
+        ];
+      };
   };
   home.packages = with pkgs; [
     #-- c/c++
@@ -278,6 +280,12 @@
     nodePackages."@tailwindcss/language-server"
     emmet-ls
     prettierd
+    # SVELTE LSP
+    nodePackages.svelte-language-server
+    # Graphql LSP
+    nodePackages.graphql-language-service-cli
+    # Prisma LSP
+    nodePackages.prisma
 
     #-- Go
     go
