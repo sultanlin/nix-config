@@ -64,6 +64,7 @@
         # bamboo-nvim not yet available
         papercolor-theme
         oxocarbon-nvim
+        rose-pine
 
         #-- TREESITTER
         nvim-treesitter.withAllGrammars # Highlight, edit, and navigate code
@@ -92,72 +93,13 @@
 
         #-- LSP - Formatting - Linting
         nvim-lspconfig # LSP configuration
-        # mason-nvim
-        # mason-lspconfig-nvim
-        # mason-tool-installer-nvim
-        # null-ls-nvim
         neodev-nvim # Additional lua config
         conform-nvim # Formatter
         nvim-lint
         none-ls-nvim # Lint and format and code actions
         # lsp_signature-nvim  # Check out later
 
-        nvim-autopairs
-        comment-nvim
-        gitsigns-nvim
-        # Github plugins
-        vim-fugitive
-        neogit
-        gitlinker-nvim
-        vim-rhubarb
-        fidget-nvim # Useful status updates for LSP
-        harpoon
-        SchemaStore-nvim
-        eyeliner-nvim
-        own-sentiment-nvim
-
-        which-key-nvim
-        legendary-nvim
-        #  {
-        # error: Failed assertions:
-        # - sultan profile: `nixpkgs` options are disabled when `home-manager.useGlobalPkgs` is enabled.
-        #    plugin = vimPlugins.sentiment-nvim;
-        #  }
-
-        nvim-surround
-        indent-blankline-nvim # DONE
-        lualine-nvim # DONE
-        refactoring-nvim
-        nvim-autopairs
-        # guess-indent-nvim
-        vim-sleuth
-        nvim-tree-lua
-        barbecue-nvim
-        nvim-navic
-        tabby-nvim
-        # barbar-nvim     # Adds buffer as tab, don't want that
-        # neoscroll-nvim    # BLOAT
-        oil-nvim
-        tabout-nvim
-        vim-jsx-pretty
-        toggleterm-nvim
-        alpha-nvim
-        project-nvim
-        nvim-colorizer-lua
-        vim-matchup
-        modicator-nvim # not working
-        # nvim-navbuddy       BLOAT
-        nvim-bqf
-        noice-nvim
-        numb-nvim
-        nvim-spider
-        todo-comments-nvim
-        trouble-nvim
-        auto-session
-        neorg
-        vim-tmux-navigator
-        vim-illuminate
-
+        #-- Code testing
         neotest
         # General tests
         vim-test
@@ -182,21 +124,80 @@
         # neotest-rspec   # ruby
         # neotest-testthat    # R
 
+        #-- Github plugins
+        vim-fugitive # Let's you do git commands using :G instead of :!g in vim cmd
+        gitsigns-nvim # Shows changes to git in the left margin
+        neogit # Emacs' magit in neovim
+        gitlinker-nvim # Link to github and blame and ??????
+        vim-rhubarb # "If fugitive is the git, rhubarb is the hub"
+
+        #-- Mandatory
+        nvim-autopairs
+        comment-nvim
+        harpoon
+        SchemaStore-nvim
+        eyeliner-nvim
+        own-sentiment-nvim
+
+        #-- Extras
+        fidget-nvim # Useful notifications and status updates for LSP
+
+        which-key-nvim
+        legendary-nvim
+
+        nvim-surround
+        indent-blankline-nvim # DONE
+        lualine-nvim # DONE
+        nvim-autopairs
+        vim-sleuth
+        nvim-tree-lua
+        barbecue-nvim
+        nvim-navic
+        tabby-nvim
+        oil-nvim
+        tabout-nvim
+        vim-jsx-pretty
+        toggleterm-nvim
+        alpha-nvim
+        project-nvim
+        nvim-colorizer-lua
+        vim-matchup
+        modicator-nvim
+        nvim-bqf
+        noice-nvim
+        numb-nvim
+        nvim-spider
+        todo-comments-nvim
+        trouble-nvim
+        neorg
+        undotree
+
         nvim-ufo
         promise-async
         statuscol-nvim
 
-        hardtime-nvim
         nui-nvim
 
         #-- Future plugins
         # flash-nvim
         # fzf-lua
 
+        #-- Vim Plugins
+        vim-tmux-navigator
+        vim-illuminate
+
         #-- CORE
         plenary-nvim
         nvim-web-devicons
         dressing-nvim
+
+        #-- Unwanted plugins
+        # hardtime-nvim # No longer need it (helps learn nvim by blocking bad practice)
+        # barbar-nvim     # Adds buffer as tab, don't want that
+        # neoscroll-nvim    # BLOAT
+        # nvim-navbuddy       # BLOAT
+        # auto-session      # Not needed
+        # refactoring-nvim    # Too difficult, code actions like move code to separate function etc
 
         # This does not work, unsure why
         # Maybe because I'm using outofstoresymlink.
