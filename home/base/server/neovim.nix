@@ -33,7 +33,8 @@
       # package = neovim-nightly.packages."${pkgs.system}".neovim;
       # package = pkgs.neovim-nightly.overrideAttrs (_: {CFLAGS = "-O3";});
       # package = pkgs.neovim-nightly;
-      package = neovim-nightly.overlay.neovim;
+      package = pkgs.neovim;
+      # package = neovim-nightly.overlay.neovim;
 
       viAlias = true;
       vimAlias = true;

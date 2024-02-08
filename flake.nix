@@ -144,10 +144,10 @@
     # };
     neovim-nightly = {
       # https://github.com/neovim/neovim/blob/master/BUILD.md
-      url = "github:nix-community/neovim-nightly-overlay";
+      # url = "github:nix-community/neovim-nightly-overlay";
+      # inputs.nixpkgs.follows = "nixpkgs-unstable";
+      url = "github:neovim/neovim?dir=contrib";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
-      # url = "github:neovim/neovim?dir=contrib";
-      # # inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
     #
     #
