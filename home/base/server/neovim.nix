@@ -328,7 +328,7 @@
     actionlint # GitHub Actions linter
     buf # protoc plugin for linting and formatting
     proselint # English prose linter
-    tree-sitter # common language parser/highlighter
+    # tree-sitter # common language parser/highlighter
     marksman # language server for markdown
     glow # markdown previewer
     fzf
