@@ -3,9 +3,10 @@
   userfullname,
   # nuenv,
   lib,
+  neovim-nightly,
   ...
 } @ args: {
-  nixpkgs.overlays = import ../overlays args;
+  nixpkgs.overlays = import ../overlays args ++ neovim-nightly.overlays;
   # [
   #   nuenv.overlays.default
   # ]
