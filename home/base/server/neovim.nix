@@ -22,8 +22,7 @@
       toLua = str: "lua << EOF\n${str}\nEOF\n";
       toLuaFile = file: "lua << EOF\n${builtins.readFile file}\nEOF\n";
 
-      neovimNightly = neovim-nightly-overlay.overlay;
-      neovimPlugins = neovim-plugins.overlays.default;
+      neovimNightly = neovim-nightly.overlay;
     in {
       enable = true;
       # enable = false;
