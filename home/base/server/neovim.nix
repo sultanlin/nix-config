@@ -21,8 +21,7 @@
     neovim = let
       toLua = str: "lua << EOF\n${str}\nEOF\n";
       toLuaFile = file: "lua << EOF\n${builtins.readFile file}\nEOF\n";
-
-      neovimNightly = neovim-nightly.overlay;
+      # neovimNightly = neovim-nightly.overlay;
     in {
       enable = true;
       # enable = false;
@@ -32,7 +31,8 @@
       # package = pkgs.neovim-nightly.overrideAttrs (_: { CFLAGS = "-O3"; });
       # package = neovim-nightly.packages."${pkgs.system}".default.override (old: old // {inherit (pkgs) libvterm-neovim;});
       # package = neovim-nightly.packages."${pkgs.system}".neovim;
-      package = pkgs.neovim-nightly.overrideAttrs (_: {CFLAGS = "-O3";});
+      # package = pkgs.neovim-nightly.overrideAttrs (_: {CFLAGS = "-O3";});
+      package = pkgs.neovim-nightly;
 
       viAlias = true;
       vimAlias = true;
