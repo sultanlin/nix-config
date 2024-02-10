@@ -89,7 +89,7 @@
         cmp-emoji
         cmp-tabnine
 
-        #-- LSP - Formatting - Linting
+        #-- LSP - Formatting - Linting - Debugging
         nvim-lspconfig # LSP configuration
         neodev-nvim # Additional lua config
         conform-nvim # Formatter
@@ -97,6 +97,12 @@
         none-ls-nvim # Lint and format and code actions
         nvim-bqf
         trouble-nvim
+        nvim-dap
+        nvim-dap-ui
+        nvim-dap-virtual-text
+        telescope-dap-nvim
+        nvim-dap-go
+        nvim-dap-python
 
         #-- Code testing
         neotest
