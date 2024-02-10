@@ -22,6 +22,7 @@ spec("sultan.barbecue")
 spec("sultan.comment")
 spec("sultan.gitsigns")
 spec("sultan.lspconfig")
+spec("sultan.debug")
 spec("sultan.navic")
 spec("sultan.neogit")
 spec("sultan.none-ls")
@@ -64,7 +65,6 @@ spec("sultan.extras.undotree")
 
 -- Inspired by chris@machine video/livestream:
 -- https://www.youtube.com/watch?v=KGJV0n70Mxs
--- https://github.com/LunarVim/Launch.nvim
 -- https://github.com/ChristianChiarulli/nvim
 
 local checkNixos = os.getenv("NEOVIM_NIXOS") or "CHANGE THIS TO FALSE IF YOU ARE NOT USING NIXOS LINUX OS"
