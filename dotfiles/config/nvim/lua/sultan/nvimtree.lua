@@ -9,7 +9,7 @@ function M.config()
         ["<leader>e"] = { "<cmd>NvimTreeToggle<CR>", "File [E]xplorer" },
     })
 
-    local icons = require("sultan.icons")
+    local icons = require("sultan.core.icons")
 
     require("nvim-tree").setup({
         hijack_netrw = false,

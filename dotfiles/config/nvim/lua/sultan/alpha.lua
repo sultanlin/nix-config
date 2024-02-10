@@ -6,7 +6,7 @@ local M = {
 
 M.config = function()
     local alpha = require("alpha")
-    local icons = require("sultan.icons")
+    local icons = require("sultan.core.icons")
     local dashboard = require("alpha.themes.dashboard")
 
     local function button(sc, txt, keybind, keybind_opts)
@@ -53,7 +53,7 @@ M.config = function()
     vim.api.nvim_create_autocmd("User", {
         pattern = "LazyVimStarted",
         callback = function()
-            local stats = require("lazy").stats()
+            local stats = require("sultan.lazy.lazy").stats()
             local ms = (math.floor(stats.startuptime * 100 + 0.5) / 100)
             dashboard.section.footer.val = "Loaded " .. stats.count .. " plugins in " .. ms .. "ms"
             pcall(vim.cmd.AlphaRedraw)
