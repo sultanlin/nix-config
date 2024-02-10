@@ -56,7 +56,8 @@ function M.config()
                         -- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
                         -- on later neovim version, you should use vim.lsp.buf.format({ async = false }) instead
                         -- vim.lsp.buf.format { async = false }
-                        vim.lsp.buf.format({ bufnr = bufnr })
+                        -- vim.lsp.buf.format({ bufnr = bufnr, description = "Format on save" })
+                        vim.lsp.buf.format({ async = false, bufnr = bufnr, description = "Format on save" })
                     end,
                 })
             end
