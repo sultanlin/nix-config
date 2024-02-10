@@ -5,7 +5,7 @@ local M = {
 }
 
 M.config = function()
-    local icons = require "sultan.icons"
+    local icons = require("sultan.core.icons")
     local keymap = function(keys, func, descr)
         vim.keymap.set("n", keys, func, { desc = descr, noremap = true, silent = true })
     end
@@ -19,7 +19,7 @@ M.config = function()
     keymap("<leader>gu", "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>", "[u]ndo Stage Hunk")
     keymap("<leader>gd", "<cmd>Gitsigns diffthis HEAD<cr>", "Git [d]iff")
 
-    require("gitsigns").setup {
+    require("gitsigns").setup({
         signs = {
             add = {
                 hl = "GitSignsAdd",
@@ -96,7 +96,7 @@ M.config = function()
         --         return "<Ignore>"
         --     end, { expr = true, buffer = bufnr, desc = "Jump to previous hunk" })
         -- end,
-    }
+    })
 end
 
 return M

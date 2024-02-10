@@ -60,7 +60,7 @@ M.config = function()
         return col == 0 or vim.fn.getline("."):sub(col, col):match("%s")
     end
 
-    local icons = require("sultan.icons")
+    local icons = require("sultan.core.icons")
     local types = require("cmp.types")
 
     cmp.setup({
@@ -124,12 +124,6 @@ M.config = function()
                 end
             end, { "i", "s" }),
         }),
-        -- window = {
-        -- 	-- TESTING https://github.com/leet0rz/barebone-nvim/blob/main/init.lua
-        -- 	-- Add borders to window
-        -- 	completion = cmp.config.window.bordered(),
-        -- 	documentation = cmp.config.window.bordered(),
-        -- },
         window = {
             completion = {
                 border = "rounded",
@@ -145,7 +139,6 @@ M.config = function()
             },
         },
         -- sources for autocompletion
-        -- sources = cmp.config.sources({
         sources = {
             -- { name = "copilot" },
             -- { name = "nvim_lsp" },
@@ -338,6 +331,17 @@ M.config = function()
                 },
             },
         }),
+    })
+
+    vim.api.nvim_create_autocmd("InsertLeave", {
+        callback = function()
+            if
+                require("luasnip").session.current_nodes[vim.api.nvim_get_current_buf()]
+                and not require("luasnip").session.jump_active
+            then
+                require("luasnip").unlink_current()
+            end
+        end,
     })
 end
 

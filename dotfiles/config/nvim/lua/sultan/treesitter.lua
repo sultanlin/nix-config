@@ -18,7 +18,7 @@ M.config = function()
         -- enable indentation
         indent = { enable = true },
         -- enable autotagging (w/ nvim-ts-autotag plugin)
-        autotag = { enable = true },
+        -- autotag = { enable = true },
         -- -- ensure these language parsers are installed
         -- managed with nixos
         -- ensure_installed = "all",

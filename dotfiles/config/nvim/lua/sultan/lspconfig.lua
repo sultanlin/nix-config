@@ -12,13 +12,13 @@ M.config = function()
     vim.filetype.add({ extension = { templ = "templ" } })
 
     local servers = {
-        "tailwindcss",
+        -- "tailwindcss",
         "eslint",
-        -- "svelte" ,
-        -- "graphql" ,
-        -- "prismals" ,
-        "emmet",
-        "nil",
+        "svelte",
+        "graphql",
+        "prismals",
+        "emmet_ls",
+        "nil_ls",
         "clangd",
         "bashls",
         "dockerls",
@@ -118,7 +118,7 @@ M.config = function()
     capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 
     -- Testing
-    local icons = require("sultan.icons")
+    local icons = require("sultan.core.icons")
 
     local default_diagnostic_config = {
         signs = {

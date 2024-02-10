@@ -5,9 +5,9 @@ local M = {
 }
 
 function M.config()
-    local icons = require "sultan.icons"
+    local icons = require("sultan.core.icons")
 
-    require("ibl").setup {
+    require("ibl").setup({
         indent = { char = icons.ui.LineMiddle },
         whitespace = {
             remove_blankline_trail = true,
@@ -32,6 +32,6 @@ function M.config()
         -- char = icons.ui.LineMiddle,
         -- context_char = icons.ui.LineLeft,
         -- context_char = icons.ui.LineMiddle,
-    }
+    })
 end
 return M

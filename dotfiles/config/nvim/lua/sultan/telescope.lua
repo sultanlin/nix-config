@@ -32,6 +32,7 @@ M.config = function()
         ["<leader>go"] = { "<cmd>Telescope git_status<cr>", "Open changed file" },
         ["<leader>gb"] = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
         ["<leader>gc"] = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
+        ["<leader>gf"] = { "<cmd>Telescope git_files<cr>", "All files in git repo" },
         ["<leader>gC"] = {
             "<cmd>Telescope git_bcommits<cr>",
             "Checkout commit(for current file)",
@@ -68,7 +69,7 @@ M.config = function()
 
     local telescope = require("telescope")
     local actions = require("telescope.actions")
-    local icons = require("sultan.icons")
+    local icons = require("sultan.core.icons")
 
     telescope.setup({
         defaults = {

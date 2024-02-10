@@ -4,7 +4,7 @@ local M = {
 }
 
 function M.config()
-    local icons = require("sultan.icons")
+    local icons = require("sultan.core.icons")
     local wk = require("which-key")
     wk.register({
         ["<leader>gg"] = { "<cmd>Neogit<CR>", "Neogit" },
