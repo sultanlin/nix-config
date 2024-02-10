@@ -27,8 +27,8 @@ local options = {
     relativenumber = true, -- set relative numbered lines
     numberwidth = 2, -- set number column width {default 4}
     termguicolors = true, -- Enables 24-bit RGB color in the TUI
-    -- colorcolumn
-    signcolumn = "yes:2", -- always show the sign column, otherwise it would shift the text each time
+    colorcolumn = "80",
+    signcolumn = "yes", -- always show the sign column, otherwise it would shift the text each time
     cmdheight = 1, -- 0, --- Give more space for displaying messages
     scrolloff = 0, -- minimal number of columns to scroll horizontally.  was 8
     sidescrolloff = 8, -- minimal number of screen columns
@@ -46,9 +46,7 @@ local options = {
     splitbelow = true, -- force all horizontal splits to go below current window
     splitkeep = "screen",
     splitright = true, -- force all vertical splits to go to the right of current window
-    swapfile = false, -- creates a swapfile
     timeoutlen = 1000, -- time to wait for a mapped sequence to complete (in milliseconds)  was 500,
-    undofile = true, -- enable persistent undo
     updatetime = 200, -- faster completion (4000ms default)
     writebackup = false, -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
     cursorline = true, -- highlight the current line
@@ -59,7 +57,6 @@ local options = {
     confirm = true, -- Confirm to save changes before exiting modified buffer
     sessionoptions = { "buffers", "curdir", "tabpages", "winsize", "help", "globals", "skiprtp" }, -- buffers to save
     virtualedit = "block", -- Allow cursor to move where there is no text in visual block mode
-    wildmode = "longest:full,full", -- Command-line completion mode
     winminwidth = 5, -- Minimum window width
     clipboard = "unnamedplus", --- Copy-paste between vim and everything else
     foldcolumn = "0",
@@ -73,7 +70,6 @@ local options = {
     -- Neovim defaults
     autoindent = true, --- Good auto indent
     backspace = "indent,eol,start", --- Making sure backspace works
-    backup = false, --- Recommended by coc
     --- Concealed text is completely hidden unless it has a custom replacement character defined (needed for dynamically showing tailwind classes)
     conceallevel = 0, -- so that `` is visible in markdown files			-- 2,
     concealcursor = "", --- Set to an empty string to expand tailwind class when on cursorline
@@ -81,6 +77,7 @@ local options = {
     errorbells = false, --- Disables sound effect for errors
     fileencoding = "utf-8", --- The encoding written to file
     showmode = false, --- Don't show things like -- INSERT -- anymore
+
     --- unknown options
     formatoptions = "jcroqlnt", --- tcqj  for autoformat
     grepformat = "%f:%l:%c:%m",
@@ -89,10 +86,21 @@ local options = {
     title = true,
     titlelen = 0, -- do not shorten title
     titlestring = "%{expand('%:t')}",
+
+    -- Command-line completion mode
+    -- wildmode = "longest:full,full",
+    wildmode = "list:longest,list:full",
+    wildmenu = true,
+
+    -- Session management
+    undofile = true, -- enable persistent undo
+    undodir = os.getenv("HOME") .. "/.vim/undodir",
+    swapfile = false, -- creates a swapfile
+    backup = false,
 }
-vim.opt.fillchars:append {
+vim.opt.fillchars:append({
     stl = " ",
-}
+})
 
 local global = {
     mkdp_auto_close = false, -- Don't Exit Preview When Switching Buffers
@@ -103,9 +111,9 @@ local global = {
     speeddating_no_mappings = 1, --- Disable default mappings for speeddating
 }
 
-vim.opt.shortmess:append "Ac" -- Disable asking when editing file with swapfile.
-vim.opt.whichwrap:append "<,>,[,],h,l"
-vim.opt.iskeyword:append "-"
+-- vim.opt.shortmess:append("Ac") -- Disable asking when editing file with swapfile.
+vim.opt.whichwrap:append("<,>,[,],h,l")
+vim.opt.iskeyword:append("-")
 
 for name, value in pairs(options) do
     vim.opt[name] = value
