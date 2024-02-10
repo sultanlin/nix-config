@@ -21,7 +21,6 @@
     neovim = let
       toLua = str: "lua << EOF\n${str}\nEOF\n";
       toLuaFile = file: "lua << EOF\n${builtins.readFile file}\nEOF\n";
-      # neovimNightly = neovim-nightly.overlay;
     in {
       enable = true;
       # enable = false;
@@ -70,7 +69,6 @@
         nvim-treesitter.withAllGrammars # Highlight, edit, and navigate code
         nvim-treesitter-textobjects
         nvim-ts-context-commentstring
-        nvim-ts-autotag
         rainbow-delimiters-nvim
 
         #-- TELESCOPE
@@ -97,7 +95,8 @@
         conform-nvim # Formatter
         nvim-lint
         none-ls-nvim # Lint and format and code actions
-        # lsp_signature-nvim  # Check out later
+        nvim-bqf
+        trouble-nvim
 
         #-- Code testing
         neotest
@@ -131,65 +130,58 @@
         gitlinker-nvim # Link to github and blame and ??????
         vim-rhubarb # "If fugitive is the git, rhubarb is the hub"
 
+        # General Project Management
+        alpha-nvim
+        project-nvim
+        nvim-tree-lua # Potentially remove, mainly use oil.nvim
+        oil-nvim
+        toggleterm-nvim
+
+        #-- UI
+        lualine-nvim # DONE
+        barbecue-nvim
+        nvim-navic
+        tabby-nvim
+        dressing-nvim
+        nui-nvim
+        nvim-web-devicons
+        indent-blankline-nvim # DONE
+        modicator-nvim
+        nvim-colorizer-lua
+        todo-comments-nvim
+
         #-- Mandatory
-        nvim-autopairs
         comment-nvim
         harpoon
         SchemaStore-nvim
         eyeliner-nvim
-        own-sentiment-nvim
-
-        #-- Extras
-        fidget-nvim # Useful notifications and status updates for LSP
-
         which-key-nvim
         legendary-nvim
 
-        nvim-surround
-        indent-blankline-nvim # DONE
-        lualine-nvim # DONE
-        nvim-autopairs
-        vim-sleuth
-        nvim-tree-lua
-        barbecue-nvim
-        nvim-navic
-        tabby-nvim
-        oil-nvim
-        tabout-nvim
-        vim-jsx-pretty
-        toggleterm-nvim
-        alpha-nvim
-        project-nvim
-        nvim-colorizer-lua
-        vim-matchup
-        modicator-nvim
-        nvim-bqf
-        noice-nvim
+        #-- Utils
         numb-nvim
         nvim-spider
-        todo-comments-nvim
-        trouble-nvim
+        tabout-nvim # Potentially remove later if you're used to living without autopairs
+        nvim-surround
         neorg
         undotree
-
         nvim-ufo
         promise-async
         statuscol-nvim
 
-        nui-nvim
+        #-- Vim Plugins
+        vim-tmux-navigator
+        vim-illuminate
+        vim-sleuth
+        vim-matchup
+
+        #-- CORE
+        plenary-nvim
 
         #-- Future plugins
         # flash-nvim
         # fzf-lua
-
-        #-- Vim Plugins
-        vim-tmux-navigator
-        vim-illuminate
-
-        #-- CORE
-        plenary-nvim
-        nvim-web-devicons
-        dressing-nvim
+        # lsp_signature-nvim
 
         #-- Unwanted plugins
         # hardtime-nvim # No longer need it (helps learn nvim by blocking bad practice)
@@ -198,6 +190,12 @@
         # nvim-navbuddy       # BLOAT
         # auto-session      # Not needed
         # refactoring-nvim    # Too difficult, code actions like move code to separate function etc
+        # nvim-autopairs # Learn to live without it
+        # nvim-ts-autotag # Learn to live without it
+        # noice-nvim  # BLOAT
+        # vim-jsx-pretty # Don't think I need it
+        # own-sentiment-nvim # Replaced by vim-matchup
+        # fidget-nvim # BUGGY Useful notifications and status updates for LSP
 
         # This does not work, unsure why
         # Maybe because I'm using outofstoresymlink.
