@@ -176,8 +176,6 @@ M.config = function()
     })
 
     telescope.load_extension("fzf")
-
-    telescope.load_extension("noice")
 end
 
 return M
