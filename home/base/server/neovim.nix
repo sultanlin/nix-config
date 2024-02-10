@@ -143,7 +143,6 @@
         nvim-navic
         tabby-nvim
         dressing-nvim
-        nui-nvim
         nvim-web-devicons
         indent-blankline-nvim # DONE
         modicator-nvim
@@ -196,6 +195,7 @@
         # vim-jsx-pretty # Don't think I need it
         # own-sentiment-nvim # Replaced by vim-matchup
         # fidget-nvim # BUGGY Useful notifications and status updates for LSP
+        # nui-nvim
 
         # This does not work, unsure why
         # Maybe because I'm using outofstoresymlink.
