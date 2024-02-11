@@ -19,6 +19,7 @@ local options = {
     -- Search
     ignorecase = true, -- ignore case when searching
     incsearch = true, --- Start searching before pressing enter
+    inccommand = "split",
     smartcase = true, -- smart case idk
     hlsearch = true, -- highlight all matches on previous search pattern
 

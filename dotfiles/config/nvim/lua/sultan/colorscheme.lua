@@ -30,7 +30,7 @@ local M = {
 
 M.config = function()
     -- Pick colorscheme here
-    ColorMyPencils("rose-pine")
+    ColorMyPencils("catppuccin")
 end
 
 function ColorMyPencils(color)

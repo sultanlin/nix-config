@@ -56,7 +56,7 @@ local defaults = {
         ["<C-u>"] = "<C-u>zz",
 
         -- Center after scrolling down or up
-        ["J"] = "mzJ`z",
+        ["J"] = "mzJ`z", -- TODO: Does it even work?
 
         -- Center after searching (next and previous)
         ["n"] = "nzzzv",
@@ -83,8 +83,6 @@ local defaults = {
 
         -- Save file
         ["<C-s>"] = ":w<CR>",
-
-        ["<leader>ee"] = "oif err != nil {<CR>}<Esc>Oreturn err<Esc>",
     },
 
     term_mode = {
