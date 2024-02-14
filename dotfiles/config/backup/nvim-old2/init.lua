@@ -1,5 +1,4 @@
 -- REVIEW LATER: :h [
-print("testing")
 vim.loader.enable()
 require("sultan.core.options")
 require("sultan.core.keymaps")
