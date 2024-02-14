@@ -1,2 +1,0 @@
-#!bin/zsh
-stow --target=$HOME .config
