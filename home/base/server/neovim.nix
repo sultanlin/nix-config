@@ -71,10 +71,6 @@
         nvim-ts-context-commentstring
         rainbow-delimiters-nvim
 
-        #-- TELESCOPE
-        telescope-nvim # Fuzzy finder (files, lsp, etc)
-        telescope-fzf-native-nvim
-
         #-- COMPLETION
         nvim-cmp
         luasnip
@@ -118,7 +114,7 @@
         neotest-deno
         neotest-dotnet # C#
         neotest-go
-        # neotest-jest    # Javacript
+        neotest-jest # Javacript
         # neotest-zig
         # neotest-dart
         # neotest-elixir
@@ -129,19 +125,24 @@
         # neotest-rspec   # ruby
         # neotest-testthat    # R
 
-        #-- Github plugins
+        #-- Git
         vim-fugitive # Let's you do git commands using :G instead of :!g in vim cmd
         gitsigns-nvim # Shows changes to git in the left margin
-        neogit # Emacs' magit in neovim
         gitlinker-nvim # Link to github and blame and ??????
+        lazygit-nvim # UI terminal for git commands
         vim-rhubarb # "If fugitive is the git, rhubarb is the hub"
+        neogit # Emacs' magit in neovim
 
-        # General Project Management
+        #-- Navigation
         alpha-nvim
         project-nvim
         nvim-tree-lua # Potentially remove, mainly use oil.nvim
         oil-nvim
         toggleterm-nvim
+        telescope-nvim # Fuzzy finder (files, lsp, etc)
+        telescope-fzf-native-nvim
+        vim-tmux-navigator
+        harpoon
 
         #-- UI
         lualine-nvim # DONE
@@ -154,10 +155,12 @@
         modicator-nvim
         nvim-colorizer-lua
         todo-comments-nvim
+        zen-mode-nvim
+        vim-matchup
+        vim-illuminate
 
-        #-- Mandatory
+        #-- Nice to have
         comment-nvim
-        harpoon
         SchemaStore-nvim
         eyeliner-nvim
         which-key-nvim
@@ -173,12 +176,8 @@
         nvim-ufo
         promise-async
         statuscol-nvim
-
-        #-- Vim Plugins
-        vim-tmux-navigator
-        vim-illuminate
+        nvim-spectre
         vim-sleuth
-        vim-matchup
 
         #-- CORE
         plenary-nvim
@@ -187,8 +186,6 @@
         # flash-nvim
         # fzf-lua
         # lsp_signature-nvim
-        zen-mode-nvim
-        nvim-spectre
 
         #-- Unwanted plugins
         # hardtime-nvim # No longer need it (helps learn nvim by blocking bad practice)
