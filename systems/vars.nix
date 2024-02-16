@@ -34,4 +34,15 @@ in {
       ../home/server.nix
     ];
   };
+  docker_vm_modules = {
+    nixos-modules = [
+      ../hosts/docker-vm
+      ../modules/server.nix
+      # ../modules/nixos/proxmox-hardware-configuration.nix
+    ];
+    home-module.imports = [
+      ../hosts/vm/home.nix
+      ../home/server.nix
+    ];
+  };
 }
