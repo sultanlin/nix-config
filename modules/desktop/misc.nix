@@ -13,4 +13,7 @@
     #
     # colmena # nixos's remote deployment tool
   ];
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-25.9.0"
+  ];
 }
