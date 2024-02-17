@@ -14,7 +14,7 @@ in {
     # vm with hyprland compositor
     vm = nixosSystem (vm_modules // base_args);
 
-    docker-vm = nixosSystem (docker-vm // base_args);
+    docker-vm = nixosSystem (docker_vm // base_args);
 
     # # wsl with hyprland compositor
     # wsl = nixosSystem (wsl_modules // base_args);
