@@ -13,8 +13,8 @@ in {
   #   source = builtins.toPath "${dotfilesConfig}/hypr";
   #   recursive = true;
   # };
-  home = {
-    file.".config/nvim" = {
+  home.file = {
+    ".config/nvim" = {
       #source = config.lib.file.mkOutOfStoreSymlink "${dotfilesConfig}/nvim";
       # source = config.lib.file.mkOutOfStoreSymlink "${dotfilesConfig}/nvim-nixos";
       # source = "${config_sym_dir}/nvim-nixos";
@@ -27,13 +27,20 @@ in {
     # source = "${config_sym_dir}/tmux";
     #  recursive = true;
     #};
-    file.".config/hypr" = {
+    ".config/hypr" = {
       source = "${config_sym_dir}/hypr";
       # source = "${dotfilesConfig}/hypr";
       # source = builtins.toPath "${dotfilesConfig}/hypr";
       # source = mylib.symlinkConfig "/hypr";
       recursive = true;
     };
+    # ".config/zsh/.p10k.zsh" = {
+    #   source = "${config_sym_dir}/zsh/.p10k.zsh";
+    #   # source = "${dotfilesConfig}/hypr";
+    #   # source = builtins.toPath "${dotfilesConfig}/hypr";
+    #   # source = mylib.symlinkConfig "/hypr";
+    #   recursive = true;
+    # };
     # nvim = {
     #   # source = "${config_sym_dir}/hypr";
     #   source = "${dotfilesConfig}/hypr";
