@@ -99,6 +99,7 @@
         telescope-dap-nvim
         nvim-dap-go
         nvim-dap-python
+        nvim-jdtls
 
         #-- Code testing
         neotest
