@@ -10,6 +10,8 @@
 
     # extraConfig = builtins.readFile dotfilesConfigPath + /tmux/tmux.conf;
     extraConfig = ''
+      set -g status-position top       # macOS / darwin style
+
       set-option -g terminal-overrides ',xterm-256color:RGB'
       set -g @catppuccin_window_left_separator ""
       set -g @catppuccin_window_right_separator " "
