@@ -8,7 +8,7 @@
     enable = true;
     shell = "${pkgs.zsh}/bin/zsh";
 
-    extraConfig = builtins.readFile (dotfilesConfigPath + tmux/tmux.conf);
+    extraConfig = builtins.readFile (dotfilesConfigPath + /tmux/tmux.conf);
     keyMode = "vi"; # default is emacs
 
     baseIndex = 1; # start index from 1
