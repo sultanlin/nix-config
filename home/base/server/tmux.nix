@@ -16,10 +16,8 @@
 
     plugins = with pkgs.tmuxPlugins; [
       vim-tmux-navigator
-      /*
-      gruvbox
-      */
-      catppuccin
+      # gruvbox
+      # catppuccin
       battery
     ];
   };
