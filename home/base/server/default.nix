@@ -27,7 +27,7 @@ in {
     # source = "${config_sym_dir}/tmux";
     #  recursive = true;
     #};
-    ".config/tmux" = {
+    ".config/tmux/extras" = {
       source = "${config_sym_dir}/tmux";
       recursive = true;
     };
