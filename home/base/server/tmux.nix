@@ -14,6 +14,6 @@
     # escapeTime = 0; # do not wait for escape key
     # terminal = "xterm-256color";
 
-    plugins = with pkgs.tmuxPlugins; [vim-tmux-navigator];
+    plugins = with pkgs.tmuxPlugins; [vim-tmux-navigator gruvbox];
   };
 }
