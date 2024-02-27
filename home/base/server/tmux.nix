@@ -14,17 +14,17 @@
     # escapeTime = 0; # do not wait for escape key
     # terminal = "xterm-256color";
 
-    plugins = with pkgs.tmuxPlugins; [
-      vim-tmux-navigator
-      # gruvbox
-      # catppuccin
-      {
-        plugin = catppuccin;
-        extraConfig = ''
-          set -g @catppuccin_flavor 'mocha'
-        '';
-      }
-      battery
-    ];
+    # plugins = with pkgs.tmuxPlugins; [
+    #   vim-tmux-navigator
+    #   # gruvbox
+    #   # catppuccin
+    #   {
+    #     plugin = catppuccin;
+    #     extraConfig = ''
+    #       set -g @catppuccin_flavor 'mocha'
+    #     '';
+    #   }
+    #   battery
+    # ];
   };
 }
