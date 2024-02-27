@@ -18,6 +18,12 @@
       vim-tmux-navigator
       # gruvbox
       # catppuccin
+      {
+        plugin = catppuccin;
+        extraConfig = ''
+          set -g @catppuccin_flavor 'mocha'
+        '';
+      }
       battery
     ];
   };
