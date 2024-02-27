@@ -5,6 +5,7 @@
 }: {
   programs.tmux = {
     enable = true;
+    sensibleOnTop = false;
     # shell = "${pkgs.zsh}/bin/zsh";
 
     # extraConfig =  builtins.readFile ./tmux.conf;
