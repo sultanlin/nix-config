@@ -6,7 +6,7 @@
 }: {
   programs.tmux = {
     enable = true;
-    shell = "${pkgs.zsh}/bin/zsh";
+    # shell = "${pkgs.zsh}/bin/zsh";
 
     # extraConfig = builtins.readFile dotfilesConfigPath + /tmux/tmux.conf;
     extraConfig = ''
@@ -44,7 +44,8 @@
     baseIndex = 1; # start index from 1
     escapeTime = 0; # do not wait for escape key
     # terminal = "xterm-256color";
-    terminal = "screen-254color";
+    # terminal = "screen-254color";
+    terminal = "screen-256color";
     mouse = true;
 
     prefix = "C-a";
