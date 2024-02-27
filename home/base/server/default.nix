@@ -27,10 +27,10 @@ in {
     # source = "${config_sym_dir}/tmux";
     #  recursive = true;
     #};
-    ".config/tmux" = {
-      source = "${config_sym_dir}/tmux";
-      recursive = true;
-    };
+    # ".config/tmux" = {
+    #   source = "${config_sym_dir}/tmux";
+    #   recursive = true;
+    # };
     ".config/hypr" = {
       source = "${config_sym_dir}/hypr";
       # source = "${dotfilesConfig}/hypr";
