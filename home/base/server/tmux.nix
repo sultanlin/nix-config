@@ -13,7 +13,8 @@
 
     baseIndex = 1; # start index from 1
     escapeTime = 0; # do not wait for escape key
-    terminal = "xterm-256color";
+    # terminal = "xterm-256color";
+    terminal = "screen-256color";
     mouse = true;
 
     prefix = "C-a";
