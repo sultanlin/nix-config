@@ -20,6 +20,7 @@
       gruvbox
       */
       catppuccin
+      battery
     ];
   };
 }
