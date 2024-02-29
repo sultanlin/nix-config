@@ -1,5 +1,5 @@
 {
-  description = "A Nix-flake-based Go 1.17 development environment";
+  description = "A Nix-flake-based Go 1.20 development environment";
 
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
   # inputs.gomod2nix.url = "github:nix-community/gomod2nix";
@@ -10,13 +10,15 @@
     nixpkgs,
     # gomod2nix,
   }: let
-    goVersion = 20; # Change this to update the whole stack
-    overlays = [(final: prev: {go = prev."go_1_${toString goVersion}";})];
+    # goVersion = 20; # Change this to update the whole stack
+    # goVersion = 21; # Change this to update the whole stack
+    # overlays = [(final: prev: {go = prev."go_1_${toString goVersion}";})];
     supportedSystems = ["x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin"];
     forEachSupportedSystem = f:
       nixpkgs.lib.genAttrs supportedSystems (system:
         f {
-          pkgs = import nixpkgs {inherit overlays system;};
+          # pkgs = import nixpkgs {inherit overlays system;};
+          pkgs = import nixpkgs {inherit system;};
           # callPackage = nixpkgs.legacyPackages.${system}.callPackage;
           # callPackage = pkgs.callPackage;
         });
@@ -68,4 +70,3 @@
 #         })
 #     );
 # }
-
