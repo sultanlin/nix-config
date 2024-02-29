@@ -130,15 +130,4 @@
     ripgrep
     tldr
   ];
-  # home.file.".config/zsh/.p10k.zsh" = {
-  #   # /home/sultan/nix-config/dotfiles/config/zsh/.p10k.zsh
-  #   source = "${dotfilesConfig}/zsh/.p10k.zsh";
-  #   # source = config.lib.file.mkOutOfStoreSymlink "${dotfilesConfig}/nvim-nixos";
-  #   # source = "${config_sym_dir}/nvim-nixos";
-  #   # source = "${config_sym_dir}/nvim";
-  #   # source = mylib.symlinkConfig "/nvim-nixos";
-  #   recursive = true;
-  #   # target = ".config/nvim";
-  # };
-  # home.file.".config/zsh/.p10k.zsh".source = config.lib.file.mkOutOfStoreSymlink "${dotfilesConfig}/zsh/.p10k.zsh";
 }
