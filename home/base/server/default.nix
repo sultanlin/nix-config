@@ -33,25 +33,6 @@ in {
       source = "${config_sym_dir}/hypr";
       recursive = true;
     };
-    ".config/vale" = {
-      source = "${config_sym_dir}/vale";
-      recursive = true;
-    };
-    # ".config/zsh/.p10k.zsh" = {
-    #   source = "${config_sym_dir}/zsh/.p10k.zsh";
-    #   # source = "${dotfilesConfig}/hypr";
-    #   # source = builtins.toPath "${dotfilesConfig}/hypr";
-    #   # source = mylib.symlinkConfig "/hypr";
-    #   recursive = true;
-    # };
-    # nvim = {
-    #   # source = "${config_sym_dir}/hypr";
-    #   source = "${dotfilesConfig}/hypr";
-    #   # source = builtins.toPath "${dotfilesConfig}/hypr";
-    #   # source = mylib.symlinkConfig "/hypr";
-    #   recursive = true;
-    #   target = ".config/hypr";
-    # };
   };
   home.sessionVariables = {
     DOTFILES_CONFIG = "${dotfilesConfig}";
