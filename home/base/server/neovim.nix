@@ -133,6 +133,7 @@
         lazygit-nvim # UI terminal for git commands
         vim-rhubarb # "If fugitive is the git, rhubarb is the hub"
         neogit # Emacs' magit in neovim
+        diffview-nvim
 
         #-- Navigation
         alpha-nvim
@@ -157,6 +158,7 @@
         nvim-colorizer-lua
         todo-comments-nvim
         zen-mode-nvim
+        twilight-nvim
         vim-matchup
         vim-illuminate
 
