@@ -99,7 +99,7 @@
         telescope-dap-nvim
         nvim-dap-go
         nvim-dap-python
-        nvim-jdtls
+        nvim-jdtls # Java
 
         #-- Code testing
         neotest
@@ -179,6 +179,7 @@
         statuscol-nvim
         nvim-spectre
         vim-sleuth
+        markdown-preview-nvim
 
         #-- CORE
         plenary-nvim
@@ -302,6 +303,10 @@
     golangci-lint
     air # Live reloading for server hosting
     templ # Templ HTML in go
+
+    #-- Java
+    jdt-language-server
+    google-java-format
 
     #-- C#
     omnisharp-roslyn
