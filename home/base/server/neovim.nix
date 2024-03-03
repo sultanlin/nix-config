@@ -160,7 +160,7 @@
         zen-mode-nvim
         twilight-nvim
         vim-matchup
-        vim-illuminate
+        # vim-illuminate
 
         #-- Nice to have
         comment-nvim
