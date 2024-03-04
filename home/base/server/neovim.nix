@@ -353,7 +353,9 @@
   home.sessionVariables = {
     # source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
 
-    OMNISHARP_ROSLYN_PATH = "${pkgs.omnisharp-roslyn}";
+    # OMNISHARP_ROSLYN_PATH = "${pkgs.omnisharp-roslyn}";
+    LSP_OMNISHARP = "${pkgs.omnisharp-roslyn}";
+    LSP_JAVA = "${pkgs.jdt-language-server}";
     NEOVIM_NIXOS = "true";
   };
 }
