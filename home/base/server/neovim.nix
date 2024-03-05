@@ -132,7 +132,7 @@
         gitlinker-nvim # Link to github and blame and ??????
         lazygit-nvim # UI terminal for git commands
         vim-rhubarb # "If fugitive is the git, rhubarb is the hub"
-        neogit # Emacs' magit in neovim
+        # neogit # Emacs' magit in neovim
         diffview-nvim
 
         #-- Navigation
@@ -170,11 +170,11 @@
         legendary-nvim
 
         #-- Utils
-        numb-nvim
-        nvim-spider
-        tabout-nvim # Potentially remove later if you're used to living without autopairs
+        # numb-nvim
+        # nvim-spider
+        # tabout-nvim # Potentially remove later if you're used to living without autopairs
         nvim-surround
-        neorg
+        # neorg
         undotree
         nvim-ufo
         promise-async
@@ -198,8 +198,8 @@
         # nvim-navbuddy       # BLOAT
         # auto-session      # Not needed
         # refactoring-nvim    # Too difficult, code actions like move code to separate function etc
-        nvim-autopairs # Learn to live without it
-        nvim-ts-autotag # Learn to live without it
+        # nvim-autopairs # Learn to live without it
+        # nvim-ts-autotag # Learn to live without it
         # noice-nvim  # BLOAT
         # vim-jsx-pretty # Don't think I need it
         # own-sentiment-nvim # Replaced by vim-matchup
@@ -307,9 +307,9 @@
     templ # Templ HTML in go
 
     #-- Java
-    jdt-language-server
-    google-java-format
-    lombok
+    # jdt-language-server
+    # google-java-format
+    # lombok
 
     #-- C#
     omnisharp-roslyn
@@ -356,8 +356,8 @@
 
     # OMNISHARP_ROSLYN_PATH = "${pkgs.omnisharp-roslyn}";
     LSP_OMNISHARP = "${pkgs.omnisharp-roslyn}";
-    LSP_JAVA = "${pkgs.jdt-language-server}";
-    LSP_LOMBOK = "${pkgs.lombok}";
+    # LSP_JAVA = "${pkgs.jdt-language-server}";
+    # LSP_LOMBOK = "${pkgs.lombok}";
     NEOVIM_NIXOS = "true";
   };
 }
