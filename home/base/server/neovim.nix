@@ -183,6 +183,8 @@
         vim-sleuth
         markdown-preview-nvim
 
+        lazy-lsp-nvim
+
         #-- CORE
         plenary-nvim
 
