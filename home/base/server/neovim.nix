@@ -309,9 +309,9 @@
     templ # Templ HTML in go
 
     #-- Java
-    # jdt-language-server
-    # google-java-format
-    # lombok
+    jdt-language-server
+    google-java-format
+    lombok
 
     #-- C#
     omnisharp-roslyn
