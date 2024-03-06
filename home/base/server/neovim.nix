@@ -257,6 +257,7 @@
     lua-language-server
     selene
     stylua
+    luajitPackages.luacheck
 
     #-- Rust
     rust-analyzer
