@@ -358,8 +358,8 @@
 
     # OMNISHARP_ROSLYN_PATH = "${pkgs.omnisharp-roslyn}";
     LSP_OMNISHARP = "${pkgs.omnisharp-roslyn}";
-    # LSP_JAVA = "${pkgs.jdt-language-server}";
-    # LSP_LOMBOK = "${pkgs.lombok}";
+    LSP_JAVA = "${pkgs.jdt-language-server}";
+    LSP_LOMBOK = "${pkgs.lombok}";
     NEOVIM_NIXOS = "true";
   };
 }
