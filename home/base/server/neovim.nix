@@ -313,6 +313,8 @@
     jdt-language-server
     google-java-format
     lombok
+    vscode-extensions.vscjava.vscode-java-test
+    vscode-extensions.vscjava.vscode-java-debug
 
     #-- C#
     omnisharp-roslyn
@@ -361,6 +363,9 @@
     LSP_OMNISHARP = "${pkgs.omnisharp-roslyn}";
     LSP_JAVA = "${pkgs.jdt-language-server}";
     LSP_LOMBOK = "${pkgs.lombok}";
+    LSP_JAVA_TEST = "${pkgs.vscode-extensions.vscjava.vscode-java-test}";
+    LSP_JAVA_DEBUG = "${pkgs.vscode-extensions.vscjava.vscode-java-debug}";
+
     NEOVIM_NIXOS = "true";
   };
 }
