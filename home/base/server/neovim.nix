@@ -100,6 +100,7 @@
         nvim-dap-go
         nvim-dap-python
         nvim-jdtls # Java
+        mason-nvim
 
         #-- Code testing
         neotest
@@ -310,8 +311,8 @@
     templ # Templ HTML in go
 
     #-- Java
-    jdt-language-server
-    google-java-format
+    # jdt-language-server
+    # google-java-format
     lombok
     vscode-extensions.vscjava.vscode-java-test
     vscode-extensions.vscjava.vscode-java-debug
