@@ -14,6 +14,7 @@
     ./base.nix
 
     ./desktop
+    ./home-manager.nix
   ];
 
   xdg.portal = {
