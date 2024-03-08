@@ -221,6 +221,145 @@
       ];
 
       extraPackages = with pkgs; [
+#         #-- c/c++
+#         cmake
+#         cmake-language-server
+#         gnumake
+#         checkmake
+#         gcc # c/c++ compiler, required by nvim-treesitter!
+#         clang-tools
+#         cppcheck
+#         gdb
+#
+#         # https://github.com/LongerHV/nixos-configuration/blob/48c8052cb47c8d83f14adbd5c2c142ebef142dd3/home-manager/config/neovim.nix#L246
+#
+#         #-- Essentials
+#         nodePackages.npm
+#         nodePackages.neovim
+#
+#         #-- Python
+#         (python3.withPackages (ps:
+#           with ps; [
+#             setuptools # Required by pylama for some reason
+#             pylama
+#             black
+#             isort
+#             yamllint
+#             debugpy
+#             # ruff-lsp
+#           ]))
+#         nodePackages.pyright
+#         ruff-lsp
+#
+#         #-- Lua
+#         lua-language-server
+#         selene
+#         stylua
+#         luajitPackages.luacheck
+#
+#         #-- Rust
+#         rust-analyzer
+#         cargo # rust package manager
+#         rustfmt
+#
+#         #-- Nix
+#         statix # Lints and suggestions for the nix programming language
+#         deadnix # Find and remove unused code in .nix source files
+#         alejandra # Nix Code Formatter
+#         nil
+#         rnix-lsp
+#         nixpkgs-fmt
+#         nixd
+#
+#         #-- Bash/Shell scripting
+#         nodePackages.bash-language-server
+#         shfmt
+#         shellcheck
+#         shellharden
+#
+#         #-- Javascript/Typescript --#
+#         nodePackages.prettier
+#         nodePackages.eslint
+#         nodePackages.typescript
+#         nodePackages.typescript-language-server
+#         eslint_d
+#         # HTML/CSS/JSON/ESLint language servers extracted from vscode
+#         nodePackages.vscode-langservers-extracted
+#         nodePackages."@tailwindcss/language-server"
+#         emmet-ls
+#         prettierd
+#         # SVELTE LSP
+#         nodePackages.svelte-language-server
+#         # Graphql LSP
+#         nodePackages.graphql-language-service-cli
+#         # Prisma LSP
+#         nodePackages.prisma
+#
+#         #-- Go
+#         go
+#         gomodifytags
+#         # iferr # generate error handling code for go
+#         impl # generate function implementation for go
+#         gotools # contains tools like: godoc, goimports, etc.
+#         gopls # go language server
+#         delve # go debugger
+#         golangci-lint
+#         air # Live reloading for server hosting
+#         templ # Templ HTML in go
+#
+#         #-- Java
+#         jdt-language-server
+#         google-java-format
+#         lombok
+#         vscode-extensions.vscjava.vscode-java-test
+#         vscode-extensions.vscjava.vscode-java-debug
+#
+# #-- Kotlin
+#         kotlin-language-server
+#         ktlint
+#
+#         #-- C#
+#         omnisharp-roslyn
+#         netcoredbg # C# Debugger
+#
+#         #-- CloudNative
+#         nodePackages.dockerfile-language-server-nodejs
+#         # terraform  # install via brew on macOS
+#         terraform-ls
+#         jsonnet
+#         jsonnet-language-server
+#         hadolint # Dockerfile linter
+#
+#         # Additional
+#         nodePackages.markdownlint-cli
+#         vale
+#         codespell
+#         gitlint
+#         taplo # TOML language server / formatter / validator
+#         taplo-cli
+#         nodePackages.yaml-language-server
+#         sqlfluff # SQL linter
+#         actionlint # GitHub Actions linter
+#         buf # protoc plugin for linting and formatting
+#         proselint # English prose linter
+#         tree-sitter # common language parser/highlighter
+#         marksman # language server for markdown
+#         glow # markdown previewer
+#         fzf
+#
+#         # Clipboard
+#         xclip
+#         wl-clipboard
+#
+#         #-- Optional Requirements:
+#         gdu # disk usage analyzer, required by AstroNvim
+#         ripgrep # fast search tool, required by AstroNvim's '<leader>fw'(<leader> is space key)
+#         verible
+#         fd
+      ];
+    };
+  };
+  home.packages = with pkgs; [
         #-- c/c++
         cmake
         cmake-language-server
@@ -356,141 +495,6 @@
         ripgrep # fast search tool, required by AstroNvim's '<leader>fw'(<leader> is space key)
         verible
         fd
-      ];
-    };
-  };
-  home.packages = with pkgs; [
-    # #-- c/c++
-    # cmake
-    # cmake-language-server
-    # gnumake
-    # checkmake
-    # gcc # c/c++ compiler, required by nvim-treesitter!
-    # clang-tools
-    # cppcheck
-    # gdb
-    #
-    # # https://github.com/LongerHV/nixos-configuration/blob/48c8052cb47c8d83f14adbd5c2c142ebef142dd3/home-manager/config/neovim.nix#L246
-    #
-    # #-- Essentials
-    # nodePackages.npm
-    # nodePackages.neovim
-    #
-    # #-- Python
-    # (python3.withPackages (ps:
-    #   with ps; [
-    #     setuptools # Required by pylama for some reason
-    #     pylama
-    #     black
-    #     isort
-    #     yamllint
-    #     debugpy
-    #     # ruff-lsp
-    #   ]))
-    # nodePackages.pyright
-    # ruff-lsp
-    #
-    # #-- Lua
-    # lua-language-server
-    # selene
-    # stylua
-    # luajitPackages.luacheck
-    #
-    # #-- Rust
-    # rust-analyzer
-    # cargo # rust package manager
-    # rustfmt
-    #
-    # #-- Nix
-    # statix # Lints and suggestions for the nix programming language
-    # deadnix # Find and remove unused code in .nix source files
-    # alejandra # Nix Code Formatter
-    # nil
-    # rnix-lsp
-    # nixpkgs-fmt
-    # nixd
-    #
-    # #-- Bash/Shell scripting
-    # nodePackages.bash-language-server
-    # shfmt
-    # shellcheck
-    # shellharden
-    #
-    # #-- Javascript/Typescript --#
-    # nodePackages.prettier
-    # nodePackages.eslint
-    # nodePackages.typescript
-    # nodePackages.typescript-language-server
-    # eslint_d
-    # # HTML/CSS/JSON/ESLint language servers extracted from vscode
-    # nodePackages.vscode-langservers-extracted
-    # nodePackages."@tailwindcss/language-server"
-    # emmet-ls
-    # prettierd
-    # # SVELTE LSP
-    # nodePackages.svelte-language-server
-    # # Graphql LSP
-    # nodePackages.graphql-language-service-cli
-    # # Prisma LSP
-    # nodePackages.prisma
-    #
-    # #-- Go
-    # go
-    # gomodifytags
-    # # iferr # generate error handling code for go
-    # impl # generate function implementation for go
-    # gotools # contains tools like: godoc, goimports, etc.
-    # gopls # go language server
-    # delve # go debugger
-    # golangci-lint
-    # air # Live reloading for server hosting
-    # templ # Templ HTML in go
-    #
-    # #-- Java
-    # jdt-language-server
-    # google-java-format
-    # lombok
-    # vscode-extensions.vscjava.vscode-java-test
-    # vscode-extensions.vscjava.vscode-java-debug
-    #
-    # #-- C#
-    # omnisharp-roslyn
-    # netcoredbg # C# Debugger
-    #
-    # #-- CloudNative
-    # nodePackages.dockerfile-language-server-nodejs
-    # # terraform  # install via brew on macOS
-    # terraform-ls
-    # jsonnet
-    # jsonnet-language-server
-    # hadolint # Dockerfile linter
-    #
-    # # Additional
-    # nodePackages.markdownlint-cli
-    # vale
-    # codespell
-    # gitlint
-    # taplo # TOML language server / formatter / validator
-    # taplo-cli
-    # nodePackages.yaml-language-server
-    # sqlfluff # SQL linter
-    # actionlint # GitHub Actions linter
-    # buf # protoc plugin for linting and formatting
-    # proselint # English prose linter
-    # tree-sitter # common language parser/highlighter
-    # marksman # language server for markdown
-    # glow # markdown previewer
-    # fzf
-    #
-    # # Clipboard
-    # xclip
-    # wl-clipboard
-    #
-    # #-- Optional Requirements:
-    # gdu # disk usage analyzer, required by AstroNvim
-    # ripgrep # fast search tool, required by AstroNvim's '<leader>fw'(<leader> is space key)
-    # verible
-    # fd
   ];
 
   home.sessionVariables = {
