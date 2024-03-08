@@ -313,7 +313,10 @@
         lombok
         vscode-extensions.vscjava.vscode-java-test
         vscode-extensions.vscjava.vscode-java-debug
+
+#-- Kotlin
         kotlin-language-server
+        ktlint
 
         #-- C#
         omnisharp-roslyn
