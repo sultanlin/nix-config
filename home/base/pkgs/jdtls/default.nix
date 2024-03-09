@@ -15,7 +15,8 @@ pkgs.stdenv.mkDerivation rec {
     tarballPointer = pkgs.fetchurl {
       url = "${prefix}/latest.txt";
       # hash = "sha256-pMRAfw7wuJ1243ETikTgqZBvRYPdWKTcO0GUzh2EQzk=";
-      hash = pkgs.lib.fakeHash;
+      hash = "sha256-bfatEGyPSLctBwu8ZeuHiwWPwEtfhcDWcbyWTuMcYhk=";
+      # hash = pkgs.lib.fakeHash;
     };
     filename = builtins.replaceStrings ["\n"] [""] (builtins.readFile tarballPointer);
     url = "${prefix}/${filename}";
