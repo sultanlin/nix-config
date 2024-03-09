@@ -1,5 +1,6 @@
 {
   pkgs,
+  pkgs-stable,
   neovim-nightly,
   ...
 }: {
@@ -309,7 +310,7 @@
         #         templ # Templ HTML in go
         #
         #         #-- Java
-        #         jdt-language-server
+        # jdt-language-server
         #         google-java-format
         #         lombok
         #         vscode-extensions.vscjava.vscode-java-test
@@ -448,8 +449,8 @@
     templ # Templ HTML in go
 
     #-- Java
-    # jdt-language-server
-    jdtls
+    pkgs-stable.jdt-language-server
+    # jdtls
     google-java-format
     lombok
     vscode-extensions.vscjava.vscode-java-test
@@ -504,8 +505,8 @@
 
     # OMNISHARP_ROSLYN_PATH = "${pkgs.omnisharp-roslyn}";
     LSP_OMNISHARP = "${pkgs.omnisharp-roslyn}";
-    # LSP_JAVA = "${pkgs.jdt-language-server}";
-    LSP_JAVA_MINE = "${pkgs.jdtls}";
+    LSP_JAVA = "${pkgs.jdt-language-server}";
+    # LSP_JAVA_MINE = "${pkgs.jdtls}";
     LSP_LOMBOK = "${pkgs.lombok}";
     LSP_JAVA_TEST = "${pkgs.vscode-extensions.vscjava.vscode-java-test}";
     LSP_JAVA_DEBUG = "${pkgs.vscode-extensions.vscjava.vscode-java-debug}";
