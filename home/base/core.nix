@@ -1,7 +1,7 @@
 {
   username,
   config,
-  pkgs,
+  # pkgs,
   ...
 }: let
   d = config.xdg.dataHome;
@@ -52,9 +52,9 @@ in {
   programs.home-manager.enable = true;
 
   # Add derivation
-  home.packages = [
-    import
-    ./pkgs
-    {inherit pkgs;}
-  ];
+  # home.packages = [
+  #   import
+  #   ./pkgs
+  #   {inherit pkgs;}
+  # ];
 }
