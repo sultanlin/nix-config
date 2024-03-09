@@ -160,7 +160,7 @@
         todo-comments-nvim
         zen-mode-nvim
         twilight-nvim
-        # vim-matchup
+        vim-matchup
         vim-illuminate
 
         #-- Nice to have
@@ -168,14 +168,14 @@
         SchemaStore-nvim
         eyeliner-nvim
         which-key-nvim
-        # legendary-nvim
+        legendary-nvim
 
         #-- Utils
         # numb-nvim
-        # nvim-spider
-        # tabout-nvim # Potentially remove later if you're used to living without autopairs
+        nvim-spider
+        tabout-nvim # Potentially remove later if you're used to living without autopairs
         nvim-surround
-        # neorg
+        neorg
         undotree
         nvim-ufo
         promise-async
@@ -449,7 +449,7 @@
     templ # Templ HTML in go
 
     #-- Java
-    # pkgs-stable.jdt-language-server
+    jdt-language-server
     # jdtls
     google-java-format
     lombok
@@ -505,7 +505,7 @@
 
     # OMNISHARP_ROSLYN_PATH = "${pkgs.omnisharp-roslyn}";
     LSP_OMNISHARP = "${pkgs.omnisharp-roslyn}";
-    # LSP_JAVA = "${pkgs-stable.jdt-language-server}";
+    LSP_JAVA = "${pkgs.jdt-language-server}";
     # LSP_JAVA_MINE = "${pkgs.jdtls}";
     LSP_LOMBOK = "${pkgs.lombok}";
     LSP_JAVA_TEST = "${pkgs.vscode-extensions.vscjava.vscode-java-test}";

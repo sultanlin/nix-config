@@ -52,12 +52,12 @@ in {
   programs.home-manager.enable = true;
 
   # Add derivation
-  home.packages = [
-    # (import ./pkgs {inherit pkgs;})
-    (import ./pkgs/jdtls/default.nix {inherit pkgs;})
-  ];
-
-  home.sessionVariables = {
-    LSP_JAVA_MINE = "${(import ./pkgs/jdtls/default.nix {inherit pkgs;})}";
-  };
+  # home.packages = [
+  #   # (import ./pkgs {inherit pkgs;})
+  #   (import ./pkgs/jdtls/default.nix {inherit pkgs;})
+  # ];
+  #
+  # home.sessionVariables = {
+  #   LSP_JAVA_MINE = "${(import ./pkgs/jdtls/default.nix {inherit pkgs;})}";
+  # };
 }
