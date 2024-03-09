@@ -1,6 +1,6 @@
 {
   pkgs,
-  pkgs-stable,
+  # pkgs-stable,
   neovim-nightly,
   ...
 }: {
@@ -449,7 +449,7 @@
     templ # Templ HTML in go
 
     #-- Java
-    pkgs-stable.jdt-language-server
+    # pkgs-stable.jdt-language-server
     # jdtls
     google-java-format
     lombok
