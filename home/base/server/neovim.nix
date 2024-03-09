@@ -1,6 +1,6 @@
 {
   pkgs,
-  # pkgs-stable,
+  pkgs-stable,
   neovim-nightly,
   ...
 }: {
@@ -449,7 +449,7 @@
     templ # Templ HTML in go
 
     #-- Java
-    # pkgs-stable.jdt-language-server
+    pkgs-stable.jdt-language-server
     # jdtls
     google-java-format
     lombok
@@ -505,7 +505,7 @@
 
     # OMNISHARP_ROSLYN_PATH = "${pkgs.omnisharp-roslyn}";
     LSP_OMNISHARP = "${pkgs.omnisharp-roslyn}";
-    LSP_JAVA = "${pkgs.jdt-language-server}";
+    LSP_JAVA = "${pkgs-stable.jdt-language-server}";
     # LSP_JAVA_MINE = "${pkgs.jdtls}";
     LSP_LOMBOK = "${pkgs.lombok}";
     LSP_JAVA_TEST = "${pkgs.vscode-extensions.vscjava.vscode-java-test}";
