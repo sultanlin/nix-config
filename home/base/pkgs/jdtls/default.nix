@@ -24,7 +24,8 @@ pkgs.stdenv.mkDerivation rec {
     pkgs.fetchurl {
       inherit url;
       # hash = "sha256-sVxrrdH0N7Uz2FdyDXWTwcu27pr7TfsFebcxjj27Lhk=";
-      hash = pkgs.lib.fakeHash;
+      hash = "sha256-UZQQl3lFPmN6Azglf97xevwA6OehO/2bSM0bg93z8YY=";
+      # hash = pkgs.lib.fakeHash;
     };
   dontUnpack = true;
   installPhase = ''
