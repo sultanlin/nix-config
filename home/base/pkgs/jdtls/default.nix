@@ -1,15 +1,18 @@
 {
-  stdenv,
-  fetchurl,
+  pkgs,
+  # stdenv,
+  # fetchurl,
+  #   stdenv ? pkgs.stdenv,
+  # , fetchurl ? pkgs.fetchurl,
   lib,
   ...
 }:
-stdenv.mkDerivation rec {
+pkgs.stdenv.mkDerivation rec {
   pname = "jdtls";
   version = "1.33.0";
   src = let
     prefix = "https://download.eclipse.org/jdtls/milestones/${version}";
-    tarballPointer = fetchurl {
+    tarballPointer = pkgs.fetchurl {
       url = "${prefix}/latest.txt";
       # hash = "sha256-pMRAfw7wuJ1243ETikTgqZBvRYPdWKTcO0GUzh2EQzk=";
       hash = lib.fakeHash;
@@ -17,7 +20,7 @@ stdenv.mkDerivation rec {
     filename = builtins.replaceStrings ["\n"] [""] (builtins.readFile tarballPointer);
     url = "${prefix}/${filename}";
   in
-    fetchurl {
+    pkgs.fetchurl {
       inherit url;
       # hash = "sha256-sVxrrdH0N7Uz2FdyDXWTwcu27pr7TfsFebcxjj27Lhk=";
       hash = lib.fakeHash;
