@@ -2,6 +2,7 @@
   stdenv,
   fetchurl,
   lib,
+  ...
 }:
 stdenv.mkDerivation rec {
   pname = "jdtls";
