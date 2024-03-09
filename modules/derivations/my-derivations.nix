@@ -1,0 +1,7 @@
+{
+  inputs,
+  config,
+  ...
+}: {
+  imports = ./jdtls;
+}
