@@ -448,7 +448,7 @@
     templ # Templ HTML in go
 
     #-- Java
-    jdt-language-server
+    # jdt-language-server
     google-java-format
     lombok
     vscode-extensions.vscjava.vscode-java-test
