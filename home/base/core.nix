@@ -53,7 +53,7 @@ in {
 
   # Add derivation
   home.packages = [
-    (import ./pkgs {inherit pkgs;})
+    # (import ./pkgs {inherit pkgs;})
     # ( import ./pkgs/jdtls/default.nix {} )
   ];
 }
