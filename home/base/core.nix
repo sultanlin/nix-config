@@ -1,6 +1,7 @@
 {
   username,
   config,
+  pkgs,
   ...
 }: let
   d = config.xdg.dataHome;
@@ -49,4 +50,11 @@ in {
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  # Add derivation
+  home.packages = [
+    import
+    ./pkgs
+    {inherit pkgs;}
+  ];
 }
