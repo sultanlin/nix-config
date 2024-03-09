@@ -3,5 +3,5 @@
   config,
   ...
 }: {
-  imports = ./jdtls;
+  imports = [./jdtls];
 }
