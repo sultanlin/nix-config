@@ -160,7 +160,7 @@
         todo-comments-nvim
         zen-mode-nvim
         twilight-nvim
-        vim-matchup
+        # vim-matchup
         vim-illuminate
 
         #-- Nice to have
@@ -168,7 +168,7 @@
         SchemaStore-nvim
         eyeliner-nvim
         which-key-nvim
-        legendary-nvim
+        # legendary-nvim
 
         #-- Utils
         # numb-nvim
