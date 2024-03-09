@@ -4,6 +4,6 @@
     ./base.nix
 
     # ./home-manager.nix
-    ./derivations/my-derivations.nix
+    # ./derivations/my-derivations.nix
   ];
 }
