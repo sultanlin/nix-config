@@ -450,7 +450,7 @@
 
     #-- Java
     # pkgs-stable.jdt-language-server
-    jdtls
+    # jdtls
     google-java-format
     lombok
     vscode-extensions.vscjava.vscode-java-test
