@@ -1,3 +1,3 @@
 {neovim-nightly, ...}: (final: prev: {
-  neovim-nightly = neovim-nightly.overlay;
+  neovim-nightly = neovim-nightly;
 })
