@@ -100,6 +100,7 @@
         nvim-dap-python
         nvim-jdtls # Java
         mason-nvim
+        rustaceanvim # Rust
 
         #-- Code testing
         neotest
@@ -400,7 +401,9 @@
     #-- Rust
     rust-analyzer
     cargo # rust package manager
-    rustfmt
+    # rustfmt
+    graphviz
+    vscode-extensions.vadimcn.vscode-lldb
 
     #-- Nix
     statix # Lints and suggestions for the nix programming language
