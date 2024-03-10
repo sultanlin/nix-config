@@ -117,6 +117,7 @@
         neotest-dotnet # C#
         neotest-go
         neotest-jest # Javacript
+        sentiment-nvim
         neotest-java
         # neotest-zig
         # neotest-dart
