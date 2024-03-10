@@ -2,6 +2,7 @@
   self,
   inputs,
   constants,
+  # neovim-nightly,
 }: let
   inherit (inputs.nixpkgs-unstable) lib;
   mylib = import ../lib {inherit lib constants;};

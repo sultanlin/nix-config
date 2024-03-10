@@ -1,9 +1,12 @@
 {
   username,
+  userfullname,
   config,
   pkgs,
+  neovim-nightly,
+  lib,
   ...
-}: let
+} @ args: let
   d = config.xdg.dataHome;
   c = config.xdg.configHome;
   cache = config.xdg.cacheHome;
@@ -60,4 +63,8 @@ in {
   # home.sessionVariables = {
   #   LSP_JAVA_MINE = "${(import ./pkgs/jdtls/default.nix {inherit pkgs;})}";
   # };
+
+  nixpkgs.overlays =
+    import ../overlays args
+    ++ [neovim-nightly.overlay];
 }

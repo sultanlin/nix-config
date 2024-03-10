@@ -6,8 +6,9 @@
   neovim-nightly,
   ...
 } @ args: {
-  nixpkgs.overlays = import ../overlays args;
-  # ++ [neovim-nightly.overlay];
+  nixpkgs.overlays =
+    import ../overlays args
+    ++ [neovim-nightly.overlay];
   # [
   #   nuenv.overlays.default
   # ]
