@@ -137,6 +137,10 @@
       url = "github:utilyre/sentiment.nvim";
       flake = false;
     };
+    neotest-java = {
+      url = "github:rcasia/neotest-java";
+      flake = false;
+    };
     nix-gaming.url = "github:fufexan/nix-gaming";
     # flake-utils.url = github:numtide/flake-utils;
     # # eww = {

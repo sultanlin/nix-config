@@ -117,6 +117,7 @@
         neotest-dotnet # C#
         neotest-go
         neotest-jest # Javacript
+        neotest-java
         # neotest-zig
         # neotest-dart
         # neotest-elixir
@@ -205,7 +206,7 @@
         # nvim-ts-autotag # Learn to live without it
         # noice-nvim  # BLOAT
         # vim-jsx-pretty # Don't think I need it
-        # own-sentiment-nvim # Replaced by vim-matchup
+        # sentiment-nvim # Replaced by vim-matchup
         # fidget-nvim # BUGGY Useful notifications and status updates for LSP
         # nui-nvim
 

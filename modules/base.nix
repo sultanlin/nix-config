@@ -1,6 +1,6 @@
 {
   username,
-  # inputs,
+  inputs,
   userfullname,
   # nuenv,
   lib,
