@@ -7,7 +7,8 @@
   vimplugins = let
     mkNvimPlugin = src: pname:
       prev.vimUtils.buildVimPlugin {
-        inherit pname src;
+        name = pname;
+        inherit src;
       };
   in {
     vimPlugins =
