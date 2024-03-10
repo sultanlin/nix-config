@@ -15,8 +15,8 @@
       prev.vimPlugins
       // {
         # neotest-java = mkNvimPlugin inputs.neotest-java "neotest-java";
-        sentiment-nvim = mkNvimPlugin inputs.sentiment-nvim "sentiment.nvim";
-        # sentiment-nvim = mkNvimPlugin sentiment-nvim "sentiment.nvim";
+        # sentiment-nvim = mkNvimPlugin inputs.sentiment-nvim "sentiment.nvim";
+        sentiment-nvim = mkNvimPlugin sentiment-nvim "sentiment.nvim";
       };
   };
 })
