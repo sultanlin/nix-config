@@ -5,6 +5,7 @@
   # nuenv,
   lib,
   neovim-nightly,
+  sentiment-nvim,
   ...
 } @ args: {
   nixpkgs.overlays =
