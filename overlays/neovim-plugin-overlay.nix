@@ -1,4 +1,4 @@
-{inputs}: final: prev: let
+inputs: final: prev: let
   mkNvimPlugin = src: pname:
     prev.pkgs.vimUtils.buildVimPlugin {
       inherit pname src;
