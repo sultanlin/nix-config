@@ -1,4 +1,8 @@
-inputs: final: prev: let
+{
+  neotest-java,
+  sentiment-nvim,
+  ...
+} @ inputs: final: prev: let
   mkNvimPlugin = src: pname:
     prev.pkgs.vimUtils.buildVimPlugin {
       inherit pname src;
