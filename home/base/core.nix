@@ -64,7 +64,7 @@ in {
   #   LSP_JAVA_MINE = "${(import ./pkgs/jdtls/default.nix {inherit pkgs;})}";
   # };
 
-  nixpkgs.overlays = [neovim-nightly.overlay];
+  # nixpkgs.overlays = [neovim-nightly.overlay];
   # import ../overlays args
   # ++ [neovim-nightly.overlay];
 }

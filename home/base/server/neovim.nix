@@ -1,7 +1,6 @@
 {
   pkgs,
   pkgs-stable,
-  neovim-nightly,
   ...
 }: {
   nixpkgs.config = {
