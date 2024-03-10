@@ -1,5 +1,6 @@
 {
   username,
+  inputs,
   userfullname,
   # nuenv,
   lib,
@@ -7,8 +8,8 @@
   ...
 } @ args: {
   nixpkgs.overlays =
-    import ../overlays args;
-  # ++ [neovim-nightly.overlay];
+    import ../overlays args
+    ++ [inputs.neovim-nightly.overlay];
   # [
   #   nuenv.overlays.default
   # ]
