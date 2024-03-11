@@ -1,9 +1,8 @@
 {
   # neotest-java,
   # sentiment-nvim,
-  inputs,
   ...
-}: (final: prev: {
+} @ inputs: (final: prev: {
   vimPlugins = let
     mkNvimPlugin = src: name:
       prev.vimUtils.buildVimPlugin {
