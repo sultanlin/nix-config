@@ -9,15 +9,14 @@
       prev.vimUtils.buildVimPlugin {
         inherit name src;
       };
-  in {
-    vimPlugins =
-      prev.vimPlugins
-      // {
-        neotest-java = mkNvimPlugin inputs.neotest-java "neotest-java";
-        # sentiment-nvim = mkNvimPlugin inputs.sentiment-nvim "sentiment.nvim";
-        # sentiment-nvim = mkNvimPlugin sentiment-nvim "sentiment.nvim";
-      };
-  };
+  in
+    # vimPlugins =
+    prev.vimPlugins
+    // {
+      neotest-java = mkNvimPlugin inputs.neotest-java "neotest-java";
+      # sentiment-nvim = mkNvimPlugin inputs.sentiment-nvim "sentiment.nvim";
+      # sentiment-nvim = mkNvimPlugin sentiment-nvim "sentiment.nvim";
+    };
 })
 # {sentiment-nvim, ...}: (final: prev: {
 #   vimPlugins =
