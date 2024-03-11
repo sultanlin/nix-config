@@ -4,11 +4,10 @@
   inputs,
   ...
 }: (final: prev: {
-  vimplugins = let
-    mkNvimPlugin = src: pname:
+  vimPlugins = let
+    mkNvimPlugin = src: name:
       prev.vimUtils.buildVimPlugin {
-        name = pname;
-        inherit src;
+        inherit name src;
       };
   in {
     vimPlugins =
