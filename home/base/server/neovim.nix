@@ -145,7 +145,6 @@
         toggleterm-nvim
         telescope-nvim # Fuzzy finder (files, lsp, etc)
         telescope-fzf-native-nvim
-        telescope-ui-select-nvim
         vim-tmux-navigator
         harpoon
 
@@ -209,7 +208,7 @@
         # vim-jsx-pretty # Don't think I need it
         # sentiment-nvim # Replaced by vim-matchup
         # fidget-nvim # BUGGY Useful notifications and status updates for LSP
-        nui-nvim
+        # nui-nvim
 
         # This does not work, unsure why
         # Maybe because I'm using outofstoresymlink.
