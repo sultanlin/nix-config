@@ -1,6 +1,6 @@
 {
   # neotest-java,
-  sentiment-nvim,
+  # sentiment-nvim,
   inputs,
   ...
 }: (final: prev: {
