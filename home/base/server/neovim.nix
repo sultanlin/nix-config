@@ -184,6 +184,7 @@
         nvim-spectre
         vim-sleuth
         markdown-preview-nvim
+        mini-nvim
 
         lazy-lsp-nvim
 
