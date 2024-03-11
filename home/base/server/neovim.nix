@@ -145,6 +145,7 @@
         toggleterm-nvim
         telescope-nvim # Fuzzy finder (files, lsp, etc)
         telescope-fzf-native-nvim
+        telescope-ui-select-nvim
         vim-tmux-navigator
         harpoon
 
