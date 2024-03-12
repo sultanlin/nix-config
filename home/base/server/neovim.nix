@@ -101,6 +101,7 @@
         nvim-jdtls # Java
         mason-nvim
         rustaceanvim # Rust
+        crates-nvim
 
         #-- Code testing
         neotest
