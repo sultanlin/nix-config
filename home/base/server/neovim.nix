@@ -106,8 +106,8 @@
           rose-pine
 
           #-- TREESITTER
-          # nvim-treesitter.withAllGrammars # Highlight, edit, and navigate code
-          nvim-treesitter-with-plugins
+          nvim-treesitter.withAllGrammars # Highlight, edit, and navigate code
+          # nvim-treesitter-with-plugins
           nvim-treesitter-textobjects
           nvim-ts-context-commentstring
           rainbow-delimiters-nvim
