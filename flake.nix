@@ -141,6 +141,10 @@
       url = "github:rcasia/neotest-java";
       flake = false;
     };
+    grapple-nvim = {
+      url = "github:cbochs/grapple.nvim";
+      flake = false;
+    };
     nix-gaming.url = "github:fufexan/nix-gaming";
     # flake-utils.url = github:numtide/flake-utils;
     # # eww = {

@@ -149,6 +149,7 @@
         telescope-fzf-native-nvim
         vim-tmux-navigator
         harpoon
+        grapple-nvim
 
         #-- UI
         lualine-nvim # DONE
