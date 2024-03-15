@@ -396,6 +396,22 @@
         "type": "github"
       }
     },
+    "grapple-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1710442200,
+        "narHash": "sha256-Xsjf/vRqzQfIr7CDSCLkWMeCtsKgJoKi9ZSTW+nOSkc=",
+        "owner": "cbochs",
+        "repo": "grapple.nvim",
+        "rev": "a31acfe94b153d6d44f0dfc61df44c55df877d98",
+        "type": "github"
+      },
+      "original": {
+        "owner": "cbochs",
+        "repo": "grapple.nvim",
+        "type": "github"
+      }
+    },
     "hercules-ci-effects": {
       "inputs": {
         "flake-parts": "flake-parts_3",
@@ -744,6 +760,7 @@
         "catppuccin-wezterm": "catppuccin-wezterm",
         "catppuccin-yazi": "catppuccin-yazi",
         "doomemacs": "doomemacs",
+        "grapple-nvim": "grapple-nvim",
         "home-manager": "home-manager",
         "hyprland": "hyprland",
         "hyprland-plugins": "hyprland-plugins",
