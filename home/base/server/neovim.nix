@@ -111,6 +111,7 @@
           nvim-treesitter-textobjects
           nvim-ts-context-commentstring
           rainbow-delimiters-nvim
+          playground
 
           #-- COMPLETION
           nvim-cmp
