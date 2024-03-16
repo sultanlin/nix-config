@@ -251,7 +251,7 @@
           refactoring-nvim # Too difficult, code actions like move code to separate function etc
           # nvim-autopairs # Learn to live without it
           # nvim-ts-autotag # Learn to live without it
-          # noice-nvim  # BLOAT
+          noice-nvim # BLOAT
           # vim-jsx-pretty # Don't think I need it
           # sentiment-nvim # Replaced by vim-matchup
           # fidget-nvim # BUGGY Useful notifications and status updates for LSP
