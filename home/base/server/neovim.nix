@@ -355,7 +355,7 @@
     go
     gomodifytags
     # iferr # generate error handling code for go
-    # impl # generate function implementation for go   # UNUSED
+    impl # generate function implementation for go   # UNUSED
     gotools # contains tools like: godoc, goimports, etc.
     gopls # go language server
     delve # go debugger
