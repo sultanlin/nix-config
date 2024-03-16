@@ -151,7 +151,7 @@
           neotest
           # General tests
           vim-test
-          # neotest-vim-test    # Not in nixpkgs
+          neotest-vim-test
           # Language specific tests
           neotest-vitest # JS? TS?
           neotest-python
@@ -179,7 +179,7 @@
           gitlinker-nvim # Link to github and blame and ??????
           lazygit-nvim # UI terminal for git commands
           vim-rhubarb # "If fugitive is the git, rhubarb is the hub"
-          # neogit # Emacs' magit in neovim
+          neogit # Emacs' magit in neovim
           diffview-nvim
 
           #-- Navigation

@@ -141,6 +141,10 @@
       url = "github:rcasia/neotest-java";
       flake = false;
     };
+    neotest-vim-test = {
+      url = "github:nvim-neotest/neotest-vim-test";
+      flake = false;
+    };
     grapple-nvim = {
       url = "github:cbochs/grapple.nvim";
       flake = false;
