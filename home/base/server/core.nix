@@ -55,6 +55,9 @@
     # productivity
     hugo # static site generator
     glow # markdown previewer in terminal
+
+    # NOTE: TEMPORARY
+    pulumi
   ];
 
   programs = {
