@@ -49,14 +49,14 @@ in {
   # docker_vm_2_modules = {
   docker_vm_modules = {
     nixos-modules = [
-      ../hosts/docker-vm-2
+      ../hosts/docker-vm
       ../modules/server.nix
       # ../modules/nixos/proxmox-hardware-configuration.nix
       # ../modules/misc/proxmox-hardware-configuration.nix
       ../modules/proxmox-hardware-configuration.nix
     ];
     home-module.imports = [
-      ../hosts/docker-vm-2/home.nix
+      ../hosts/docker-vm/home.nix
       ../home/server.nix
     ];
   };
