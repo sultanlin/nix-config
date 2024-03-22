@@ -18,10 +18,10 @@
       fsType = "ext4";
     };
 
-  fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/E674-55DC";
-      fsType = "vfat";
-    };
+#  fileSystems."/boot" =
+#    { device = "/dev/disk/by-uuid/E674-55DC";
+#      fsType = "vfat";
+#    };
 
   swapDevices = [ ];
 
