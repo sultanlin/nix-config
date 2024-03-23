@@ -12,4 +12,8 @@
     #   "nfsvers=4.2,defaults"
     # ];
   };
+  fileSystems."/home/${username}/truenas/PlexMedia" = {
+    device = "truenas:/mnt/Plex/PlexStorage";
+    fsType = "nfs";
+  };
 }
