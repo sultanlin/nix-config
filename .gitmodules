@@ -1,3 +1,5 @@
 [submodule "dotfiles"]
 	path = dotfiles
 	url = https://github.com/sultanlin/dotfiles.git
+	branch = main
+	update = rebase
