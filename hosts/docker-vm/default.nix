@@ -17,7 +17,6 @@
       "192.168.1.40" = ["truenas"];
     };
 
-    powerManagement.cpuFreqGovernor = "performance";
     # Configure network proxy if necessary
     # proxy.default = "http://user:password@proxy:port/";
     # proxy.noProxy = "127.0.0.1,localhost,internal.domain";
@@ -40,6 +39,7 @@
     #   "223.5.5.5" # AliDNS
     # ];
   };
+  powerManagement.cpuFreqGovernor = "performance";
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
