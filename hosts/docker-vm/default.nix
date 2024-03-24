@@ -39,7 +39,7 @@
     #   "223.5.5.5" # AliDNS
     # ];
   };
-  powerManagement.cpuFreqGovernor = "performance";
+  powerManagement.cpuFreqGovernor = "performance"; # NOTE: Fixes slow database on server
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
