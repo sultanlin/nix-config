@@ -116,11 +116,6 @@
         zmodload zsh/complist
         compinit
         _comp_options+=(globdots)		# Include hidden files.
-
-        #Docker completion
-        zstyle ':completion:*:*:docker:*' option-stacking yes
-        zstyle ':completion:*:*:docker-*:*' option-stacking yes
-        zstyle ':completion:*:*:docker *:*' option-stacking yes
       '';
     };
   };
