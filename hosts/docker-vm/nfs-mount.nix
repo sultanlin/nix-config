@@ -16,6 +16,10 @@
     device = "truenas:/mnt/Plex/PlexStorage";
     fsType = "nfs";
   };
+  fileSystems."/home/${username}/truenas/Proxmox" = {
+    device = "truenas:/mnt/Plex/Prox-Vms";
+    fsType = "nfs";
+  };
   fileSystems."/home/${username}/truenas/temporary" = {
     device = "truenas:/mnt/largest-used/temporary-backup";
     fsType = "nfs";
