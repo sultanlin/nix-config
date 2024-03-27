@@ -28,7 +28,7 @@
     extraGroups = [
       username
       "users"
-      # "networkmanager"
+      "networkmanager"
       "wheel"
       "docker"
       "wireshark"
@@ -43,6 +43,8 @@
       "plex"
     ];
   };
+
+  # This is a test
 
   # users.users.root = {
   #   initialHashedPassword = "$7$CU..../....X6uvZYnFD.i1CqqFFNl4./$4vgqzIPyw5XBr0aCDFbY/UIRRJr7h5SMGoQ/ZvX3FP2";
