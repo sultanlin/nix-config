@@ -24,15 +24,15 @@
     networkmanager.enable = false;
 
     enableIPv6 = false; # disable ipv6
-    # interfaces.enp5s0 = {
-    #   useDHCP = false;
-    #   ipv4.addresses = [
-    #     {
-    #       address = "192.168.5.100";
-    #       prefixLength = 24;
-    #     }
-    #   ];
-    # };
+    interfaces.ens18 = {
+      useDHCP = false;
+      ipv4.addresses = [
+        {
+          address = "192.168.1.48";
+          prefixLength = 24;
+        }
+      ];
+    };
     # defaultGateway = "192.168.5.201";
     # nameservers = [
     #   "119.29.29.29" # DNSPod
