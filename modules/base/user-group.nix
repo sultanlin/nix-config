@@ -28,7 +28,7 @@
     extraGroups = [
       username
       "users"
-      "networkmanager"
+      # "networkmanager"
       "wheel"
       "docker"
       "wireshark"
