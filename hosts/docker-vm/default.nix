@@ -24,7 +24,8 @@
     networkmanager.enable = false;
 
     enableIPv6 = false; # disable ipv6
-    interfaces.ensp018 = {
+    # interfaces.ensp018 = {
+    interfaces.ens18 = {
       useDHCP = false;
       ipv4.addresses = [
         {
