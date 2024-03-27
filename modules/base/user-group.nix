@@ -7,7 +7,9 @@
   # users.mutableUsers = false;
 
   users.groups = {
-    "${username}" = {};
+    "${username}" = {
+      gid = 1000;
+    };
     docker = {};
     wireshark = {};
     # for android platform tools's udev rules
@@ -42,6 +44,7 @@
       "kvm"
       "plex"
     ];
+    uid = 1000;
   };
 
   # users.users.root = {
