@@ -35,11 +35,10 @@
       ];
     };
     defaultGateway = "192.168.1.1";
-    nameservers = [
-      "1.1.1.1"
-      # "119.29.29.29" # DNSPod
-      #   "223.5.5.5" # AliDNS
-    ];
+    # nameservers = [
+    #   "119.29.29.29" # DNSPod
+    #   "223.5.5.5" # AliDNS
+    # ];
   };
   powerManagement.cpuFreqGovernor = "performance"; # NOTE: Fixes slow database on server
 
