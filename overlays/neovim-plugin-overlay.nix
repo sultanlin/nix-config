@@ -17,6 +17,5 @@
       grapple-nvim = mkNvimPlugin inputs.grapple-nvim "grapple.nvim";
       # sentiment-nvim = mkNvimPlugin sentiment-nvim "sentiment.nvim";
       neotest-vim-test = mkNvimPlugin inputs.neotest-vim-test "neotest-vim-test";
-      tree-sitter-just = mkNvimPlugin inputs.tree-sitter-just "tree-sitter-just";
     };
 })
