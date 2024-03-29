@@ -107,6 +107,7 @@
 
           #-- TREESITTER
           nvim-treesitter.withAllGrammars # Highlight, edit, and navigate code
+          tree-sitter-just
           # nvim-treesitter-with-plugins
           nvim-treesitter-textobjects
           nvim-ts-context-commentstring

@@ -149,6 +149,10 @@
       url = "github:cbochs/grapple.nvim";
       flake = false;
     };
+    tree-sitter-just = {
+      url = "github:IndianBoy42/tree-sitter-just";
+      flake = false;
+    };
     nix-gaming.url = "github:fufexan/nix-gaming";
     # flake-utils.url = github:numtide/flake-utils;
     # # eww = {
