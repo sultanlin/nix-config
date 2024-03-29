@@ -112,6 +112,22 @@
           nvim-ts-context-commentstring
           rainbow-delimiters-nvim
           playground
+          # Doesn't work
+          # https://github.com/NixOS/nixpkgs/blob/nixos-unstable/pkgs/development/tools/parsing/tree-sitter/grammars/tree-sitter-just.json
+          # (nvim-treesitter.withPlugins (_:
+          #   nvim-treesitter.allGrammars
+          #   ++ [
+          #     (pkgs.tree-sitter.buildGrammar {
+          #       language = "just";
+          #       version = "f807ab3";
+          #       src = pkgs.fetchFromGitHub {
+          #         owner = "IndianBoy42";
+          #         repo = "tree-sitter-just";
+          #         rev = "f807ab33c36651ecb503a291aed933932754864d";
+          #         sha256 = "sha256-iK+MpyK5pQ/sYT2CHYmeI0k231HwHdZ80ij1cqlO5Nk=";
+          #       };
+          #     })
+          #   ]))
 
           #-- COMPLETION
           nvim-cmp
