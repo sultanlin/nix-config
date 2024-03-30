@@ -789,8 +789,7 @@
         "nixpkgs-unstable": "nixpkgs-unstable",
         "nuenv": "nuenv",
         "polybar-themes": "polybar-themes",
-        "sentiment-nvim": "sentiment-nvim",
-        "tree-sitter-just": "tree-sitter-just"
+        "sentiment-nvim": "sentiment-nvim"
       }
     },
     "rust-overlay": {
@@ -888,22 +887,6 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
-        "type": "github"
-      }
-    },
-    "tree-sitter-just": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1711142481,
-        "narHash": "sha256-EnU0IpBr9i3+RFLzg7g6XuDSiuMBLGQ0eCJNPKeDohw=",
-        "owner": "IndianBoy42",
-        "repo": "tree-sitter-just",
-        "rev": "6c2f018ab1d90946c0ce029bb2f7d57f56895dff",
-        "type": "github"
-      },
-      "original": {
-        "owner": "IndianBoy42",
-        "repo": "tree-sitter-just",
         "type": "github"
       }
     },

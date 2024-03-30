@@ -246,6 +246,7 @@
           nvim-spectre
           vim-sleuth
           markdown-preview-nvim
+          glow-nvim
           mini-nvim
 
           lazy-lsp-nvim
