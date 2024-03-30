@@ -3,7 +3,10 @@
   nixosPath,
   ...
 }:
-pkgs.writeShellScriptBin "dva" ''
-  # echo "use flake $HOME/nix-config/programming/$1" >> .envrc
-  git submodule update --init --remote --recursive
+pkgs.writeShellScriptBin "mygitsubmodule" ''
+  # Initially get submodules
+  # git submodule update --init --remote --recursive
+
+  # Update submodules (do not use git pull --recursive)
+  # git submodule update --remote --recursive --merge
 ''
