@@ -35,7 +35,7 @@
         }
       ];
     };
-    # defaultGateway = "192.168.1.1";
+    defaultGateway = "192.168.1.1";
     # nameservers = [
     #   "119.29.29.29" # DNSPod
     #   "223.5.5.5" # AliDNS
