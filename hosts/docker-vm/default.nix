@@ -21,7 +21,8 @@
     # proxy.default = "http://user:password@proxy:port/";
     # proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
-    networkmanager.enable = false;
+    # networkmanager.enable = false;
+    networkmanager.enable = true;
 
     # enableIPv6 = true; # disable ipv6
     enableIPv6 = false; # disable ipv6
