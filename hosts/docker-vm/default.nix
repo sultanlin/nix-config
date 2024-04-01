@@ -28,7 +28,7 @@
     # enableIPv6 = false; # disable ipv6
     # interfaces.ensp018 = {
     interfaces.ens18 = {
-      useDHCP = true;
+      useDHCP = false;
       ipv4.addresses = [
         {
           address = "192.168.1.48";
