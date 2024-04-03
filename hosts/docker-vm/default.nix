@@ -3,7 +3,7 @@
 #  Ai - my main computer, with NixOS + I5-13600KF + RTX 4090 GPU, for gaming & daily use.
 #
 #############################################################
-{pkgs}: {
+{
   imports = [
     ./nfs-mount.nix
     # Include the results of the hardware scan.
@@ -44,8 +44,6 @@
     ];
   };
   powerManagement.cpuFreqGovernor = "performance"; # NOTE: Fixes slow database on server
-
-  boot.kernelPackages = pkgs.linuxPackages_6_1;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
