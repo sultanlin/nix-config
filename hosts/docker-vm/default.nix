@@ -10,6 +10,8 @@
     ./hardware-configuration.nix
   ];
 
+  boot.kernelParams = ["acpi_osi=!acpi_osi=\"Windows 2009\""];
+
   networking = {
     hostName = "docker-vm";
     wireless.enable = false; # Enables wireless support via wpa_supplicant.
