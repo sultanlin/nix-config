@@ -46,12 +46,12 @@
   };
 
   # for power management
-  # services = {
-  #   power-profiles-daemon = {
-  #     enable = true;
-  #   };
-  #   upower.enable = true;
-  # };
+  services = {
+    power-profiles-daemon = {
+      enable = true;
+    };
+    upower.enable = true;
+  };
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
