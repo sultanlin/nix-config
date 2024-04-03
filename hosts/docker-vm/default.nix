@@ -12,7 +12,7 @@
 
   networking = {
     hostName = "docker-vm";
-    wireless.enable = false; # Enables wireless support via wpa_supplicant.
+    wireless.enable = true; # Enables wireless support via wpa_supplicant.
     hosts = {
       "192.168.1.40" = ["truenas"];
     };
@@ -26,16 +26,17 @@
     # enableIPv6 = true; # disable ipv6
     # enableIPv6 = false; # disable ipv6
     # interfaces.ensp018 = {
-    interfaces.ens18 = {
-      # useDHCP = false;
-      useDHCP = true;
-      # ipv4.addresses = [
-      #   {
-      #     address = "192.168.1.48";
-      #     prefixLength = 24;
-      #   }
-      # ];
-    };
+    useDHCP = true;
+    # interfaces.ens18 = {
+    #   # useDHCP = false;
+    #   useDHCP = true;
+    #   # ipv4.addresses = [
+    #   #   {
+    #   #     address = "192.168.1.48";
+    #   #     prefixLength = 24;
+    #   #   }
+    #   # ];
+    # };
     # defaultGateway = "192.168.1.1";
     # nameservers = [
     #   "1.1.1.1"
