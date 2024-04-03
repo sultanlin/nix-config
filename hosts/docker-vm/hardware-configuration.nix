@@ -5,6 +5,7 @@
   config,
   lib,
   pkgs,
+  pkgs-stable,
   modulesPath,
   ...
 }: {
@@ -18,6 +19,8 @@
   boot.extraModulePackages = [];
 
   boot.loader.grub.enable = true;
+
+  boot.kernelPackages = pkgs-stable.linuxPackages_latest;
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's
