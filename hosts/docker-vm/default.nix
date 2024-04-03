@@ -12,7 +12,7 @@
 
   networking = {
     hostName = "docker-vm";
-    wireless.enable = true; # Enables wireless support via wpa_supplicant.
+    # wireless.enable = true; # Enables wireless support via wpa_supplicant.
     hosts = {
       "192.168.1.40" = ["truenas"];
     };
