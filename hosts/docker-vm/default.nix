@@ -12,7 +12,7 @@
 
   networking = {
     hostName = "docker-vm";
-    # wireless.enable = true; # Enables wireless support via wpa_supplicant.
+    wireless.enable = false; # Enables wireless support via wpa_supplicant.
     hosts = {
       "192.168.1.40" = ["truenas"];
     };
@@ -21,29 +21,27 @@
     # proxy.default = "http://user:password@proxy:port/";
     # proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
-    networkmanager.enable = true;
+    networkmanager.enable = false;
 
     # enableIPv6 = true; # disable ipv6
     # enableIPv6 = false; # disable ipv6
     # interfaces.ensp018 = {
-    # useDHCP = true;
-    # interfaces.ens18 = {
-    #   # useDHCP = false;
-    #   useDHCP = true;
-    #   # ipv4.addresses = [
-    #   #   {
-    #   #     address = "192.168.1.48";
-    #   #     prefixLength = 24;
-    #   #   }
-    #   # ];
-    # };
-    # defaultGateway = "192.168.1.1";
-    # nameservers = [
-    #   "1.1.1.1"
-    #   "8.8.8.8"
-    #   #   "119.29.29.29" # DNSPod
-    #   #   "223.5.5.5" # AliDNS
-    # ];
+    interfaces.ens18 = {
+      useDHCP = false;
+      ipv4.addresses = [
+        {
+          address = "192.168.1.48";
+          prefixLength = 24;
+        }
+      ];
+    };
+    defaultGateway = "192.168.1.1";
+    nameservers = [
+      "1.1.1.1"
+      "8.8.8.8"
+      #   "119.29.29.29" # DNSPod
+      #   "223.5.5.5" # AliDNS
+    ];
   };
   powerManagement.cpuFreqGovernor = "performance"; # NOTE: Fixes slow database on server
 
