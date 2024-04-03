@@ -23,14 +23,14 @@ in
     #   # }
     #   #
     #
-    #   # Home manager as a NixOS module
-    #   home-manager.nixosModules.home-manager
-    #   {
-    #     home-manager.useGlobalPkgs = true;
-    #     home-manager.useUserPackages = true;
-    #
-    #     home-manager.extraSpecialArgs = specialArgs;
-    #     home-manager.users."${username}" = home-module;
-    #   }
-    # ];
+       # Home manager as a NixOS module
+       home-manager.nixosModules.home-manager
+       {
+         home-manager.useGlobalPkgs = true;
+         home-manager.useUserPackages = true;
+    
+         home-manager.extraSpecialArgs = specialArgs;
+         home-manager.users."${username}" = home-module;
+       }
+     ];
   }
