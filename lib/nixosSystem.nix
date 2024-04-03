@@ -11,8 +11,8 @@ in
   nixpkgs.lib.nixosSystem {
     inherit system specialArgs;
     modules =
-      nixos-modules;
-    # ++ [
+      nixos-modules
+     ++ [
     #   # nixos-generators.nixosModules.all-formats
     #   # {
     #   #   # formatConfigs.iso = {config, ...}: {};
