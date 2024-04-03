@@ -40,14 +40,14 @@
   # supported file systems, so we can mount any removable disks with these filesystems
   boot.supportedFilesystems = [
     "ext4"
-    "btrfs"
-    "xfs"
-    #"zfs"
-    "ntfs"
-    "fat"
-    "vfat"
-    "exfat"
-    "cifs" # mount windows share
+    # "btrfs"
+    # "xfs"
+    # #"zfs"
+    # "ntfs"
+    # "fat"
+    # "vfat"
+    # "exfat"
+    # "cifs" # mount windows share
   ];
 
   fileSystems."/" = {
