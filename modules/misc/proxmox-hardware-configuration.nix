@@ -1,7 +1,7 @@
 {
   lib,
   modulesPath,
-  pkgs,
+  # pkgs,
   ...
 }:
 ##############################################################################
@@ -64,7 +64,7 @@
     "cifs" # mount windows share
   ];
 
-  boot.kernelPackages = pkgs.linuxPackages_6_1;
+  # boot.kernelPackages = pkgs.linuxPackages_6_1;
 
   # it alse had qemu-guest-agent installed by default.
   services.qemuGuest.enable = lib.mkDefault true;
