@@ -10,7 +10,7 @@
     ./hardware-configuration.nix
   ];
 
-  boot.kernelParams = ["acpi_osi=!acpi_osi=\"Windows 2009\""];
+  boot.kernelParams = ["acpi_osi=!" "acpi_osi='Windows 2009'"];
 
   networking = {
     hostName = "docker-vm";
