@@ -26,7 +26,7 @@
     # enableIPv6 = true; # disable ipv6
     # enableIPv6 = false; # disable ipv6
     # interfaces.ensp018 = {
-    useDHCP = true;
+    # useDHCP = true;
     # interfaces.ens18 = {
     #   # useDHCP = false;
     #   useDHCP = true;
