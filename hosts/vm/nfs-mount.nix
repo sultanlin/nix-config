@@ -15,25 +15,25 @@
   fileSystems."/home/${username}/truenas/PlexMedia" = {
     device = "truenas:/mnt/Plex/PlexStorage";
     fsType = "nfs";
-    options = [
-      #   # "vers=3.0,uid=1000,gid=100,dir_mode=0755,file_mode=0755,mfsymlinks,credentials=${config.age.secrets.smb-credentials.path},nofail"
-      #   "nfsvers=4.2,defaults"
-    ];
+    # options = [
+    #   # "vers=3.0,uid=1000,gid=100,dir_mode=0755,file_mode=0755,mfsymlinks,credentials=${config.age.secrets.smb-credentials.path},nofail"
+    #   "nfsvers=4.2,defaults"
+    # ];
   };
   fileSystems."/home/${username}/truenas/Proxmox" = {
     device = "truenas:/mnt/Plex/Prox-Vms";
     fsType = "nfs";
-    options = [
-      #   # "vers=3.0,uid=1000,gid=100,dir_mode=0755,file_mode=0755,mfsymlinks,credentials=${config.age.secrets.smb-credentials.path},nofail"
-      #   "nfsvers=4.2,defaults"
-    ];
+    # options = [
+    #   # "vers=3.0,uid=1000,gid=100,dir_mode=0755,file_mode=0755,mfsymlinks,credentials=${config.age.secrets.smb-credentials.path},nofail"
+    #   "nfsvers=4.2,defaults"
+    # ];
   };
   fileSystems."/home/${username}/truenas/temporary" = {
     device = "truenas:/mnt/largest-used/temporary-backup";
     fsType = "nfs";
-    options = [
-      #   # "vers=3.0,uid=1000,gid=100,dir_mode=0755,file_mode=0755,mfsymlinks,credentials=${config.age.secrets.smb-credentials.path},nofail"
-      #   "nfsvers=4.2,defaults"
-    ];
+    # options = [
+    #   # "vers=3.0,uid=1000,gid=100,dir_mode=0755,file_mode=0755,mfsymlinks,credentials=${config.age.secrets.smb-credentials.path},nofail"
+    #   "nfsvers=4.2,defaults"
+    # ];
   };
 }
