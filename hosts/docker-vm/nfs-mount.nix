@@ -34,8 +34,8 @@
     #   # "nfsvers=3.0"
     # ];
   };
-  fileSystems."/home/${username}/truenas/PlexSto" = {
-    device = "truenas:/mnt/hoard/PlexStorage";
-    fsType = "nfs";
-  };
+  # fileSystems."/home/${username}/truenas/PlexSto" = {
+  #   device = "truenas:/mnt/hoard/PlexStorage";
+  #   fsType = "nfs";
+  # };
 }
