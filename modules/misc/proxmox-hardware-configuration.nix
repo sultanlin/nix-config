@@ -1,6 +1,7 @@
 {
   lib,
   modulesPath,
+  # pkgs,
   ...
 }:
 ##############################################################################
@@ -18,7 +19,7 @@
     ./base
     ./base.nix
 
-    (modulesPath + "/profiles/qemu-guest.nix")
+    # (modulesPath + "/profiles/qemu-guest.nix")
     # ./home-manager.nix
     # ./derivations/my-derivations.nix
   ];
@@ -61,7 +62,10 @@
     "vfat"
     "exfat"
     "cifs" # mount windows share
+    "nfs"
   ];
+
+  # boot.kernelPackages = pkgs.linuxPackages_6_1;
 
   # it alse had qemu-guest-agent installed by default.
   services.qemuGuest.enable = lib.mkDefault true;

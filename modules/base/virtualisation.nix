@@ -5,9 +5,10 @@
   #
   ###################################################################################
 
-  boot.kernelModules = ["kvm-amd" "kvm-intel" "vfio-pci"];
+  # boot.kernelModules = ["kvm-amd" "kvm-intel" "vfio-pci"];
+  boot.kernelModules = ["kvm-intel" "vfio-pci"];
   # Enable nested virtualization, required by security containers and nested vm.
-  boot.extraModprobeConfig = "options kvm_intel nested=1"; # for intel cpu
+  # boot.extraModprobeConfig = "options kvm_intel nested=1"; # for intel cpu
   # boot.extraModprobeConfig = "options kvm_amd nested=1";  # for amd cpu
 
   virtualisation = {

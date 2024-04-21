@@ -10,6 +10,8 @@
     ./hardware-configuration.nix
   ];
 
+  # boot.kernelParams = ["acpi_osi=!" "acpi_osi=\"Windows 2009\""];
+
   networking = {
     hostName = "docker-vm";
     wireless.enable = false; # Enables wireless support via wpa_supplicant.
@@ -24,10 +26,11 @@
     networkmanager.enable = false;
 
     # enableIPv6 = true; # disable ipv6
-    # enableIPv6 = false; # disable ipv6
+    enableIPv6 = false; # disable ipv6
+    useDHCP = false;
     # interfaces.ensp018 = {
     interfaces.ens18 = {
-      useDHCP = false;
+      # useDHCP = false;
       ipv4.addresses = [
         {
           address = "192.168.1.48";
