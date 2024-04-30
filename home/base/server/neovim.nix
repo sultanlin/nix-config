@@ -266,7 +266,7 @@
           # nvim-navbuddy       # BLOAT
           # auto-session      # Not needed
           refactoring-nvim # Too difficult, code actions like move code to separate function etc
-          # nvim-autopairs # Learn to live without it
+          nvim-autopairs # Learn to live without it
           # nvim-ts-autotag # Learn to live without it
           noice-nvim # BLOAT
           # vim-jsx-pretty # Don't think I need it
