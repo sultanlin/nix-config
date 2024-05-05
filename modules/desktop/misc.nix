@@ -13,4 +13,21 @@
       flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
     '';
   };
+
+  # Gaming
+  programs.steam = {
+    enable = true;
+    gamescopeSession.enable = true;
+  };
+
+  environment.systemPackages = with pkgs; [
+    mangohud
+    protonup
+  ];
+
+  program.gamemode.enable = true;
+
+  environment.sessionVariables = {
+    STEAM_EXTRA_COMPAT_TOOLS_PATH = "/home/user/.steam/root/compatibilitytools.d";
+  };
 }
