@@ -4,6 +4,7 @@
     # use fonts specified by user rather than default ones
     enableDefaultPackages = false;
     fontDir.enable = true;
+    fontconfig.enable = true;
 
     packages = with pkgs; [
       # icon fonts
