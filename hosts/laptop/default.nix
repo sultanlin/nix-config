@@ -40,10 +40,19 @@
     # ];
   };
 
-  services.xserver.videoDrivers = ["amdgpu"]; # will install nvidia-vaapi-driver by default
-
   # conflict with feature: containerd-snapshotter
   # virtualisation.docker.storageDriver = "btrfs";
+
+  # for AMD GPU
+  services.xserver.videoDrivers = ["amdgpu"]; # will install nvidia-vaapi-driver by default
+
+  hardware.opengl = {
+    enable = true;
+    # if hardware.opengl.driSupport is enabled, mesa is installed and provides Vulkan for supported hardware.
+    driSupport = true;
+    # needed by nvidia-docker
+    driSupport32Bit = true;
+  };
 
   # # for Nvidia GPU
   # services.xserver.videoDrivers = ["nvidia"]; # will install nvidia-vaapi-driver by default
@@ -56,14 +65,6 @@
   #   powerManagement.enable = true;
   # };
   # virtualisation.docker.enableNvidia = true; # for nvidia-docker
-  #
-  # hardware.opengl = {
-  #   enable = true;
-  #   # if hardware.opengl.driSupport is enabled, mesa is installed and provides Vulkan for supported hardware.
-  #   driSupport = true;
-  #   # needed by nvidia-docker
-  #   driSupport32Bit = true;
-  # };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
