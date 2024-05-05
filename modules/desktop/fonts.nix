@@ -42,6 +42,7 @@
       })
       julia-mono
       dejavu_fonts
+      wqy_zenhei
 
       # (pkgs.callPackage ../../fonts/icomoon-feather-icon-font.nix {})
     ];
