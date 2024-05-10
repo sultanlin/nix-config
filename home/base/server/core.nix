@@ -58,9 +58,6 @@
 
     # NOTE: TEMPORARY
     pulumi
-    chafa
-    timg
-    catimg
   ];
 
   programs = {
