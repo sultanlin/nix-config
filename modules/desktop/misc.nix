@@ -2,6 +2,7 @@
   config,
   lib,
   pkgs,
+  pkgs-stable,
   ...
 }: {
   services.flatpak.enable = true;
@@ -26,7 +27,8 @@
     protonup
 
     # Libre office
-    libreoffice-bin
+    # pkgs-stable.libreoffice
+    pkgs-stable.libreoffice-qt
     # libreoffice-qt
     hunspell
     hunspellDicts.en_US
