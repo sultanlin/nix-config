@@ -26,6 +26,7 @@
     protonup
 
     # Libre office
+    libreoffice
     libreoffice-qt
     hunspell
     hunspellDicts.en_US
