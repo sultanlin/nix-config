@@ -21,8 +21,14 @@
   };
 
   environment.systemPackages = with pkgs; [
+    # Games?
     mangohud
     protonup
+
+    # Libre office
+    libreoffice-qt
+    hunspell
+    hunspellDicts.en_US
   ];
 
   programs.gamemode.enable = true;
