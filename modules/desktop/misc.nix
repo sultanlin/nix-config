@@ -26,14 +26,14 @@
     mangohud
     protonup
 
-    # Libre office
-    # pkgs-stable.libreoffice
-    pkgs-stable.libreoffice-qt
-    # libreoffice-qt
-    hunspell
-    hunspellDicts.en_US
-    vistafonts
-    corefonts
+    # # Libre office
+    # # pkgs-stable.libreoffice
+    # pkgs-stable.libreoffice-qt
+    # # libreoffice-qt
+    # hunspell
+    # hunspellDicts.en_US
+    # vistafonts
+    # corefonts
   ];
 
   programs.gamemode.enable = true;
