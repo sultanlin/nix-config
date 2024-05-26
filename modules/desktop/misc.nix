@@ -27,9 +27,11 @@
 
     # Libre office
     libreoffice
-    libreoffice-qt
+    # libreoffice-qt
     hunspell
     hunspellDicts.en_US
+    vistafonts
+    corefonts
   ];
 
   programs.gamemode.enable = true;
