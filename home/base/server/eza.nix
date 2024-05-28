@@ -2,7 +2,6 @@
   config,
   lib,
   pkgs,
-
   userfullname,
   useremail,
   ...
@@ -11,8 +10,8 @@
     enable = true;
     icons = true;
     git = true;
-    
-    enableAliases = true;
+
+    # enableAliases = true;
 
     # extraOptions = {}
   };
