@@ -28,7 +28,7 @@
 
       # Nightly failing, tree-sitter old version
       # package = pkgs.neovim-nightly.overrideAttrs (_: {CFLAGS = "-O3";});
-      package = pkgs.neovim-nightly;
+      # package = pkgs.neovim-nightly;
 
       viAlias = true;
       vimAlias = true;
