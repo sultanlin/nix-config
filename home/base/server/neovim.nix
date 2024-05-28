@@ -340,7 +340,7 @@
     deadnix # Find and remove unused code in .nix source files
     alejandra # Nix Code Formatter
     nil
-    rnix-lsp
+    # rnix-lsp
     nixpkgs-fmt
     nixd
 
