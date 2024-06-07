@@ -7,7 +7,8 @@
   # add user's shell into /etc/shells
   environment.shells = with pkgs; [
     bashInteractive
-    nushellFull
+    # nushellFull
+    nushell
   ];
 
   programs.zsh.enable = true;

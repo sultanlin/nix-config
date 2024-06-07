@@ -29,6 +29,7 @@
   services = {
     gvfs.enable = true; # Mount, trash, and other functionalities
     tumbler.enable = true; # Thumbnail support for images
+    displayManager.defaultSession = "hyprland";
     xserver = {
       enable = true;
       videoDrivers = ["amdgpu"];
@@ -38,7 +39,7 @@
       };
 
       displayManager = {
-        defaultSession = "hyprland";
+        # defaultSession = "hyprland";
         lightdm.enable = false;
         gdm = {
           enable = true;

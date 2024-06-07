@@ -1,23 +1,26 @@
-{ pkgs, username, ... }:
-
 {
+  pkgs,
+  username,
+  ...
+}: {
   # home.users.${username}.shell = pkgs.zsh;
 
   programs = {
     zsh = {
       enable = true;
       syntaxHighlighting.enable = true;
-      enableAutosuggestions = true;
+      # enableAutosuggestions = true;
+      autosuggestion.enable = true;
       enableCompletion = true;
       #histSize = 100000;
       # Automatically goes into directory without cd
       autocd = true;
 
       history = {
-	        ignoreAllDups = true;
-		      extended = true;
-		      expireDuplicatesFirst = true;
-	    };
+        ignoreAllDups = true;
+        extended = true;
+        expireDuplicatesFirst = true;
+      };
 
       dirHashes = {
         docs = "$(xdg-user-dir DOCUMENTS)";
@@ -55,7 +58,7 @@
         zmodload zsh/complist
         compinit
         _comp_options+=(globdots)		# Include hidden files.
-      '';  
+      '';
     };
 
     home.packages = with pkgs; [
@@ -71,9 +74,9 @@
     ];
 
     env = {
-      ZDOTDIR   = "$XDG_CONFIG_HOME/zsh";
+      ZDOTDIR = "$XDG_CONFIG_HOME/zsh";
       ZSH_CACHE = "$XDG_CACHE_HOME/zsh";
-      ZGEN_DIR  = "$XDG_DATA_HOME/zgenom";
+      ZGEN_DIR = "$XDG_DATA_HOME/zgenom";
     };
   };
 }
