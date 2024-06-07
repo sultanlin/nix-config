@@ -59,6 +59,7 @@
 
     # NOTE: TEMPORARY
     pulumi
+    swappy
   ];
 
   programs = {
