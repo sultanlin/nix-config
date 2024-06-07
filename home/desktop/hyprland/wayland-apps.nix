@@ -19,7 +19,7 @@
       [mouse]
       hide-when-typing=yes
     ''
-    + (builtins.readFile "${catppuccin-foot}/catppuccin-mocha.ini");
+    + (builtins.readFile "${catppuccin-foot}/themes/catppuccin-mocha.ini");
 
   programs = {
     # a wayland only terminal emulator

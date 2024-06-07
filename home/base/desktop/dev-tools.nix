@@ -16,7 +16,7 @@
 
   home.packages = with pkgs; [
     # db related
-    dbeaver
+    dbeaver-bin
     mycli
     pgcli
     mongosh
