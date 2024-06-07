@@ -101,6 +101,7 @@
     # TODO replace by `flameshot gui --raw | wl-copy`
 
     mako # the notification daemon, the same as dunst
+    swaynotificationcenter
 
     yad # a fork of zenity, for creating dialogs
 
@@ -110,6 +111,8 @@
     mpc-cli # command-line mpd client
     ncmpcpp # a mpd client with a UI
     networkmanagerapplet # provide GUI app: nm-connection-editor
+
+    nwg-look
 
     xfce.thunar # xfce4's file manager
   ];
