@@ -27,10 +27,10 @@
     protonup
 
     # Libre office
-    libreoffice
+    # libreoffice
     # # pkgs-stable.libreoffice
     # pkgs-stable.libreoffice-qt
-    # # libreoffice-qt
+    libreoffice-qt
     hunspell
     hunspellDicts.en_US
     vistafonts
