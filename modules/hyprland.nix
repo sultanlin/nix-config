@@ -89,10 +89,12 @@
   environment.systemPackages = with pkgs; [
     waybar # the status bar
     swaybg # the wallpaper
+    swww
     swayidle # the idle timeout
     swaylock # locking the screen
     wlogout # logout menu
     wl-clipboard # copying and pasting
+    cliphist
     hyprpicker # color picker
 
     wf-recorder # screen recording
