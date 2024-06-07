@@ -33,6 +33,10 @@ in {
       source = "${config_sym_dir}/hypr";
       recursive = true;
     };
+    ".config/fastfetch" = {
+      source = "${config_sym_dir}/fastfetch";
+      recursive = true;
+    };
   };
   home.sessionVariables = {
     DOTFILES_CONFIG = "${dotfilesConfig}";
