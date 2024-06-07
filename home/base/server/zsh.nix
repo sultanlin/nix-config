@@ -10,7 +10,8 @@
     zsh = {
       enable = true;
       syntaxHighlighting.enable = true;
-      enableAutosuggestions = true;
+      # enableAutosuggestions = true;
+      autosuggestion.enable = true;
       enableCompletion = true;
       #histSize = 100000;
       # histSize = 10000;
