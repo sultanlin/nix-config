@@ -116,7 +116,7 @@
     networkmanagerapplet # provide GUI app: nm-connection-editor
 
     nwg-look
-    rofi
+    rofi-wayland
 
     xfce.thunar # xfce4's file manager
   ];
