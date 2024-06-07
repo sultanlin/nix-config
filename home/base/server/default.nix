@@ -37,6 +37,10 @@ in {
       source = "${config_sym_dir}/fastfetch";
       recursive = true;
     };
+    ".config/swappy" = {
+      source = "${config_sym_dir}/swappy";
+      recursive = true;
+    };
   };
   home.sessionVariables = {
     DOTFILES_CONFIG = "${dotfilesConfig}";
