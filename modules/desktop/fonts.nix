@@ -15,6 +15,7 @@
       vegur # NixOS
       corefonts # MS
 
+      # Consider Dejavu sans
       noto-fonts
       noto-fonts-cjk
       noto-fonts-emoji
