@@ -105,6 +105,7 @@
 
     mako # the notification daemon, the same as dunst
     swaynotificationcenter
+    dunst
 
     yad # a fork of zenity, for creating dialogs
 
