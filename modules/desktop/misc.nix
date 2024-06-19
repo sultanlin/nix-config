@@ -35,6 +35,9 @@
     hunspellDicts.en_US
     vistafonts
     corefonts
+
+    # Protonvpn
+    protonvpn-gui
   ];
 
   programs.gamemode.enable = true;
