@@ -41,6 +41,14 @@ in {
       source = "${config_sym_dir}/swappy";
       recursive = true;
     };
+    ".config/rofi" = {
+      source = "${config_sym_dir}/rofi";
+      recursive = true;
+    };
+    ".config/dunst" = {
+      source = "${config_sym_dir}/dunst";
+      recursive = true;
+    };
   };
   home.sessionVariables = {
     DOTFILES_CONFIG = "${dotfilesConfig}";
