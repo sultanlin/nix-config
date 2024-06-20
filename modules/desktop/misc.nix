@@ -36,8 +36,8 @@
     vistafonts
     corefonts
 
-    # Protonvpn
-    protonvpn-gui
+    # Plex media player
+    plex-media-player
   ];
 
   programs.gamemode.enable = true;
