@@ -34,7 +34,7 @@
         "--enable-wayland-ime"
 
         # enable hardware acceleration - vulkan api
-        # "--enable-features=Vulkan"
+        "--enable-features=Vulkan"
       ];
     };
   };
