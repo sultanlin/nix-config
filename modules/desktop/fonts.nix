@@ -57,6 +57,10 @@
       monospace = ["JetBrainsMono Nerd Font" "Noto Color Emoji"];
       emoji = ["Noto Color Emoji"];
     };
+
+    environment.sessionVariables = {
+      FONTCONFIG_PATH = "/etc/fonts";
+    };
   };
 
   # # https://wiki.archlinux.org/title/KMSCON
