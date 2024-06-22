@@ -32,6 +32,7 @@
         "--ozone-platform=wayland"
         # make it use text-input-v1, which works for kwin 5.27 and weston
         "--enable-wayland-ime"
+        "--enable-features=TouchpadOverscrollHistoryNavigation"
 
         # enable hardware acceleration - vulkan api
         "--enable-features=Vulkan"
