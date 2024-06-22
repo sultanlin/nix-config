@@ -38,6 +38,9 @@
 
     # Plex media player
     plex-media-player
+
+    # postgresql cli ++
+    pgcli
   ];
 
   programs.gamemode.enable = true;
