@@ -381,7 +381,7 @@
     templ # Templ HTML in go
 
     #-- Java
-    jdt-language-server
+    # jdt-language-server
     # jdtls
     google-java-format
     lombok
