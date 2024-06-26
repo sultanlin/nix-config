@@ -25,6 +25,7 @@
     # Games?
     mangohud
     protonup
+    lutris
 
     # Libre office
     # libreoffice
