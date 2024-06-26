@@ -48,10 +48,10 @@
   services.xserver.videoDrivers = ["amdgpu"]; # will install nvidia-vaapi-driver by default
   # services.xserver.videoDrivers = lib.mkDefault [ "modesetting" ];
 
-  hardware.graphics = {
-    enable = true;
-    enable32bit = true;
-  };
+  # hardware.graphics = {
+  #   enable = true;
+  #   enable32bit = true;
+  # };
 
   hardware.opengl = {
     enable = true;
