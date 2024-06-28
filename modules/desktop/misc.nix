@@ -42,6 +42,8 @@
 
     # postgresql cli ++
     pgcli
+
+    easyeffects
   ];
 
   programs.gamemode.enable = true;
