@@ -35,7 +35,7 @@
         "--enable-features=TouchpadOverscrollHistoryNavigation"
 
         # enable hardware acceleration - vulkan api
-        "--enable-features=Vulkan"
+        # "--enable-features=Vulkan"
       ];
     };
   };
