@@ -912,7 +912,8 @@
         "nixpkgs-unstable": "nixpkgs-unstable",
         "nuenv": "nuenv",
         "polybar-themes": "polybar-themes",
-        "sentiment-nvim": "sentiment-nvim"
+        "sentiment-nvim": "sentiment-nvim",
+        "spring-boot-java": "spring-boot-java"
       }
     },
     "rust-overlay": {
@@ -950,6 +951,22 @@
       "original": {
         "owner": "utilyre",
         "repo": "sentiment.nvim",
+        "type": "github"
+      }
+    },
+    "spring-boot-java": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1720234150,
+        "narHash": "sha256-F/vKssupmkglcNYy1ILUeQVeYMFli9bVH3w9jj81BQ4=",
+        "owner": "JavaHello",
+        "repo": "spring-boot.nvim",
+        "rev": "aae50e8471365fe722b94427bec8e1c7d403669b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "JavaHello",
+        "repo": "spring-boot.nvim",
         "type": "github"
       }
     },
