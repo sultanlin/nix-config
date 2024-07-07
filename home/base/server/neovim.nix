@@ -158,6 +158,7 @@
           nvim-dap-go
           nvim-dap-python
           nvim-jdtls # Java
+          spring-boot-java
           mason-nvim
           rustaceanvim # Rust
           crates-nvim # Rust crates
@@ -387,7 +388,6 @@
     lombok
     vscode-extensions.vscjava.vscode-java-test
     vscode-extensions.vscjava.vscode-java-debug
-    spring-boot-java
 
     #-- Kotlin
     kotlin-language-server
