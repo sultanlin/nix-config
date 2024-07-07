@@ -138,6 +138,10 @@
       url = "github:utilyre/sentiment.nvim";
       flake = false;
     };
+    spring-boot-java = {
+      url = "github:JavaHello/spring-boot.nvim";
+      flake = false;
+    };
     neotest-java = {
       url = "github:rcasia/neotest-java";
       flake = false;

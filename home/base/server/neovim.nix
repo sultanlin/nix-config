@@ -387,6 +387,7 @@
     lombok
     vscode-extensions.vscjava.vscode-java-test
     vscode-extensions.vscjava.vscode-java-debug
+    spring-boot-java
 
     #-- Kotlin
     kotlin-language-server

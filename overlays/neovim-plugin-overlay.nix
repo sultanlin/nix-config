@@ -17,5 +17,6 @@
       grapple-nvim = mkNvimPlugin inputs.grapple-nvim "grapple.nvim";
       # sentiment-nvim = mkNvimPlugin sentiment-nvim "sentiment.nvim";
       neotest-vim-test = mkNvimPlugin inputs.neotest-vim-test "neotest-vim-test";
+      spring-boot-java = mkNvimPlugin inputs.spring-boot-java "spring-boot-java";
     };
 })
