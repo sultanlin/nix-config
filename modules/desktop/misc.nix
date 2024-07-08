@@ -46,8 +46,8 @@
     easyeffects
 
     # Jetbrains
-    jetbrains.riderpkgs.jetbrains.idea-ultimate
     jetbrains.idea-community
+    jetbrains.idea-ultimate
     jetbrains.pycharm-professional
   ];
 
