@@ -83,7 +83,7 @@
 
     ########################  Color Schemes  #########################################
 
-    catppuccin.url = "github:catppuccin/nix";
+    # catppuccin.url = "github:catppuccin/nix";
 
     # color scheme - catppuccin
     catppuccin-btop = {
