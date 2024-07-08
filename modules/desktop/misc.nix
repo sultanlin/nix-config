@@ -44,6 +44,11 @@
     pgcli
 
     easyeffects
+
+    # Jetbrains
+    jetbrains.riderpkgs.jetbrains.idea-ultimate
+    jetbrains.idea-community
+    jetbrains.pycharm-professional
   ];
 
   programs.gamemode.enable = true;
