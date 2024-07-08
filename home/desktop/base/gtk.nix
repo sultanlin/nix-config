@@ -45,7 +45,11 @@
 
     theme = {
       # https://github.com/catppuccin/gtk
+      # To get theme name
+      # cd $(nix build nixpkgs#gruvbox-gtk-theme --print-out-paths -no-link)
+
       package = pkgs.gruvbox-gtk-theme;
+      name = "Gruvbox-Dark-B";
       # name = "Catppuccin-Macchiato-Compact-Pink-dark";
       # name = "Catppuccin-Macchiato-Compact-Pink-dark";
       # package = pkgs.catppuccin-gtk.override {
