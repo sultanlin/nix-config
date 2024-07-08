@@ -1,6 +1,7 @@
 {
   pkgs,
   config,
+  catppuccin,
   ...
 }: {
   # If your themes for mouse cursor, icons or windows don’t load correctly,
@@ -43,6 +44,7 @@
       package = pkgs.papirus-icon-theme;
     };
 
+    catppuccin.enable = true;
     # theme = {
     #   # https://github.com/catppuccin/gtk
     #   package = pkgs.gruvbox-gtk-theme;
