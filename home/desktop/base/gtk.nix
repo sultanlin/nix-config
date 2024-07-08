@@ -58,6 +58,4 @@
     #   # };
     # };
   };
-
-  catppuccin.enable = true;
 }
