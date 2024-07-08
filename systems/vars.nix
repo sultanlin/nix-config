@@ -20,7 +20,6 @@ in {
       [
         ../hosts/laptop/home.nix
         # {modules.desktop.hyprland.enable = true;}
-        <catppuccin/modules/home-manager>
       ]
       ++ desktop_base_modules.home-module.imports;
   };
