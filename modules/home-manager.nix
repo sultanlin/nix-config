@@ -14,6 +14,7 @@
 in {
   imports = [
     inputs.home-manager.nixosModules.home-manager
+    <catppuccin/modules/home-manager>
   ];
 
   # home-manager
