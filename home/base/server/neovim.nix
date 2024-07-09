@@ -445,6 +445,7 @@
     LSP_LOMBOK = "${pkgs.lombok}";
     LSP_JAVA_TEST = "${pkgs.vscode-extensions.vscjava.vscode-java-test}";
     LSP_JAVA_DEBUG = "${pkgs.vscode-extensions.vscjava.vscode-java-debug}";
+    LSP_JAVA_SPRING = "${pkgs.spring-boot-java}";
     LSP_CODELLDB = "${pkgs.vscode-extensions.vadimcn.vscode-lldb}";
     # vscode-extensions.vadimcn.vscode-lldb
 
