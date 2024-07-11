@@ -117,6 +117,9 @@
         zmodload zsh/complist
         compinit
         _comp_options+=(globdots)		# Include hidden files.
+
+        bindkey '^[[1;5C' forward-word
+        bindkey '^[[1;5D' backward-word
       '';
     };
   };
