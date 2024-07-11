@@ -120,6 +120,9 @@
 
         bindkey "^[[1;5C" forward-word
         bindkey "^[[1;5D" backward-word
+
+        zstyle ':completion:*:*:docker:*' option-stacking yes
+        zstyle ':completion:*:*:docker-*:*' option-stacking yes
       '';
     };
   };
