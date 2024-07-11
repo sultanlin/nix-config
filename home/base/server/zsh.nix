@@ -123,6 +123,10 @@
 
         zstyle ':completion:*:*:docker:*' option-stacking yes
         zstyle ':completion:*:*:docker-*:*' option-stacking yes
+
+        fpath=(~/nix-config/dotfiles/config/zsh/_docker \\$fpath)
+        autoload -Uz compinit
+        compinit
       '';
     };
   };
