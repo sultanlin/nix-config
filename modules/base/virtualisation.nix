@@ -43,5 +43,7 @@
     #   qemu_full
 
     lazydocker # Docker terminal UI
+
+    docker-compose
   ];
 }
