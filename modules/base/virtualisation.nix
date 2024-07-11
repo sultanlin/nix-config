@@ -44,6 +44,6 @@
 
     lazydocker # Docker terminal UI
 
-    docker-compose
+    # docker-compose
   ];
 }
