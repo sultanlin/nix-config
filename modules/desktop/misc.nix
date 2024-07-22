@@ -49,6 +49,8 @@
     jetbrains.idea-community
     jetbrains.idea-ultimate
     jetbrains.pycharm-professional
+
+    postman
   ];
 
   programs.gamemode.enable = true;
