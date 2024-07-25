@@ -127,7 +127,7 @@
         zstyle ':completion:*:*:docker-*:*' option-stacking yes
 
         # fpath=(~/nix-config/dotfiles/config/zsh \\$fpath)
-        fpath=(~/nix-config/dotfiles/config/zsh/_docker \\$fpath)
+        # fpath=(~/nix-config/dotfiles/config/zsh/_docker \\$fpath)
         autoload -Uz compinit
         compinit
         #
