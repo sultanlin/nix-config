@@ -130,24 +130,24 @@
         fpath=(~/nix-config/dotfiles/config/zsh/_docker \\$fpath)
         autoload -Uz compinit
         compinit
-
-        # Delete 1 level in a path using ESC+DEL
-        function kill-path-word()
-        {
-          local words word spaces
-            zle set-mark-command                 # save current cursor position ("mark")
-            while [[ $LBUFFER[-1] == "/" ]] {
-              (( CURSOR -= 1 ))                  # consume all trailing slashes
-            }
-          words=("''${(s:/:)LBUFFER/\~/_}")       # split command line at "/" after "~" is replaced by "_" to prevent FILENAME EXPANSION messing things up
-            word=$words[-1]                       # this is the portion from cursor back to previous "/"
-            (( CURSOR -= $#word ))                # then, jump to the previous "/"
-            zle exchange-point-and-mark           # swap "mark" and "cursor"
-            zle kill-region                       # delete marked region
-        }
-        zle -N kill-path-word
-        bindkey "^[^[[3~" kill-path-word
-      '';
+        #
+        #   # Delete 1 level in a path using ESC+DEL
+        #   function kill-path-word()
+        #   {
+        #     local words word spaces
+        #       zle set-mark-command                 # save current cursor position ("mark")
+        #       while [[ $LBUFFER[-1] == "/" ]] {
+        #         (( CURSOR -= 1 ))                  # consume all trailing slashes
+        #       }
+        #     words=("''${(s:/:)LBUFFER/\~/_}")       # split command line at "/" after "~" is replaced by "_" to prevent FILENAME EXPANSION messing things up
+        #       word=$words[-1]                       # this is the portion from cursor back to previous "/"
+        #       (( CURSOR -= $#word ))                # then, jump to the previous "/"
+        #       zle exchange-point-and-mark           # swap "mark" and "cursor"
+        #       zle kill-region                       # delete marked region
+        #   }
+        #   zle -N kill-path-word
+        #   bindkey "^[^[[3~" kill-path-word
+        # '';
     };
   };
   home.packages = with pkgs; [
