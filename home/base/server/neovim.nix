@@ -344,6 +344,7 @@
     # rnix-lsp
     nixpkgs-fmt
     nixd
+    nixfmt-rfc-style
 
     #-- Bash/Shell scripting
     nodePackages.bash-language-server
@@ -362,6 +363,8 @@
     nodePackages."@tailwindcss/language-server"
     emmet-ls
     prettierd
+    rustywind
+    nodePackages.fixjson
     # SVELTE LSP
     nodePackages.svelte-language-server
     # Graphql LSP
