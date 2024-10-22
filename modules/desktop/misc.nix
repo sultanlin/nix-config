@@ -59,11 +59,12 @@
     STEAM_EXTRA_COMPAT_TOOLS_PATH = "/home/user/.steam/root/compatibilitytools.d";
   };
 
-  # services.mysql = {
-  #   enable = true;
-  #   # package = pkgs.mariadb;
-  #   package = pkgs.mysql84;
-  # };
+  services.mysql = {
+    enable = true;
+    package = pkgs.mariadb;
+    # package = pkgs.mysql84;
+  };
+
   services.postgresql = {
     enable = true;
     ensureDatabases = ["mydatabase"];
