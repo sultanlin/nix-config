@@ -308,6 +308,7 @@
     #-- Essentials
     nodePackages.npm
     nodePackages.neovim
+    nodePackages.live-server
 
     #-- Python
     (python3.withPackages (ps:
