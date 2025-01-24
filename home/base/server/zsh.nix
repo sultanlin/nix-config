@@ -126,10 +126,9 @@
         zstyle ':completion:*:*:docker:*' option-stacking yes
         zstyle ':completion:*:*:docker-*:*' option-stacking yes
 
-        # fpath=(~/nix-config/dotfiles/config/zsh \\$fpath)
-        # fpath=(~/nix-config/dotfiles/config/zsh/_docker \\$fpath)
-        autoload -Uz compinit
-        compinit
+        # https://unix.stackexchange.com/questions/33255/how-to-define-and-load-your-own-shell-function-in-zsh
+        fpath=($HOME/nix-config/dotfiles/config/zsh $fpath)
+        autoload -U $HOME/nix-config/dotfiles/config/zsh/_docker
         #
         #   # Delete 1 level in a path using ESC+DEL
         #   function kill-path-word()
