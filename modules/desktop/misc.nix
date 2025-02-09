@@ -49,8 +49,16 @@
     jetbrains.idea-community
     jetbrains.idea-ultimate
     jetbrains.pycharm-professional
+    jetbrains.pycharm-community
 
     postman
+
+    slack
+
+    # Database GUI
+    pgadmin4
+    dbeaver-bin
+    pgmanage
   ];
 
   programs.gamemode.enable = true;
