@@ -2,8 +2,8 @@
   home.packages = with pkgs;
     [
       # general tools
-      pulumi
-      pulumictl
+      # pulumi
+      # pulumictl
       packer # machine image builder
 
       # aws
