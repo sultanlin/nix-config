@@ -48,18 +48,18 @@
   services.xserver.videoDrivers = ["amdgpu"]; # will install nvidia-vaapi-driver by default
   # services.xserver.videoDrivers = lib.mkDefault [ "modesetting" ];
 
-  # hardware.graphics = {
-  #   enable = true;
-  #   enable32bit = true;
-  # };
-
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
-    # if hardware.opengl.driSupport is enabled, mesa is installed and provides Vulkan for supported hardware.
-    driSupport = true;
-    # needed by nvidia-docker
-    driSupport32Bit = true;
+    enable32Bit = true;
   };
+
+  # hardware.opengl = {
+  #   enable = true;
+  #   # if hardware.opengl.driSupport is enabled, mesa is installed and provides Vulkan for supported hardware.
+  #   # driSupport = true;
+  #   # needed by nvidia-docker
+  #   driSupport32Bit = true;
+  # };
 
   # # for Nvidia GPU
   # services.xserver.videoDrivers = ["nvidia"]; # will install nvidia-vaapi-driver by default
