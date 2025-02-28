@@ -5,7 +5,9 @@
 
   # security with polkit
   services.power-profiles-daemon = {
-    enable = true;
+    # enable = true;
+    # Collision with autocpu-freq, had to disable
+    enable = false;
   };
   security.polkit.enable = true;
   # security with gnome-kering
