@@ -57,7 +57,7 @@
     glow # markdown previewer in terminal
 
     # NOTE: TEMPORARY
-    pulumi
+    # pulumi
   ];
 
   programs = {
