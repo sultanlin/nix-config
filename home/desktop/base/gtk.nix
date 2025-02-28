@@ -49,9 +49,13 @@
       # cd $(nix build nixpkgs#gruvbox-gtk-theme --print-out-paths -no-link)
 
       package = pkgs.gruvbox-gtk-theme;
-      name = "Gruvbox-Dark-B";
+      # name = "Gruvbox-Dark-B";
+      name = "Gruvbox-Dark";
       # name = "Catppuccin-Macchiato-Compact-Pink-dark";
       # name = "Catppuccin-Macchiato-Compact-Pink-dark";
+      # name = "catppuccin-macchiato-compact-pink-dark";
+      # name = "catppuccin-macchiato-blue-standard+default";
+      # name = "catppuccin-mocha-pink-compact+default";
       # package = pkgs.catppuccin-gtk.override {
       #   # https://github.com/NixOS/nixpkgs/blob/nixos-23.05/pkgs/data/themes/catppuccin-gtk/default.nix
       #   accents = ["pink"];
