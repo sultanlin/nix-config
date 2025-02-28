@@ -1,6 +1,7 @@
 {
   nixpkgs,
   home-manager,
+  # nixos-hardware,
   system,
   specialArgs,
   nixos-modules,
@@ -32,5 +33,7 @@ in
           home-manager.extraSpecialArgs = specialArgs;
           home-manager.users."${username}" = home-module;
         }
+        # TODO: Sort this out, thinkpad
+        # nixos-hardware.nixosModules.lenovo-thinkpad-t14-amd-gen2
       ];
   }
