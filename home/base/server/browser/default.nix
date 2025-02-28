@@ -12,7 +12,7 @@
   ];
 
   home.packages = with pkgs; [
-    firefox
+    # firefox
     # google-chrome
     vivaldi
     brave
