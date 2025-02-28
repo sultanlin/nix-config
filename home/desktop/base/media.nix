@@ -18,7 +18,8 @@
     # nvtop # htop for GPUs (nvidia/amd/intel), builds cuda, takes too long
 
     # video/audio tools
-    cava # for visualizing audio
+    # BUG: cava no longer works?!?!?
+    # cava # for visualizing audio
     libva-utils
     vdpauinfo
     vulkan-tools
