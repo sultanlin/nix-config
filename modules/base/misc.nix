@@ -47,10 +47,28 @@
 
   # for power management
   services = {
-    power-profiles-daemon = {
+    # power-profiles-daemon = {
+    #   enable = true;
+    # };
+    # upower.enable = true;
+
+    thermald.enable = true;
+    auto-cpufreq = {
       enable = true;
+      settings = {
+        battery = {
+          governor = "powersave";
+          turbo = "auto";
+          enable_thresholds = true;
+          start_threshold = 30;
+          stop_threshold = 80;
+        };
+        charger = {
+          governor = "performance";
+          turbo = "auto";
+        };
+      };
     };
-    upower.enable = true;
   };
 
   # List packages installed in system profile. To search, run:
