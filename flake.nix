@@ -61,6 +61,7 @@
     };
 
     nuenv.url = "github:DeterminateSystems/nuenv";
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
     # enables nixos in wsl
     nixos-wsl = {
@@ -134,6 +135,11 @@
       url = "github:yazi-rs/themes";
       flake = false;
     };
+
+    ghostty = {
+      url = "github:ghostty-org/ghostty";
+    };
+
     #------ Review later
     # https://github.com/virchau13/dots/blob/9eec548da8e72c5f2b41cdeb40e983dcc91aefd1/apps/nvim/default.nix#L7
     sentiment-nvim = {
