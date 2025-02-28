@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  ghostty,
+  ...
+}: {
   home.packages = with pkgs; [
     neofetch
     fastfetch
@@ -58,8 +62,10 @@
     glow # markdown previewer in terminal
 
     # NOTE: TEMPORARY
-    pulumi
+    # pulumi
     swappy
+    libinput
+    ghostty.packages.${pkgs.system}.default
   ];
 
   programs = {
