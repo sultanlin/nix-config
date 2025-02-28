@@ -321,8 +321,10 @@
         debugpy
         # ruff-lsp
       ]))
-    nodePackages.pyright
+    # nodePackages.pyright
+    pyright
     ruff-lsp
+    ruff
 
     #-- Lua
     lua-language-server
