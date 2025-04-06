@@ -41,7 +41,7 @@
     plex-media-player
 
     # postgresql cli ++
-    pgcli
+    # pgcli
 
     easyeffects
 
@@ -57,8 +57,9 @@
 
     # Database GUI
     # pgadmin4
-    dbeaver-bin
-    pgmanage
+
+    # dbeaver-bin
+    # pgmanage
   ];
 
   programs.gamemode.enable = true;
@@ -73,39 +74,39 @@
   #   # package = pkgs.mysql84;
   # };
 
-  services = {
-    postgresql = {
-      enable = true;
-      ensureDatabases = ["mydatabase"];
-      # settings = {
-      #   ssl = true;
-      # };
-      # initialScript = ''
-      #   CREATE ROLE pgadmin WITH PASSWORD 'pgadmin' SUPERUSER CREATEROLE CREATEDB REPLICATION BYPASSRLS LOGIN;
-      #   CREATE DATABASE pgadmin;
-      #   GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO pgadmin;
-      #   GRANT ALL PRIVILEGES ON DATABASE postgres TO pgadmin;
-      #   GRANT ALL PRIVILEGES ON DATABASE pgadmin TO pgadmin;
-      # '';
-      authentication = pkgs.lib.mkOverride 10 ''
-        #type database  DBuser  auth-method
-        local all       pgadmin peer
-        local all       sultan  peer
-        local all       all     trust
-        host  all       all     0.0.0.0/0 scram-sha-256
-      '';
-    };
-    # pgadmin = {
-    #   enable = true;
-    #   initialEmail = "skorpion219@hotmail.co.uk";
-    #   # initialPasswordFile = config.sops.secrets.pg_pass.path;
-    #   openFirewall = true;
-    #   settings = {
-    #     "ALLOWED_HOSTS" = [
-    #       "192.168.0.0/16"
-    #     ];
-    #     "CONFIG_DATABASE_URI" = "postgresql://pgadmin:pgadmin@localhost/pgadmin";
-    #   };
-    # };
-  };
+  # services = {
+  #   postgresql = {
+  #     enable = true;
+  #     ensureDatabases = ["mydatabase"];
+  #     # settings = {
+  #     #   ssl = true;
+  #     # };
+  #     # initialScript = ''
+  #     #   CREATE ROLE pgadmin WITH PASSWORD 'pgadmin' SUPERUSER CREATEROLE CREATEDB REPLICATION BYPASSRLS LOGIN;
+  #     #   CREATE DATABASE pgadmin;
+  #     #   GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO pgadmin;
+  #     #   GRANT ALL PRIVILEGES ON DATABASE postgres TO pgadmin;
+  #     #   GRANT ALL PRIVILEGES ON DATABASE pgadmin TO pgadmin;
+  #     # '';
+  #     authentication = pkgs.lib.mkOverride 10 ''
+  #       #type database  DBuser  auth-method
+  #       local all       pgadmin peer
+  #       local all       sultan  peer
+  #       local all       all     trust
+  #       host  all       all     0.0.0.0/0 scram-sha-256
+  #     '';
+  #   };
+  #   # pgadmin = {
+  #   #   enable = true;
+  #   #   initialEmail = "skorpion219@hotmail.co.uk";
+  #   #   # initialPasswordFile = config.sops.secrets.pg_pass.path;
+  #   #   openFirewall = true;
+  #   #   settings = {
+  #   #     "ALLOWED_HOSTS" = [
+  #   #       "192.168.0.0/16"
+  #   #     ];
+  #   #     "CONFIG_DATABASE_URI" = "postgresql://pgadmin:pgadmin@localhost/pgadmin";
+  #   #   };
+  #   # };
+  # };
 }
