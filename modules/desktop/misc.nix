@@ -38,7 +38,9 @@
     corefonts
 
     # Plex media player
-    plex-media-player
+    # plex-media-player
+    plex-desktop
+    jellyfin-media-player
 
     # postgresql cli ++
     # pgcli
