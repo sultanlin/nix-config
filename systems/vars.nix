@@ -9,6 +9,20 @@ let
     ];
   };
 in {
+  desktop_modules = {
+    nixos-modules =
+      [
+        ../hosts/desktop
+        # {modules.desktop.wayland.enable = true;}
+      ]
+      ++ desktop_base_modules.nixos-modules;
+    home-module.imports =
+      [
+        ../hosts/desktop/home.nix
+        # {modules.desktop.hyprland.enable = true;}
+      ]
+      ++ desktop_base_modules.home-module.imports;
+  };
   laptop_modules = {
     nixos-modules =
       [
