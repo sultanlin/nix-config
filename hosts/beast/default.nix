@@ -12,7 +12,7 @@
   ];
 
   networking = {
-    hostName = "laptop";
+    hostName = "beast";
     wireless.enable = false; # Enables wireless support via wpa_supplicant.
     hosts = {
       "192.168.1.40" = ["truenas"];
@@ -45,7 +45,7 @@
   # virtualisation.docker.storageDriver = "btrfs";
 
   # for AMD GPU
-  services.xserver.videoDrivers = ["amdgpu"]; # will install nvidia-vaapi-driver by default
+  # services.xserver.videoDrivers = ["amdgpu"]; # will install nvidia-vaapi-driver by default
   # services.xserver.videoDrivers = lib.mkDefault [ "modesetting" ];
 
   hardware.graphics = {
@@ -61,16 +61,16 @@
   #   driSupport32Bit = true;
   # };
 
-  # # for Nvidia GPU
-  # services.xserver.videoDrivers = ["nvidia"]; # will install nvidia-vaapi-driver by default
-  # hardware.nvidia = {
-  #   # Optionally, you may need to select the appropriate driver version for your specific GPU.
-  #   # package = config.boot.kernelPackages.nvidiaPackages.stable;
-  #
-  #   # required by most wayland compositors!
-  #   modesetting.enable = true;
-  #   powerManagement.enable = true;
-  # };
+  # for Nvidia GPU
+  services.xserver.videoDrivers = ["nvidia"]; # will install nvidia-vaapi-driver by default
+  hardware.nvidia = {
+    #   # Optionally, you may need to select the appropriate driver version for your specific GPU.
+    #   # package = config.boot.kernelPackages.nvidiaPackages.stable;
+    #
+    #   # required by most wayland compositors!
+    modesetting.enable = true;
+    #   powerManagement.enable = true;
+  };
   # virtualisation.docker.enableNvidia = true; # for nvidia-docker
 
   # This value determines the NixOS release from which the default

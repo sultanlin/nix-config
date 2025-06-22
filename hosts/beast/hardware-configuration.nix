@@ -13,17 +13,28 @@
 
   # Bootloader, grub vs systemd-boot. Grub better for dual booting
   #
-  boot.loader = {
-    # Use the EFI boot loader.
-    efi.canTouchEfiVariables = true;
-    # depending on how you configured your disk mounts, change this to /boot or /boot/efi.
-    efi.efiSysMountPoint = "/boot";
-    systemd-boot.enable = true;
+  # boot.loader = {
+  #   # Use the EFI boot loader.
+  #   efi.canTouchEfiVariables = true;
+  #   # depending on how you configured your disk mounts, change this to /boot or /boot/efi.
+  #   efi.efiSysMountPoint = "/boot";
+  #   systemd-boot.enable = true;
+  # };
+
+  boot.loader = lib.mkDefault {
+    grub = {
+      enable = true;
+      device = "/dev/sda";
+      configurationLimit = 10; # lib.mkDefault 10;
+      useOSProber = true;
+    };
+    timeout = 1;
   };
 
   boot.initrd.availableKernelModules = ["nvme" "xhci_pci" "usb_storage" "sd_mod" "rtsx_pci_sdmmc" "usbhid" "ahci"];
-  boot.initrd.kernelModules = ["amdgpu"];
-  boot.kernelModules = ["kvm-amd"];
+  # boot.initrd.kernelModules = ["amdgpu"];
+  boot.initrd.kernelModules = [];
+  boot.kernelModules = ["kvm-intel"];
   # boot.kernelParams = ["nvidia.NVreg_PreserveVideoMemoryAllocations=1"];
   boot.extraModulePackages = [];
 
@@ -41,13 +52,15 @@
   ];
 
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/a5329769-587b-4fc4-b545-bb9b8a1d6dc9";
-    fsType = "ext4";
+    device = "/dev/disk/by-label/nixos";
+    fsType = "btrfs";
+    options = ["subvol=@"];
   };
 
   fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/6038-D6D3";
+    device = "/dev/disk/by-uuid/FF83-FE70";
     fsType = "vfat";
+    options = ["fmask=0077" "dmask=0077"];
   };
 
   swapDevices = [];
