@@ -27,7 +27,7 @@
   # Remove sound.enable or turn it off if you had it set previously, it seems to cause conflicts with pipewire
   # sound.enable = false;
   # Disable pulseaudio, it conflicts with pipewire too.
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
 
   #============================= Bluetooth =============================
 

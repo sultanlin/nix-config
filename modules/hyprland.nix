@@ -41,12 +41,16 @@
       displayManager = {
         # defaultSession = "hyprland";
         lightdm.enable = false;
-        gdm = {
-          enable = true;
-          wayland = true;
-        };
       };
     };
+
+    displayManager = {
+      gdm = {
+        enable = true;
+        wayland = true;
+      };
+    };
+
     greetd = {
       enable = false;
       settings = {

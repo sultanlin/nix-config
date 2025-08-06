@@ -3,6 +3,7 @@
   pkgs-stable,
   ...
 }: {
+  # WARNING: Remove this while using useGlobalPkgs
   nixpkgs.config = {
     programs.npm = {
       enable = true;
