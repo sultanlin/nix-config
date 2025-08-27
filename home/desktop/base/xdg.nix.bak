@@ -37,7 +37,7 @@
     mimeApps = {
       enable = true;
       defaultApplications = let
-        browser = ["firefox.desktop"];
+        browser = ["google-chrome.desktop"];
       in {
         "application/json" = browser;
         "application/pdf" = browser; # TODO: pdf viewer

@@ -9,16 +9,16 @@ let
     ];
   };
 in {
-  desktop_modules = {
+  beast_modules = {
     nixos-modules =
       [
-        ../hosts/desktop
+        ../hosts/beast
         # {modules.desktop.wayland.enable = true;}
       ]
       ++ desktop_base_modules.nixos-modules;
     home-module.imports =
       [
-        ../hosts/desktop/home.nix
+        ../hosts/beast/home.nix
         # {modules.desktop.hyprland.enable = true;}
       ]
       ++ desktop_base_modules.home-module.imports;

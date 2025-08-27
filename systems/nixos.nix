@@ -28,7 +28,7 @@ in {
     # laptop with hyprland compositor
     laptop = nixosSystem (laptop_modules // base_args);
 
-    # desktop with hyprland compositor
-    desktop = nixosSystem (desktop_modules // base_args);
+    # beast with hyprland compositor
+    beast = nixosSystem (beast_modules // base_args);
   };
 }

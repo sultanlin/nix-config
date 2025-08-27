@@ -1,14 +1,17 @@
 #############################################################
 #
-#  Ai - my main computer, with NixOS + I5-13600KF + RTX 4090 GPU, for gaming & daily use.
+#  Beast - my main computer: I7 CPU + RTX GPU for gaming & daily use.
 #
 #############################################################
 {
+  lib,
+  config,
+  ...
+}: {
   imports = [
     ./nfs-mount.nix
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
-    ./amd_pstate.nix
   ];
 
   networking = {
@@ -44,32 +47,22 @@
   # conflict with feature: containerd-snapshotter
   # virtualisation.docker.storageDriver = "btrfs";
 
-  # for AMD GPU
-  # services.xserver.videoDrivers = ["amdgpu"]; # will install nvidia-vaapi-driver by default
-  # services.xserver.videoDrivers = lib.mkDefault [ "modesetting" ];
-
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
   };
 
-  # hardware.opengl = {
-  #   enable = true;
-  #   # if hardware.opengl.driSupport is enabled, mesa is installed and provides Vulkan for supported hardware.
-  #   # driSupport = true;
-  #   # needed by nvidia-docker
-  #   driSupport32Bit = true;
-  # };
-
   # for Nvidia GPU
   services.xserver.videoDrivers = ["nvidia"]; # will install nvidia-vaapi-driver by default
   hardware.nvidia = {
+    open = true;
     #   # Optionally, you may need to select the appropriate driver version for your specific GPU.
-    #   # package = config.boot.kernelPackages.nvidiaPackages.stable;
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
     #
     #   # required by most wayland compositors!
     modesetting.enable = true;
-    #   powerManagement.enable = true;
+    powerManagement.enable = true;
+    ## nvidiaSettings = true;
   };
   # virtualisation.docker.enableNvidia = true; # for nvidia-docker
 

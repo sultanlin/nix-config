@@ -13,30 +13,58 @@
 
   # Bootloader, grub vs systemd-boot. Grub better for dual booting
   #
-  # boot.loader = {
-  #   # Use the EFI boot loader.
-  #   efi.canTouchEfiVariables = true;
-  #   # depending on how you configured your disk mounts, change this to /boot or /boot/efi.
-  #   efi.efiSysMountPoint = "/boot";
-  #   systemd-boot.enable = true;
-  # };
-
-  boot.loader = lib.mkDefault {
-    grub = {
-      enable = true;
-      device = "/dev/sda";
-      configurationLimit = 10; # lib.mkDefault 10;
-      useOSProber = true;
-    };
-    timeout = 1;
+  boot.loader = {
+    # Use the EFI boot loader.
+    efi.canTouchEfiVariables = true;
+    # depending on how you configured your disk mounts, change this to /boot or /boot/efi.
+    efi.efiSysMountPoint = "/boot";
+    systemd-boot.enable = true;
   };
+
+  # boot.loader = lib.mkDefault {
+  #   efi = {
+  #     canTouchEfiVariables = true;
+  #     # efiInstallAsRemovable = true;
+  #     #   efiSysMountPoint = "/boot";
+  #   };
+  #   #   # Use the EFI boot loader.
+  #   #   efi.canTouchEfiVariables = true;
+  #   #   # depending on how you configured your disk mounts, change this to /boot or /boot/efi.
+  #   #   efi.efiSysMountPoint = "/boot";
+  #   # systemd-boot.enable = false;
+  #   grub = {
+  #     enable = true;
+  #     # device = "/dev/sda";
+  #     # efiInstallAsRemovable = true;
+  #     devices = ["nodev"];
+  #     efiSupport = true;
+  #     # NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+  #     # sda           8:0    1  28.7G  0 disk
+  #     # └─sda1        8:1    1  28.7G  0 part /run/media/gdm/NIXOS-GRAPH
+  #     # zram0       253:0    0  15.6G  0 disk [SWAP]
+  #     # nvme0n1     259:0    0   1.8T  0 disk
+  #     # ├─nvme0n1p1 259:1    0    16M  0 part
+  #     # └─nvme0n1p2 259:2    0   1.8T  0 part
+  #     # nvme1n1     259:3    0   1.8T  0 disk
+  #     # ├─nvme1n1p1 259:4    0   100M  0 part
+  #     # ├─nvme1n1p2 259:5    0    16M  0 part
+  #     # ├─nvme1n1p3 259:6    0   1.3T  0 part
+  #     # ├─nvme1n1p4 259:7    0   728M  0 part
+  #     # ├─nvme1n1p5 259:8    0   512M  0 part /boot
+  #     # └─nvme1n1p6 259:9    0 550.4G  0 part /nix/store
+  #     #                                       /
+  #     configurationLimit = 10; # lib.mkDefault 10;
+  #     useOSProber = true;
+  #   };
+  #   timeout = 1;
+  # };
 
   boot.initrd.availableKernelModules = ["nvme" "xhci_pci" "usb_storage" "sd_mod" "rtsx_pci_sdmmc" "usbhid" "ahci"];
   # boot.initrd.kernelModules = ["amdgpu"];
-  boot.initrd.kernelModules = [];
   boot.kernelModules = ["kvm-intel"];
   # boot.kernelParams = ["nvidia.NVreg_PreserveVideoMemoryAllocations=1"];
-  boot.extraModulePackages = [];
+  boot.initrd.kernelModules = ["gcadapter_oc"];
+  boot.extraModulePackages = [config.boot.kernelPackages.gcadapter-oc-kmod];
 
   # supported file systems, so we can mount any removable disks with these filesystems
   boot.supportedFilesystems = [
