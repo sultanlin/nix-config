@@ -142,7 +142,7 @@
           lspkind-nvim
           cmp-nvim-lua
           cmp-emoji
-          cmp-tabnine
+          # cmp-tabnine  # too much memory
 
           #-- LSP - Formatting - Linting - Debugging
           nvim-lspconfig # LSP configuration
@@ -169,7 +169,7 @@
           neotest
           # General tests
           vim-test
-          neotest-vim-test
+          # neotest-vim-test
           # Language specific tests
           neotest-vitest # JS? TS?
           neotest-python
@@ -324,7 +324,7 @@
       ]))
     # nodePackages.pyright
     pyright
-    ruff-lsp
+    # ruff-lsp
     ruff
 
     #-- Lua

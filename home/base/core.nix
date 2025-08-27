@@ -29,7 +29,7 @@ in {
       # XAUTHORITY = "$XDG_RUNTIME_DIR/Xauthority";
 
       # set default applications
-      BROWSER = "firefox";
+      BROWSER = "google-chrome";
 
       # enable scrolling in git diff
       DELTA_PAGER = "less -R";

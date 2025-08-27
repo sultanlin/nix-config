@@ -12,7 +12,7 @@
     # vimPlugins =
     prev.vimPlugins
     // {
-      neotest-java = mkNvimPlugin inputs.neotest-java "neotest-java";
+      # neotest-java = mkNvimPlugin inputs.neotest-java "neotest-java";
       sentiment-nvim = mkNvimPlugin inputs.sentiment-nvim "sentiment.nvim";
       grapple-nvim = mkNvimPlugin inputs.grapple-nvim "grapple.nvim";
       # sentiment-nvim = mkNvimPlugin sentiment-nvim "sentiment.nvim";

@@ -150,10 +150,6 @@
       url = "github:JavaHello/spring-boot.nvim";
       flake = false;
     };
-    neotest-java = {
-      url = "github:rcasia/neotest-java";
-      flake = false;
-    };
     neotest-vim-test = {
       url = "github:nvim-neotest/neotest-vim-test";
       flake = false;

@@ -13,7 +13,7 @@
   nixpkgs.config.allowUnfree = lib.mkForce true;
 
   # for nix server, we do not need to keep too much generations
-  boot.loader.systemd-boot.configurationLimit = lib.mkDefault 10;
+  # boot.loader.systemd-boot.configurationLimit = lib.mkDefault 10;
 
   # do garbage collection weekly to keep disk usage low
   nix.gc = {
@@ -45,31 +45,31 @@
     memoryPercent = 50;
   };
 
-  # for power management
-  services = {
-    # power-profiles-daemon = {
-    #   enable = true;
-    # };
-    # upower.enable = true;
-
-    thermald.enable = true;
-    auto-cpufreq = {
-      enable = true;
-      settings = {
-        battery = {
-          governor = "powersave";
-          turbo = "auto";
-          enable_thresholds = true;
-          start_threshold = 30;
-          stop_threshold = 80;
-        };
-        charger = {
-          governor = "performance";
-          turbo = "auto";
-        };
-      };
-    };
-  };
+  # # for power management
+  # services = {
+  #   # power-profiles-daemon = {
+  #   #   enable = true;
+  #   # };
+  #   # upower.enable = true;
+  #
+  #   thermald.enable = true;
+  #   # auto-cpufreq = {
+  #   #   enable = true;
+  #   #   settings = {
+  #   #     battery = {
+  #   #       governor = "powersave";
+  #   #       turbo = "auto";
+  #   #       enable_thresholds = true;
+  #   #       start_threshold = 30;
+  #   #       stop_threshold = 80;
+  #   #     };
+  #   #     charger = {
+  #   #       governor = "performance";
+  #   #       turbo = "auto";
+  #   #     };
+  #   #   };
+  #   # };
+  # };
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget

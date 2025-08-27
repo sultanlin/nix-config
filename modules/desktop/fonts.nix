@@ -26,21 +26,29 @@
       source-han-sans
       source-han-serif
 
+      nerd-fonts.symbols-only
+      nerd-fonts.fira-code
+      nerd-fonts.jetbrains-mono
+      nerd-fonts.iosevka
+      # nerd-fonts.source-code-pro
+      nerd-fonts.hack
+      nerd-fonts.meslo-lg
+
       # nerdfonts
       # https://github.com/NixOS/nixpkgs/blob/nixos-23.11/pkgs/data/fonts/nerdfonts/shas.nix
-      (nerdfonts.override {
-        fonts = [
-          # symbols icon only
-          "NerdFontsSymbolsOnly"
-          # Characters
-          "FiraCode"
-          "JetBrainsMono"
-          "Iosevka"
-          "SourceCodePro"
-          "Hack"
-          "Meslo"
-        ];
-      })
+      # (nerdfonts.override {
+      #   fonts = [
+      #     # symbols icon only
+      #     "NerdFontsSymbolsOnly"
+      #     # Characters
+      #     "FiraCode"
+      #     "JetBrainsMono"
+      #     "Iosevka"
+      #     "SourceCodePro"
+      #     "Hack"
+      #     "Meslo"
+      #   ];
+      # })
       julia-mono
       dejavu_fonts
       wqy_zenhei

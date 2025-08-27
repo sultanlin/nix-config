@@ -26,6 +26,10 @@
     mangohud
     protonup
     lutris
+    gamescope
+
+    mgba
+    libsForQt5.qt5.qtwayland
 
     # Libre office
     # libreoffice
@@ -39,8 +43,14 @@
 
     # Plex media player
     # plex-media-player
-    plex-desktop
+    # plex-desktop
     jellyfin-media-player
+    delfin
+    keyd
+    dolphin-emu
+    usbutils
+
+    # eden_emu
 
     # postgresql cli ++
     # pgcli
@@ -65,6 +75,7 @@
   ];
 
   programs.gamemode.enable = true;
+  programs.thunderbird.enable = true;
 
   environment.sessionVariables = {
     STEAM_EXTRA_COMPAT_TOOLS_PATH = "/home/user/.steam/root/compatibilitytools.d";

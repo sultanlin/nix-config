@@ -1,3 +1,7 @@
-{mylib, ...}: {
+{
+  pkgs,
+  mylib,
+  ...
+}: {
   imports = mylib.scanPaths ./.;
 }

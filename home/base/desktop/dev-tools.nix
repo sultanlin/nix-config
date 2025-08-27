@@ -63,7 +63,7 @@
 
     vscode = {
       enable = true;
-      extensions = with pkgs.vscode-extensions; [
+      profiles.default.extensions = with pkgs.vscode-extensions; [
         bbenoist.nix
         ms-python.python
         ms-azuretools.vscode-docker
