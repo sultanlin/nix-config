@@ -30,7 +30,6 @@
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.11";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    # nurjf.url = "github:mio-19/nurpkgs";
     home-manager = {
       # url = "github:nix-community/home-manager/release-23.11";
       url = "github:nix-community/home-manager";
