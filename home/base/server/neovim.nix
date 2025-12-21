@@ -37,260 +37,8 @@
       withPython3 = true;
       withNodeJs = true;
 
-      plugins = let
-        nvim-treesitter-with-plugins = pkgs.vimPlugins.nvim-treesitter.withPlugins (treesitter-plugins:
-          with treesitter-plugins; [
-            c
-            vim
-            vimdoc
-            query
-            angular
-            bash
-            c
-            cpp
-            css
-            dockerfile
-            git_rebase
-            gitcommit
-            go
-            html
-            hyprlang
-            java
-            javascript
-            json
-            kotlin
-            llvm
-            lua
-            luadoc
-            markdown
-            markdown_inline
-            nix
-            python
-            rust
-            sql
-            svelte
-            templ
-            terraform
-            tmux
-            tsx
-            typescript
-            vue
-            yaml
-          ]);
-      in
-        with pkgs.vimPlugins; [
-          # Non-neovim plugins (aka vim plugins) don't need a .setup() in config
-
-          #-- COLORSCHEMES
-          gruvbox-nvim
-          gruvbox-material
-          tokyonight-nvim
-          oceanic-next
-          catppuccin-nvim
-          nightfox-nvim
-          onehalf
-          kanagawa-nvim
-          onedark-nvim
-          #onedarkpro-nvim
-          nord-nvim
-          onenord-nvim
-          neovim-ayu
-          papercolor-theme
-          iceberg-vim
-          nightfly
-          sonokai
-          everforest
-          monokai-pro-nvim
-          # bamboo-nvim not yet available
-          papercolor-theme
-          oxocarbon-nvim
-          rose-pine
-
-          #-- TREESITTER
-          nvim-treesitter.withAllGrammars # Highlight, edit, and navigate code
-          # nvim-treesitter-with-plugins
-          nvim-treesitter-textobjects
-          nvim-ts-context-commentstring
-          rainbow-delimiters-nvim
-          playground
-          # Doesn't work
-          # https://github.com/NixOS/nixpkgs/blob/nixos-unstable/pkgs/development/tools/parsing/tree-sitter/grammars/tree-sitter-just.json
-          # (nvim-treesitter.withPlugins (_:
-          #   nvim-treesitter.allGrammars
-          #   ++ [
-          #     (pkgs.tree-sitter.buildGrammar {
-          #       language = "just";
-          #       version = "f807ab3";
-          #       src = pkgs.fetchFromGitHub {
-          #         owner = "IndianBoy42";
-          #         repo = "tree-sitter-just";
-          #         rev = "f807ab33c36651ecb503a291aed933932754864d";
-          #         sha256 = "sha256-iK+MpyK5pQ/sYT2CHYmeI0k231HwHdZ80ij1cqlO5Nk=";
-          #       };
-          #     })
-          #   ]))
-
-          #-- COMPLETION
-          nvim-cmp
-          luasnip
-          cmp-path
-          cmp-buffer
-          cmp-nvim-lsp
-          cmp_luasnip
-          cmp-cmdline
-          friendly-snippets
-          lspkind-nvim
-          cmp-nvim-lua
-          cmp-emoji
-          # cmp-tabnine  # too much memory
-
-          #-- LSP - Formatting - Linting - Debugging
-          nvim-lspconfig # LSP configuration
-          neodev-nvim # Additional lua config
-          conform-nvim # Formatter
-          nvim-lint
-          none-ls-nvim # Lint and format and code actions
-          nvim-bqf
-          trouble-nvim
-          nvim-dap
-          nvim-dap-ui
-          nvim-dap-virtual-text
-          telescope-dap-nvim
-          nvim-dap-go
-          nvim-dap-python
-          nvim-jdtls # Java
-          spring-boot-java
-          mason-nvim
-          rustaceanvim # Rust
-          crates-nvim # Rust crates
-          typescript-tools-nvim
-
-          #-- Code testing
-          neotest
-          # General tests
-          vim-test
-          # neotest-vim-test
-          # Language specific tests
-          neotest-vitest # JS? TS?
-          neotest-python
-          neotest-plenary
-          neotest-rust
-          # neotest-bash
-          neotest-deno
-          neotest-dotnet # C#
-          neotest-go
-          neotest-jest # Javacript
-          neotest-java
-          # neotest-zig
-          # neotest-dart
-          # neotest-elixir
-          # neotest-haskell
-          # neotest-pest    # PhP
-          # neotest-phpunit
-          # neotest-scala
-          # neotest-rspec   # ruby
-          # neotest-testthat    # R
-
-          #-- Git
-          vim-fugitive # Let's you do git commands using :G instead of :!g in vim cmd
-          gitsigns-nvim # Shows changes to git in the left margin
-          gitlinker-nvim # Link to github and blame and ??????
-          lazygit-nvim # UI terminal for git commands
-          vim-rhubarb # "If fugitive is the git, rhubarb is the hub"
-          neogit # Emacs' magit in neovim
-          diffview-nvim
-
-          #-- Navigation
-          alpha-nvim
-          project-nvim
-          nvim-tree-lua # Potentially remove, mainly use oil.nvim
-          oil-nvim
-          toggleterm-nvim
-          telescope-nvim # Fuzzy finder (files, lsp, etc)
-          telescope-fzf-native-nvim
-          vim-tmux-navigator
-          harpoon
-          grapple-nvim
-
-          #-- UI
-          lualine-nvim # DONE
-          barbecue-nvim
-          nvim-navic
-          tabby-nvim
-          dressing-nvim
-          nvim-web-devicons
-          indent-blankline-nvim # DONE
-          modicator-nvim
-          nvim-colorizer-lua
-          todo-comments-nvim
-          zen-mode-nvim
-          twilight-nvim
-          vim-matchup
-          vim-illuminate
-
-          #-- Nice to have
-          comment-nvim
-          SchemaStore-nvim
-          eyeliner-nvim
-          which-key-nvim
-          legendary-nvim
-
-          #-- Utils
-          # numb-nvim
-          nvim-spider
-          tabout-nvim # Potentially remove later if you're used to living without autopairs
-          nvim-surround
-          neorg
-          undotree
-          nvim-ufo
-          promise-async
-          statuscol-nvim
-          nvim-spectre
-          vim-sleuth
-          markdown-preview-nvim
-          glow-nvim
-          mini-nvim
-
-          lazy-lsp-nvim
-
-          #-- CORE
-          plenary-nvim
-
-          #-- Future plugins
-          # flash-nvim
-          # fzf-lua
-          # lsp_signature-nvim
-
-          #-- Unwanted plugins
-          # hardtime-nvim # No longer need it (helps learn nvim by blocking bad practice)
-          # barbar-nvim     # Adds buffer as tab, don't want that
-          # neoscroll-nvim    # BLOAT
-          # nvim-navbuddy       # BLOAT
-          # auto-session      # Not needed
-          refactoring-nvim # Too difficult, code actions like move code to separate function etc
-          nvim-autopairs # Learn to live without it
-          # nvim-ts-autotag # Learn to live without it
-          noice-nvim # BLOAT
-          # vim-jsx-pretty # Don't think I need it
-          # sentiment-nvim # Replaced by vim-matchup
-          # fidget-nvim # BUGGY Useful notifications and status updates for LSP
-          nui-nvim
-
-          # This does not work, unsure why
-          # Maybe because I'm using outofstoresymlink.
-          # TLDR the config is supposed to be added to init.lua
-          # Maybe I'm doing something that conflicts with that
-          #{
-          #  plugin = gitsigns-nvim;
-          #  type = "lua";
-          #  config = ''
-          #    require("gitsigns").setup()
-          #  '';
-          #}
-        ];
-
-      extraPackages = with pkgs; [
-      ];
+      # plugins = with pkgs.vimPlugins; [];
+      # extraPackages = with pkgs; [];
     };
   };
   home.packages = with pkgs; [
@@ -309,7 +57,7 @@
     #-- Essentials
     nodePackages.npm
     nodePackages.neovim
-    nodePackages.live-server
+    # nodePackages.live-server # TODO: removed: unmaintained
 
     #-- Python
     (python3.withPackages (ps:
@@ -360,7 +108,8 @@
     nodePackages.prettier
     nodePackages.eslint
     nodePackages.typescript
-    nodePackages.typescript-language-server
+    # nodePackages.typescript-language-server
+    typescript-go
     eslint_d
     # HTML/CSS/JSON/ESLint language servers extracted from vscode
     nodePackages.vscode-langservers-extracted
@@ -405,7 +154,7 @@
     netcoredbg # C# Debugger
 
     #-- CloudNative
-    nodePackages.dockerfile-language-server-nodejs
+    dockerfile-language-server
     # terraform  # install via brew on macOS
     terraform-ls
     jsonnet
@@ -414,17 +163,17 @@
 
     # Additional
     nodePackages.markdownlint-cli
-    vale
+    markdownlint-cli2
+    # markdown-toc # TODO: Uncomment after update
     codespell
     gitlint
     taplo # TOML language server / formatter / validator
-    taplo-cli
+    # taplo-cli
     nodePackages.yaml-language-server
     sqlfluff # SQL linter
     actionlint # GitHub Actions linter
     buf # protoc plugin for linting and formatting
     proselint # English prose linter
-    tree-sitter # common language parser/highlighter
     marksman # language server for markdown
     glow # markdown previewer
     fzf
@@ -440,6 +189,10 @@
     ripgrep # fast search tool, required by AstroNvim's '<leader>fw'(<leader> is space key)
     verible
     fd
+
+    #-- Treesitter
+    tree-sitter # common language parser/highlighter
+    gcc # c/c++ compiler, required by nvim-treesitter!
   ];
 
   home.sessionVariables = {
@@ -453,7 +206,6 @@
     LSP_JAVA_TEST = "${pkgs.vscode-extensions.vscjava.vscode-java-test}";
     LSP_JAVA_DEBUG = "${pkgs.vscode-extensions.vscjava.vscode-java-debug}";
     LSP_CODELLDB = "${pkgs.vscode-extensions.vadimcn.vscode-lldb}";
-    # vscode-extensions.vadimcn.vscode-lldb
 
     NEOVIM_NIXOS = "true";
   };
