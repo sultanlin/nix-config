@@ -3,6 +3,7 @@
   lib,
   pkgs,
   pkgs-stable,
+  nurjf,
   ...
 }: {
   services.flatpak.enable = true;
@@ -20,6 +21,11 @@
     enable = true;
     gamescopeSession.enable = true;
   };
+
+  # nixpkgs.config.permittedInsecurePackages = [
+  #   # "nodejs-12.22.12"
+  #   "qtwebengine-5.15.19"
+  # ];
 
   environment.systemPackages = with pkgs; [
     # Games?
@@ -46,6 +52,9 @@
     # plex-media-player
     # plex-desktop
     jellyfin-media-player
+    # nur.nur.repos.mio.jellyfin-media-player
+    # https://discourse.nixos.org/t/using-nur-in-nixos-configuration-via-flakes/51221/7
+    # nurjf.packages.x86_64-linux.jellyfin-media-player
     delfin
     keyd
     dolphin-emu
