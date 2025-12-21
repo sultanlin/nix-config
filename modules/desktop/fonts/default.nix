@@ -22,8 +22,8 @@ in {
       # Consider Dejavu sans
       noto-fonts
       noto-fonts-cjk-sans
-      noto-fonts-emoji
-      noto-fonts-extra
+      noto-fonts-color-emoji
+      noto-fonts
 
       source-sans
       source-serif

@@ -116,12 +116,12 @@
     # audio
     alsa-utils # provides amixer/alsamixer/...
     # mpd # for playing system sounds
-    mpc-cli # command-line mpd client
+    mpc # command-line mpd client
     ncmpcpp # a mpd client with a UI
     networkmanagerapplet # provide GUI app: nm-connection-editor
 
     nwg-look
-    rofi-wayland
+    rofi
 
     xfce.thunar # xfce4's file manager
   ];

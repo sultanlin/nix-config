@@ -59,9 +59,9 @@
         gnome-settings-daemon
         platformio # udev rules for platformio
         openocd # required by paltformio, see https://github.com/NixOS/nixpkgs/issues/224895
-        android-udev-rules # required by adb
         openfpgaloader
         dolphin-emu
+        # android-udev-rules # required by adb
       ];
       # extraRules = ''
       #   # gamecube wii u usb adapter

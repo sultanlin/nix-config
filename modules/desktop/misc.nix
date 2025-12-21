@@ -24,9 +24,10 @@
   environment.systemPackages = with pkgs; [
     # Games?
     mangohud
-    protonup
+    protonup-ng
     lutris
     gamescope
+    rusty-path-of-building
 
     mgba
     libsForQt5.qt5.qtwayland
@@ -38,7 +39,7 @@
     libreoffice-qt
     hunspell
     hunspellDicts.en_US
-    vistafonts
+    vista-fonts
     corefonts
 
     # Plex media player
@@ -58,10 +59,10 @@
     easyeffects
 
     # Jetbrains
-    jetbrains.idea-community
-    jetbrains.idea-ultimate
-    jetbrains.pycharm-professional
-    jetbrains.pycharm-community
+    jetbrains.idea-oss
+    jetbrains.idea
+    jetbrains.pycharm
+    jetbrains.pycharm-oss
 
     postman
 
@@ -72,6 +73,8 @@
 
     # dbeaver-bin
     # pgmanage
+    pkgs-stable.orca
+    at-spi2-core
   ];
 
   programs.gamemode.enable = true;
