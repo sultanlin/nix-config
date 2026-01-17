@@ -16,7 +16,7 @@
 
   networking = {
     hostName = "beast";
-    wireless.enable = false; # Enables wireless support via wpa_supplicant.
+    # wireless.enable = false; # Enables wireless support via wpa_supplicant.
     hosts = {
       "192.168.1.40" = ["truenas"];
     };

@@ -221,3 +221,45 @@ Other dotfiles that inspired me:
 [Btrfs]: https://btrfs.readthedocs.io
 [LUKS]: https://wiki.archlinux.org/title/Dm-crypt/Encrypting_an_entire_system
 [lanzaboote]: https://github.com/nix-community/lanzaboote
+
+### SLIPPI
+
+1. https://github.com/ImYuugen/nix-ssb/tree/main
+1. https://discourse.nixos.org/t/trouble-packaging-mkyarnpackage-missing-dependencies-a-lot-of-warnings/65866/5
+1. https://docs.google.com/document/d/1cQ3pbKZm_yUtcLK9ZIXyPzVbTJkvnfxKIyvuFMwzWe0/edit?tab=t.0
+1. Nixos discord search "slippi" from 'nezia' https://discord.com/channels/568306982717751326/570351733780381697/1412094749090779136
+
+   ```nix
+   slippi-rust-extensions = rustPlatform.buildRustPackage (finalAttrs: {
+           name = "slippi-rust-extensions";
+           version = "3.3.0";
+
+           src = fetchFromGitHub {
+           owner = "project-slippi";
+           repo = "Ishiiruka";
+           rev = "v${finalAttrs.version}";
+           hash = "sha256-mLkIRuyERmH5VF3UVU1VjM9wJYZhPhb6oIvZy7FhL0s=";
+           fetchSubmodules = true;
+           };
+
+           cargoRoot = "Externals/SlippiRustExtensions";
+           buildAndTestSubdir = finalAttrs.cargoRoot;
+           cargoDeps = rustPlatform.importCargoLock {
+           lockFile = "${finalAttrs.src}/${finalAttrs.cargoRoot}/Cargo.lock";
+           };
+
+           nativeBuildInputs = [
+           pkg-config
+           rustc
+           cargo
+           rustPlatform.cargoSetupHook
+           ];
+           buildInputs = [
+               alsa-lib
+           ];
+           postInstall = ''
+               mkdir $out/include
+               cp ${finalAttrs.buildAndTestSubdir}/ffi/includes/SlippiRustExtensions.h $out/include
+               '';
+   });
+   ```

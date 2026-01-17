@@ -17,13 +17,13 @@
   home.packages = with pkgs; [
     # db related
     dbeaver-bin
-    mycli
+    # mycli
     pgcli
-    mongosh
+    # mongosh
     sqlite
 
     # embedded development
-    minicom
+    # minicom
 
     # ai related
     python311Packages.huggingface-hub # huggingface-cli

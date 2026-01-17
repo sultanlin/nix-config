@@ -19,11 +19,9 @@
   #};
 
   programs = {
-    neovim = let
-      toLua = str: "lua << EOF\n${str}\nEOF\n";
-      toLuaFile = file: "lua << EOF\n${builtins.readFile file}\nEOF\n";
-    in {
+    neovim = {
       enable = true;
+
       # enable = false;
       defaultEditor = true;
 
@@ -115,7 +113,6 @@
     nodePackages.vscode-langservers-extracted
     nodePackages."@tailwindcss/language-server"
     emmet-ls
-    prettierd
     rustywind
     nodePackages.fixjson
     # SVELTE LSP
@@ -124,6 +121,8 @@
     nodePackages.graphql-language-service-cli
     # Prisma LSP
     nodePackages.prisma
+    angular-language-server
+    vue-language-server
 
     #-- Go
     go
@@ -170,7 +169,7 @@
     taplo # TOML language server / formatter / validator
     # taplo-cli
     nodePackages.yaml-language-server
-    sqlfluff # SQL linter
+    # sqlfluff # SQL linter
     actionlint # GitHub Actions linter
     buf # protoc plugin for linting and formatting
     proselint # English prose linter

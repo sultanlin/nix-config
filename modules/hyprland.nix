@@ -128,4 +128,7 @@
 
   # fix https://github.com/ryan4yin/nix-config/issues/10
   security.pam.services.swaylock = {};
+
+  # always keep a reference to the source flake that generated each generations
+  environment.etc."current-nixos".source = ./.;
 }
